@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OfficielePublicatie>
+<!--OfficielePublicatie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.overheid.nl/imop/def#" xmlns:gml="http://www.opengis.net/gml/3.2" xsi:schemaLocation="http://www.overheid.nl/imop/def# http://technische-documentatie.oep.overheid.nl/poc-toepassingsprofiel/schemas/imop/0.96/xsd/imop_0.96.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd"-->
+   <Metadata>
+      <Uitspraak eigenschap="imop:typeDocument">
+         <Waarde type="xs:string">Omgevingsvisie</Waarde>
+      </Uitspraak>
+      <Uitspraak eigenschap="imop:conformProfiel">
+         <Waarde type="xs:string">TPOD Omgevingsvisie V0.90</Waarde>
+      </Uitspraak>
+      <Uitspraak eigenschap="imop:citeertitel">
+         <Waarde type="xs:string">Vijf perspectieven op de toekomst van Rotterdam</Waarde>
+      </Uitspraak>
+      <Uitspraak eigenschap="imop:datumLaatsteWijziging">
+         <Waarde type="xs:date">2019-01-23</Waarde>
+      </Uitspraak>
+      <Uitspraak eigenschap="imop:werkingsgebied">
+         <Waarde type="imop:XMLIncludeRef">gemeente_rotterdam</Waarde>
+      </Uitspraak>
+   </Metadata>
+   <Gemeenteblad>
+      <Bladaanduiding>
+         <Titelregel>Gemeenteblad</Titelregel>
+      </Bladaanduiding>
+      <Tekst>
+         <Kop>
+            <Opschrift>Vijf perspectieven op de toekomst van Rotterdam</Opschrift>
+         </Kop>
+         <Divisie id="d1e30">
+            <Kop>
+               <Opschrift>Inleiding</Opschrift>
+            </Kop>
+            <Inhoud>
+               <al class="Ambitie">Samen bieden ze richting en een integrale blik.</al>
+               <al>Met de omgevingsvisie willen we richting geven aan de toekomst van de fysieke leefomgeving van Rotterdam. Hiervoor gebruiken wij het intersectorale model. Uit de opstapeling van bestaand beleid, gecombineerd met de opgaven die op ons afkomen, ontstaat echter nog geen eenduidig toekomstbeeld. Het huidige beleid kan onderling tegenstrijdigheden bevatten, en vaak worden afwegingen sectoraal gemaakt. Om een optimale invulling van de leefomgeving te realiseren, moeten we nadrukkelijk integraal kijken naar de toekomst. Hiervoor ontbreekt momenteel een gezamenlijke blik.</al>
+               <Lijst type="ongemarkeerd">
+                  <Lijstaanhef>Om tot een integrale blik te komen, hebben we vijf perspectieven benoemd die gezamenlijk richting geven aan de toekomst van de fysieke leefomgeving:</Lijstaanhef>
+                  <Li>
+                     <Inhoud>
+                        <al>Compacte stad</al>
+                     </Inhoud>
+                  </Li>
+                  <Li>
+                     <Inhoud>
+                        <al>Gezonde stad</al>
+                     </Inhoud>
+                  </Li>
+                  <Li>
+                     <Inhoud>
+                        <al>Inclusieve stad</al>
+                     </Inhoud>
+                  </Li>
+                  <Li>
+                     <Inhoud>
+                        <al>Circulaire stad</al>
+                     </Inhoud>
+                  </Li>
+                  <Li>
+                     <Inhoud>
+                        <al>Productieve stad</al>
+                     </Inhoud>
+                  </Li>
+               </Lijst>
+               <al class="Afstand_na">Deze perspectieven zijn opgebouwd aan de hand van kernwaarden en staan voor hetgeen we in Rotterdam belangrijk vinden. De perspectieven zijn niet bedoeld als keuzemodel; ze zijn allemaal even belangrijk en samen bieden ze een integrale kijk op de toekomst. Je kunt ze zien als vijf ‘brillen’ die je kunt opzetten om richting te bepalen. Gezamenlijk vormen ze een richtinggevend ‘kompas’. De perspectieven zijn van toepassing op het gehele grondgebied van de gemeente Rotterdam.</al>
+               <al>De perspectieven geven richting aan het handelen van ambtenaren en bieden houvast voor raadsleden en initiatiefnemers. Ze zijn flexibel genoeg om invulling te geven aan nieuwe ideeën en ontwikkelingen. Enerzijds maken de perspectieven de impact van grote trends, beleid, verkiezingsprogramma’s en initiatieven op de fysieke leefomgeving inzichtelijk; anderzijds maken ze de ruimtelijke impact van plannen en keuzes vergelijkbaar. Uiteenlopende plannen en initiatieven worden zo beter bespreekbaar, gemakkelijker te beoordelen en eenvoudiger om in gezamenlijkheid te verbeteren.</al>
+            </Inhoud>
+         </Divisie>
+         <Divisie id="d1e106">
+            <Metadata>
+               <Uitspraak onderwerp="d1e106" eigenschap="tpod:heeftOnderwerp">
+                  <Object type="tpod:Onderwerp">
+                     <Eigenschap naam="onderwerp">
+                        <Waarde type="xs:string">binnenstad</Waarde>
+                     </Eigenschap>
+                     <Eigenschap naam="locatie">
+                        <Waarde type="imop:XMLIncludeRef">centrum_rotterdam</Waarde>
+                     </Eigenschap>
+                  </Object>
+               </Uitspraak>
+            </Metadata>
+            <Kop>
+               <Opschrift>Compacte stad</Opschrift>
+            </Kop>
+            <Inhoud>
+               <al class="Ambitie">Rotterdam ontwikkelt zich als een compacte, aantrekkelijke stad aan de rivier. </al>
+               <al class="Afstand_na">Een stad die onderdeel is van een grootstedelijk netwerk, met sterk openbaar vervoer en volop ruimte voor buitenleven. Rotterdam is en blijft een architectuurstad die durft te experimenteren door verdichting en vergroening op een slimme manier met elkaar te combineren. Een stad waar zoveel mogelijk passende voorzieningen voor iedereen op loop- en fietsafstand aanwezig zijn.</al>
+               <table class="Tabel" frame="all" colsep="1" rowsep="1">
+                  <title>Kernwaarden compacte stad</title>
+                  <tgroup cols="2">
+                     <colspec colname="col1" colwidth="25"/>
+                     <colspec colname="col2" colwidth="75"/>
+                     <tbody>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image1.png" breedte="100" alt="image1.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>Nabijheid</Tussenkop>
+                              <al>Een stad waar zoveel mogelijk passende voorzieningen voor iedereen op loop- en fietsafstand aanwezig zijn</al>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image2.png" breedte="100" alt="image2.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>Binnenstad als city lounge</Tussenkop>
+                              <al>De binnenstad ontwikkelt zich als een hoogwaardige plek voor ontmoeting, verblijf en cultuur</al>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image3.png" breedte="100" alt="image3.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>Rauwheid en dynamiek</Tussenkop>
+                              <al>De compacte stad bouwt voort op het unieke karakter van rotterdam: rauw en dynamisch</al>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image4.png" breedte="100" alt="image4.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>Architectuurstad</Tussenkop>
+                              <al>Bij de verdichting van de stad hebben we oog voor de kwaliteit van de architectuur en de waarde van cultuurhistorie</al>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image5.png" breedte="100" alt="image5.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>Mix stad en groen</Tussenkop>
+                              <al>De verdichting en vergroening van Rotterdam gaan hand in hand</al>
+                           </entry>
+                        </row>
+                     </tbody>
+                  </tgroup>
+               </table>
+            </Inhoud>
+            <Divisie id="d1e260">
+               <Kop>
+                  <Opschrift>Wat is een compacte stad?</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <al>In een compacte stad woon je in de buurt van werk, winkels, het openbaar vervoer en andere voorzieningen. Dit is alleen mogelijk wanneer de dichtheid van een stad groot genoeg is. Pas als op een plek genoeg mensen wonen, is er voldoende draagkracht voor voorzieningen en is het een aantrekkelijke vestigingsplek voor bedrijven. Compact ruimtegebruik in het haven- en industriecomplex zorgt ervoor dat elders ruimte voor woningbouw, natuur en andere functies aanwezig is. Door clustering van activiteiten binnen dit complex blijft de milieu-impact en daarmee de leefomgevingskwaliteit in de regio op een acceptabel niveau. In de compacte stad is het van belang ruimte zo goed mogelijk te benutten, bijvoorbeeld door multifunctioneel gebruik. Daarnaast leidt de hoge bevolkingsdichtheid in een compacte stad tot veel verplaatsingen. Om te voorkomen dat het vervuilende autogebruik toeneemt, is een sterk netwerk van openbaar vervoer en fiets- en wandelpaden belangrijk. De hogere dichtheid van woningen vraagt om genoeg ruimte voor ontmoeting, sport en spel.</al>
+               </Inhoud>
+            </Divisie>
+            <Divisie id="d1e275">
+               <Kop>
+                  <Opschrift>Motivatie compacte stad</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <al>Waarom compacte stad een belangrijk perspectief is voor rotterdam.</al>
+               </Inhoud>
+               <Divisie id="d1e289">
+                  <Kop>
+                     <Opschrift>Rotterdam is populair</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <al>Tien jaar geleden heeft Rotterdam ingezet op de verdichting van de bestaande stad. Dit heeft ervoor gezorgd dat Rotterdam compacter en aantrekkelijker is geworden. Maar de verdichting gaat niet snel genoeg. Er ontstaat een tekort aan woningen vooral voor bepaalde doelgroepen.</al>
+                     <al>Er is meer vraag naar studentenhuisvesting, grotere studio’s, kindvriendelijke appartementen, zorggeschikte woningen voor ouderen en grondgebonden eengezinswoningen. Vooral onder huishoudens met een modaal of hoger inkomen, sociale stijgers en ‘young professionals’ neemt de vraag naar een passende woning toe. Rotterdam heeft zowel een gebrek aan centrum-stedelijke als ook aan groen-stedelijke woonmilieus. Hierdoor trekken veel jonge gezinnen uiteindelijk weg uit de stad, terwijl ze er graag zouden blijven wonen.</al>
+                  </Inhoud>
+               </Divisie>
+               <Divisie id="d1e307">
+                  <Kop>
+                     <Opschrift>Behoefte aan rust</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <al>Levendigheid is een wezenlijk kenmerk van Rotterdam. Rotterdammers zijn trots en blij met het groeiend aanbod van vertier, maar ze maken zich ook zorgen om de drukte. Naast de stedelijke reuring hebben ze ook behoefte aan plekken waar ze tot rust kunnen komen en zich kunnen ontspannen, zowel in de stad als in de regio. Groene en aantrekkelijke buitenruimte speelt hierin een belangrijke rol: om te spelen, te bewegen, om met elkaar in contact te komen en om rust te vinden. De roep om groen klinkt daarom luider. Hoewel Rotterdam relatief veel groene buitenruimte per inwoner heeft, is het groen niet altijd goed bruikbaar en ligt het ook niet altijd op een logische plek. Rotterdam ziet veel kansen om langs de Nieuwe Maas een nieuwe blauw-groene structuur te ontwikkelen die het centrum en de wijken verbindt met de rivier. Ook de Nieuwe Waterweg, de Rotte en de Schie zijn belangrijke dragers voor groene aantrekkelijke buitenruimte.</al>
+                  </Inhoud>
+               </Divisie>
+               <Divisie id="d1e322">
+                  <Kop>
+                     <Opschrift>Openbaar vervoer en de fiets</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <al>Het autogebruik in Rotterdam neemt af. Rotterdammers stappen vaker op de fiets of gaan met het openbaar vervoer. Het gebruik van de fiets in het centrum is de afgelopen tien jaar met 60% gestegen. En ook het aantal metroreizigers neemt toe, mede door de aansluiting van het netwerk op de Randstadrail naar Den Haag. Op metrostation Beurs komen dagelijks al meer reizigers dan op het treinstation van Arnhem. Verdichting van wonen en werken zou daarom plaats moeten vinden rondom bestaande stations zoals Melanchtonweg, Kralingse Zoom, Prins Alexander en ook nieuw te ontwikkelen stations (Stadionpark, Spaanse Polder). Daarnaast is het voor de fietser van belang dat er goede fietsverbindingen zijn tussen de verschillende stadskernen.</al>
+                  </Inhoud>
+               </Divisie>
+               <Divisie id="d1e338">
+                  <Kop>
+                     <Opschrift>Nieuwe economie</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <al>De transities zoals eerder genoemd hebben een grote invloed op de Rotterdamse economie. Daarom ligt er een taak om in te spelen op de behoeften van nieuwe en opkomende economische sectoren. Economische kansen liggen vooral in slimme verbindingen en samenwerkingsverbanden tussen diverse sectoren. Rotterdam wil daarom fysieke plekken creëren rondom toplocaties waar verschillende bedrijven elkaar kunnen ontmoeten die samen nieuwe diensten of producten kunnen ontwikkelen. Op deze manier ontstaat er een nieuwe economie naast de oude met nieuwe niches en werkgelegenheid als resultaat.</al>
+                  </Inhoud>
+               </Divisie>
+            </Divisie>
+            <Divisie id="d1e355">
+               <Kop>
+                  <Opschrift>Elly woont in een compacte stad</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <al>Elly (67 jaar) heeft sinds een jaar geen auto meer. ‘Scheelt toch behoorlijk in de kosten en ik gebruikte hem maar weinig. Alles wat ik dagelijks nodig heb, kan ik lopend of op de fiets bereiken, zoals de supermarkt, de yogastudio en het Concertgebouw de Doelen. Als ik ga oppassen, pak ik gewoon de metro naar mijn dochter en de kleinkinderen in Nesselande.’ Elly is verknocht aan de rauwheid en de dynamiek van de stad. Ook is ze trots</al>
+                  <al class="Afstand_na">op iconen als de Markthal en de Erasmusbrug. Rotterdam is de afgelopen tien jaar drukker en voller geworden, maar ook leefbaarder. ‘Zo fijn dat ik sinds kort een groen parkje om de hoek heb. Wanneer het in de zomer erg warm is op mijn balkon, ga ik daar lekker in de schaduw zitten met een goed boek. Ik vind het heerlijk om naar spelende kinderen en kletsende jongeren te kijken.’</al>
+                  <al>Dit personage is fictief en bedoeld ter illustratie. Het voorbeeld geeft weer hoe het perspectief beleefd kan worden en hoe de doorvertaling van de omgevingsvisie in een later stadium gemaakt kan worden.</al>
+               </Inhoud>
+            </Divisie>
+         </Divisie>
+         <Divisie id="d1e377">
+            <Metadata>
+               <Uitspraak onderwerp="d1e377" eigenschap="tpod:heeftOnderwerp">
+                  <Object type="tpod:Onderwerp">
+                     <Eigenschap naam="onderwerp">
+                        <Waarde type="xs:string">circulair</Waarde>
+                     </Eigenschap>
+                     <Eigenschap naam="locatie">
+                        <Waarde type="imop:XMLIncludeRef">gemeente_rotterdam</Waarde>
+                     </Eigenschap>
+                  </Object>
+               </Uitspraak>
+            </Metadata>
+            <Kop>
+               <Opschrift>Circulaire stad</Opschrift>
+            </Kop>
+            <Inhoud>
+               <al class="Ambitie">Rotterdam ontwikkelt zich als een stad, haven en regio, die voorop loopt in de transitie naar duurzame energie en circulaire processen.</al>
+               <al class="Afstand_na">Wijken worden aardgasvrij en de haveneconomie maakt een overgang door naar schonere energie. Rotterdam draagt zo bij aan een toekomstbestendige wereld, beperking van klimaatverandering en vernieuwing van de economie.</al>
+               <table class="Tabel" frame="all" colsep="1" rowsep="1">
+                  <title>Kernwaarden circulaire stad</title>
+                  <tgroup cols="2">
+                     <colspec colname="col1" colwidth="25"/>
+                     <colspec colname="col2" colwidth="75"/>
+                     <tbody>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image6.png" breedte="100" alt="image6.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>Eigen initiatief</Tussenkop>
+                              <al>Alle rotterdammers worden gestimuleerd tot het nemen van initiatief om zo bij te dragen aan nieuwe circulaire oplossingen</al>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image7.png" breedte="100" alt="image7.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>CO<sub>2</sub>­neutraal</Tussenkop>
+                              <al>Rotterdam is in de toekomst co<sub>2</sub>-neutraal. Daarmee verkleinen we onze ecologische voetafdruk</al>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image8.png" breedte="100" alt="image8.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>Experimenteel</Tussenkop>
+                              <al>In rotterdam is veel ruimte voor experimenten en leren we van nieuwe benaderingen om te komen tot innovaties</al>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image9.png" breedte="100" alt="image9.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>Reststof = grondstof</Tussenkop>
+                              <al>Afval bestaat niet meer. We zien reststoffen als grondstoffen, waardoor er steeds minder nieuwe grondstoffen nodig zijn</al>
+                           </entry>
+                        </row>
+                        <row>
+                           <entry namest="col1" nameend="col1" morerows="0" align="left">
+                              <Figuur>
+                                 <Illustratie class="Figuur" naam="image10.png" breedte="100" alt="image10.png"/>
+                              </Figuur>
+                           </entry>
+                           <entry namest="col2" nameend="col2" morerows="0" align="left">
+                              <Tussenkop>Leiderschap</Tussenkop>
+                              <al>Rotterdam loopt voorop in grensverleggende circulaire initiatieven en toont daarmee leiderschap</al>
+                           </entry>
+                        </row>
+                     </tbody>
+                  </tgroup>
+               </table>
+            </Inhoud>
+            <Divisie id="d1e537">
+               <Kop>
+                  <Opschrift>Wat is een circulaire stad?</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <al>In de circulaire stad bestaat geen afval. Dat komt doordat bewoners en bedrijven efficiënter omgaan met energie, water en grondstoffen. Fabrikanten maken slimmer ontworpen producten met minder materiaal en hergebruiken daar zoveel mogelijk van. Afval is dé nieuwe grondstof in de circulaire stad: alles wat Rotterdammers gebruiken, hergebruiken ze continu opnieuw. Om dit mogelijk te maken, komt er een eind aan de lijn ‘produceren, consumeren, weggooien’. In plaats daarvan maken we de cirkel rond. Zo besparen we behalve energie, water en grondstoffen ook het milieu door de CO<sub>2</sub>-uitstoot te verminderen. Ook wordt energie opgewekt uit duurzame bronnen. Daarnaast stimuleren we in de circulaire stad innovatie, nieuwe bedrijvigheid en werkgelegenheid. Door samenwerking en informatiedeling komen nieuwe interessante verbindingen tot stand die leiden tot grensverleggende circulaire initiatieven.</al>
+               </Inhoud>
+            </Divisie>
+            <Divisie id="d1e555">
+               <Kop>
+                  <Opschrift>Motivatie circulaire stad</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <al>Waarom de circulaire stad een belangrijk perspectief is voor rotterdam.</al>
+               </Inhoud>
+               <Divisie id="d1e569">
+                  <Kop>
+                     <Opschrift>Hergebruik van grondstoffen</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <al>De verwachting is dat de beperkte beschikbaarheid van grondstoffen een van de grootste veiligheidsrisico’s van deze eeuw wordt. Uitputting van grondstoffen, vooral de zogenoemde ‘Rare Earth Metals’ (vooral gebruikt voor mobiele telefoons en afkomstig uit China), en de ingrepen in natuurlijke systemen om grondstoffen te winnen, hebben steeds grotere negatieve gevolgen voor de ecosystemen. Daarnaast zijn sommige grondstoffen slechts op een aantal plekken in de wereld winbaar. Daarom is het belangrijk dat we in Rotterdam zuiniger omgaan met de onze grondstoffen. Door de toegenomen welvaart is de hoeveelheid huishoudelijk afval per Rotterdammer de afgelopen zestig jaar bijna verviervoudigd. Rotterdammers produceren gemiddeld 489 kilo afval per persoon per jaar. Veel afval is echter nog heel goed bruikbaar. Door afval te scheiden besparen we water, grondstoffen en energie. Hiervoor is het van belang dat we ruimte maken om afval op te slaan voor recycling en hergebruik. De druk op de ruimte in Rotterdam is echter groot. Daarom zijn innovatieve oplossingen nodig. Verder zorgen de bouwsector en de inrichting en het beheer van de openbare ruimte voor veel afval. Ook hier liggen kansen voor meer circulaire concepten.</al>
+                  </Inhoud>
+               </Divisie>
+               <Divisie id="d1e584">
+                  <Kop>
+                     <Opschrift>Van eigendom naar gebruik</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <al>Veel producten worden vervangen omdat er een mooiere of betere versie op de markt komt. Daarom maken producenten producten die snel stuk gaan. Mensen en bedrijven geven echter steeds minder om eigendom, maar willen wel betalen voor het gebruik van een product. Prestatie en service zijn hierbij doorslaggevend. Dit betekent dat je geen product, maar een dienst aanschaft. Iemand huurt bijvoorbeeld licht in plaats van een lamp te kopen. Deze ontwikkeling stimuleert de producent een lamp te maken die heel lang meegaat en zo min mogelijk energie verbruikt.</al>
+                     <al>Tegelijkertijd gebruiken mensen lang niet alle producten dagelijks. Het gebruik van een boormachine, barbecue of statafel is vaak slechts enkele malen per jaar. Verschillende websites maken het mogelijk deze producten eenvoudig te lenen van iemand uit de buurt. Het zelfde geldt voor het autogebruik, dat vooral in grote steden afneemt. Rotterdam wil het delen van auto’s op een hoger plan tillen door te experimenteren met deelauto’s voor wijken.</al>
+                  </Inhoud>
+               </Divisie>
+               <Divisie id="d1e602">
+                  <Kop>
+                     <Opschrift>Vernieuwing economie</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <al class="Afstand_na">Digitalisering en verduurzaming van energieopwekking en efficiënt gebruik van productiesystemen, vervoersketens en dienstverlening hebben grote gevolgen voor de economische bedrijvigheid in Rotterdam. Het gaat om vernieuwing én om doorontwikkeling van de bestaande bedrijvigheid. Zo kan de haven een grote rol spelen in opkomende markten van offshore windenergie en het ontmantelen van olie- en gasplatformen. Maasvlakte II kan hieraan ruimte bieden. Op deze manier ontstaat hier nieuwe economische bedrijvigheid en werkgelegenheid op alle beroepsniveaus.</al>
+                     <al>Daarnaast voelen steeds meer Rotterdammers de behoefte om een steentje bij te dragen aan een toekomstbestendige wereld en beperking van de klimaatverandering. Het aantal burgerinitiatieven stijgt de laatste jaren. Rotterdammers nemen zelf het heft in handen door de oprichting van energie- zorg-, voedsel, en andere coöperaties.</al>
+                  </Inhoud>
+               </Divisie>
+               <Divisie id="d1e621">
+                  <Kop>
+                     <Opschrift>Klimaatbeleid</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <al>Om de wereldwijde uitstoot van broeikasgassen terug te brengen, heeft Nederland samen met andere landen met het Parijsakkoord in 2015 getekend voor een ambitieus klimaatbeleid.</al>
+                     <al>Alle landen streven de opwarming te beperken tot maximaal 1,5 graad. Verder wordt in het regeerakkoord van het kabinet Rutte-III een emissiedoel van 49% reductie op broeikasgassen in 2030 genoemd.</al>
+                     <al>Voor Rotterdam ligt er hier een grote opgave voor de haven, waar veel bedrijven veel CO<sub>2</sub> uitstoten. Tegelijkertijd hebben deze bedrijven veel kennis van energie, energie-intensieve productieprocessen en CO<sub>2</sub>-reductie. Dat maakt de haven van Rotterdam bij uitstek geschikt om grootschalige toepassingen van techniek te ontwikkelen om de energietransitie een impuls te geven en de CO<sub>2</sub>-uitstoot fors terug te brengen. Daarnaast is verbetering nodig van het goederenvervoer van en naar de haven. Dat kan door een efficiëntere logistiek en bevordering van elektrisch transport. Het vervoer van goederen zorgt momenteel nog voor veel CO<sub>2</sub> en fijnstof. Maar ook de gebouwde omgeving zorgt nog voor erg veel CO<sub>2</sub>-uitstoot.</al>
+                  </Inhoud>
+               </Divisie>
+               <Divisie id="d1e657">
+                  <Kop>
+                     <Opschrift>Duurzaamheid</Opschrift>
+                  </Kop>
+                  <Inhoud>
+                     <al>We willen enerzijds energie besparen en anderzijds de nog steeds benodigde energie duurzaam gaan opwekken. We zetten ons daarom in om zuiniger en slimmer om te gaan met de beschikbare energie. We willen alle kantoren verduurzamen tot energielabel A, alleen energiepositief nieuwbouwen en alle bestaande woonwijken aardgasvrij maken. Ook maken we ons hard voor het opwekken van hernieuwbare energie. Deze energietransitie vraagt om veel meer ruimte. Naast deze vraag om ruimte gaat het om een aanvaardbare ruimtelijke kwaliteit voor de omgeving. Om de mogelijkheden voor energieopwekking te vergroten en te benutten, hebben we een ruimtelijke visie op energie nodig. Waar komen bijvoorbeeld windmolens te staan? En waar zonnepanelen? Hoe kunnen bewoners en bedrijven thermische energie uit de Nieuwe Maas benutten? Hoe kan het warmtenet worden uitgebreid? En hoe zetten Rotterdammers restwarmte en geothermie in? Het gaat hierbij niet alleen om ingrijpende veranderingen in energiebronnen, maar ook om infrastructuren en systemen, die zoveel mogelijk gekoppeld moeten zijn.</al>
+                  </Inhoud>
+               </Divisie>
+            </Divisie>
+            <Divisie id="d1e674">
+               <Kop>
+                  <Opschrift>René woont in een circulaire stad of buurt</Opschrift>
+               </Kop>
+               <Inhoud>
+                  <al class="Afstand_na">Samen met zestig buurtbewoners is René (40 jaar) een kleine energiecoöperatie gestart. ‘Onze ambitie is om over twee jaar energieneutraal te zijn. Om dat te bereiken zijn alle huizen extra geïsoleerd en van het gasnet afgehaald. Op beschikbare daken zijn zonnepanelen geplaatst en we beheren één van de nieuwe windmolens langs de Maas. Het netwerk van elektrische deelauto’s zorgt voor extra buffercapaciteit op piekmomenten’, vertelt hij trots. Daarnaast is René de drijvende kracht achter de buurtleenapp. ‘Een paar jaar geleden kochten we dit huis en we hebben sindsdien veel zelf verbouwd. Hiervoor hebben we toen allerlei gereedschap aangeschaft. Nadat de ‘klus was geklaard’ lag al dat mooie spul in mijn schuur te verstoffen. Eeuwig zonde. Om andere mensen zo’n enorme kostenpost te besparen, ontwikkelde ik de buurtleenapp waarin buurtgenoten kunnen aangeven wat ze te leen hebben of wat ze graag zouden willen lenen. Wel drie keer per week komt er iemand aan de deur die ik blij kan mak- en met mijn cirkelzaag, slijptol of schuurmachine. En in de zomer regel ik met de buurman dat ik zijn geweldige gasbarbecue zo nu en dan mag lenen. Zo profiteert iedereen van elkaar.’</al>
+                  <al>Dit personage is fictief en is bedoeld ter illustratie. Het voorbeeld geeft weer hoe het perspectief beleefd kan worden en hoe de doorvertaling van de omgevingsvisie in een later stadium gemaakt kan worden.</al>
+               </Inhoud>
+            </Divisie>
+         </Divisie>
+      </Tekst>
+   </Gemeenteblad>
+</OfficielePublicatie>

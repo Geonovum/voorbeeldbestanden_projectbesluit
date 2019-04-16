@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+  <ribbon>
+    <tabs>
+      <tab id="CustomTab" label="STOP/TP">
+        <group idMso="GroupFont"/>
+        <group id="Alinea" label="Alinea">
+          <buttonGroup id="Indent">
+            <button idMso="IndentIncreaseWord"/>
+            <button idMso="IndentDecreaseWord"/>
+          </buttonGroup>
+        </group>
+        <group idMso="GroupStyles"/>
+        <group id="Invoegen" label="Invoegen">
+          <menu id="Annotaties" label="Annotaties" imageMso="Post" screentip="Voeg annotatie toe" supertip="Als extra informatie kunt u een van de volgende annotaties aan de geselecteerde tekst toevoegen.">
+            <button id="Activiteit" label="Activiteit" onAction="Algemeen.ActiviteitForm"/>
+            <button id="Beperkingengebied" label="Beperkingengebied" onAction="Algemeen.BeperkingengebiedForm"/>
+            <button id="Document" label="Document" onAction="Algemeen.DocumentForm"/>
+            <button id="Functie" label="Functie" onAction="Algemeen.FunctieForm"/>
+            <button id="Omgevingsnorm" label="Omgevingsnorm" onAction="Algemeen.OmgevingsnormForm"/>
+            <button id="Omgevingswaarde" label="Omgevingswaarde" onAction="Algemeen.OmgevingswaardeForm"/>
+            <button id="Onderwerp" label="Onderwerp" onAction="Algemeen.OnderwerpForm"/>
+            <button id="Regelkwalificatie" label="Regelkwalificatie" onAction="Algemeen.RegelkwalificatieForm"/>
+            <button id="Relatiekwalificatie" label="Relatiekwalificatie" onAction="Algemeen.RelatiekwalificatieForm"/>
+            <button id="Thema" label="Thema" onAction="Algemeen.ThemaForm"/>
+            <button id="Werkingsgebied" label="Werkingsgebied" onAction="Algemeen.WerkingsgebiedForm"/>
+          </menu>
+          <button idMso="EquationInsertNew" label="Formule"/>
+          <button idMso="HyperlinkInsert" label="Hyperlink"/>
+        </group>
+      </tab>
+    </tabs>
+  </ribbon>
+</customUI>

@@ -1,0 +1,2727 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--OfficielePublicatie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.overheid.nl/imop/def#" xmlns:gml="http://www.opengis.net/gml/3.2" xsi:schemaLocation="http://www.overheid.nl/imop/def# http://technische-documentatie.oep.overheid.nl/poc-toepassingsprofiel/schemas/imop/0.91/xsd/imop_0.91.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd"-->
+<OfficielePublicatie xmlns:gml="http://www.opengis.net/gml/3.2">
+    <Metadata>
+        <Uitspraak eigenschap="imop:citeertitel">
+            <Waarde type="xs:string">Voorbeeld gemeente Amterdam</Waarde>
+        </Uitspraak>
+    </Metadata>
+    <Staatscourant>
+        <Bladaanduiding>
+            <Titelregel>Staatscourant</Titelregel>
+        </Bladaanduiding>
+        <Regeling id="reg041">
+            <RegelingOpschrift>
+                <al>Voorbeeld gemeente Amterdam</al>
+            </RegelingOpschrift>
+            <Lichaam id="reg041_001">
+                <Hoofdstuk id="reg041_hfdst004">
+                    <Metadata>
+                        <Uitspraak onderwerp="reg041_hfdst004" eigenschap="tpod:regelOverActiviteit">
+                            <Object type="tpod:Activiteit">
+                                <Eigenschap naam="activiteit">
+                                    <Waarde type="xs:string">oprichten en in stand houden van bouwwerken</Waarde>
+                                </Eigenschap>
+                                <Eigenschap naam="activiteitengroep">
+                                    <Waarde type="xs:string">bouwactiviteit</Waarde>
+                                </Eigenschap>
+                                <Eigenschap naam="regelkwalificatie">
+                                    <Waarde type="xs:string">algemeneRegel</Waarde>
+                                </Eigenschap>
+                                <Eigenschap naam="locatie">
+                                    <Waarde type="imop:objectRef">plangebied</Waarde>
+                                </Eigenschap>
+                            </Object>
+                        </Uitspraak>
+                    </Metadata>
+                    <Kop>
+                        <Label>Hoofdstuk</Label>
+                        <Nummer>4</Nummer>
+                        <Opschrift>Algemeen van toepassing zijnde regels over activiteiten</Opschrift>
+                    </Kop>
+                    <Artikel id="reg041_hfdst004_art001">
+                        <Metadata>
+                            <Uitspraak onderwerp="reg041_hfdst004_art001_lid002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">oprichten en in stand houden van bouwwerken</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">bouwactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art001_lid003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">oprichten en in stand houden van bouwwerken</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">bouwactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>vergunningplichtig</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art001_lid004_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">oprichten en in stand houden van bouwwerken</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">bouwactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">vergunningvrije_bouwactiviteit_1</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art001_lid004_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">oprichten en in stand houden van bouwwerken</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">bouwactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">vergunningvrije_bouwactiviteit_2</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art001_lid005_001" eigenschap="tpod:bevat">
+                                <Reeks>
+                                    <Object type="tpod:Omgevingsnorm">
+                                        <Eigenschap naam="omgevingsnorm">
+                                            <Waarde type="xs:string">maximumBouwhoogte</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="typeOmgevingsnorm">
+                                            <Waarde type="xs:string">maatvoeringBouwen</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="locatie">
+                                            <Waarde type="imop:objectRef">bouwhoogte_12m</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="waarde">
+                                            <Object type="WaardeEenheidCombinatie">
+                                                <Eigenschap naam="waarde">
+                                                    <Waarde type="xs:string">12</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="eenheid">
+                                                    <Waarde type="xs:string">meter</Waarde>
+                                                </Eigenschap>
+                                            </Object>
+                                        </Eigenschap>
+                                    </Object>
+                                    <Object type="tpod:Omgevingsnorm">
+                                        <Eigenschap naam="omgevingsnorm">
+                                            <Waarde type="xs:string">maximumBouwhoogte</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="typeOmgevingsnorm">
+                                            <Waarde type="xs:string">maatvoeringBouwen</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="locatie">
+                                            <Waarde type="imop:objectRef">bouwhoogte_15m</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="waarde">
+                                            <Object type="WaardeEenheidCombinatie">
+                                                <Eigenschap naam="waarde">
+                                                    <Waarde type="xs:string">15</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="eenheid">
+                                                    <Waarde type="xs:string">meter</Waarde>
+                                                </Eigenschap>
+                                            </Object>
+                                        </Eigenschap>
+                                    </Object>
+                                </Reeks>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art001_lid005_002" eigenschap="tpod:bevat">
+                                <Reeks>
+                                    <Object type="tpod:Omgevingsnorm">
+                                        <Eigenschap naam="omgevingsnorm">
+                                            <Waarde type="xs:string">maximumGoothoogte</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="typeOmgevingsnorm">
+                                            <Waarde type="xs:string">maatvoeringBouwen</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="locatie">
+                                            <Waarde type="imop:objectRef">goothoogte_9m</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="waarde">
+                                            <Object type="WaardeEenheidCombinatie">
+                                                <Eigenschap naam="waarde">
+                                                    <Waarde type="xs:string">9</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="eenheid">
+                                                    <Waarde type="xs:string">meter</Waarde>
+                                                </Eigenschap>
+                                            </Object>
+                                        </Eigenschap>
+                                    </Object>
+                                    <Object type="tpod:Omgevingsnorm">
+                                        <Eigenschap naam="omgevingsnorm">
+                                            <Waarde type="xs:string">maximumGoothoogte</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="typeOmgevingsnorm">
+                                            <Waarde type="xs:string">maatvoeringBouwen</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="locatie">
+                                            <Waarde type="imop:objectRef">goothoogte_12m</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="waarde">
+                                            <Object type="WaardeEenheidCombinatie">
+                                                <Eigenschap naam="waarde">
+                                                    <Waarde type="xs:string">12</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="eenheid">
+                                                    <Waarde type="xs:string">meter</Waarde>
+                                                </Eigenschap>
+                                            </Object>
+                                        </Eigenschap>
+                                    </Object>
+                                </Reeks>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art001_lid006" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">oprichten en in stand houden van bouwwerken</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">bouwactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>beoordelingsregel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">bouwen_na_vergunning_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art001_lid006_001" eigenschap="tpod:bevat">
+                                <Reeks>
+                                    <Object type="tpod:Omgevingsnorm">
+                                        <Eigenschap naam="omgevingsnorm">
+                                            <Waarde type="xs:string">maximumBouwhoogte</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="typeOmgevingsnorm">
+                                            <Waarde type="xs:string">maatvoeringBouwen</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="locatie">
+                                            <Waarde type="imop:objectRef">bouwhoogte_12m</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="waarde">
+                                            <Object type="WaardeEenheidCombinatie">
+                                                <Eigenschap naam="waarde">
+                                                    <Waarde type="xs:string">12</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="eenheid">
+                                                    <Waarde type="xs:string">meter</Waarde>
+                                                </Eigenschap>
+                                            </Object>
+                                        </Eigenschap>
+                                    </Object>
+                                    <Object type="tpod:Omgevingsnorm">
+                                        <Eigenschap naam="omgevingsnorm">
+                                            <Waarde type="xs:string">maximumBouwhoogte</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="typeOmgevingsnorm">
+                                            <Waarde type="xs:string">maatvoeringBouwen</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="locatie">
+                                            <Waarde type="imop:objectRef">bouwhoogte_15m</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="waarde">
+                                            <Object type="WaardeEenheidCombinatie">
+                                                <Eigenschap naam="waarde">
+                                                    <Waarde type="xs:string">15</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="eenheid">
+                                                    <Waarde type="xs:string">meter</Waarde>
+                                                </Eigenschap>
+                                            </Object>
+                                        </Eigenschap>
+                                    </Object>
+                                </Reeks>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>4.1</Nummer>
+                            <Opschrift>Het oprichten en in stand houden van bouwwerken</Opschrift>
+                        </Kop>
+                        <Lid id="reg041_hfdst004_art001_lid001">
+                            <Lidnr>1.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Reikwijdtebepaling</Tussenkop>
+                                <al>Dit artikel is van toepassing behalve daar waar in verband met een toegedeelde functie afwijkende regels over het oprichten en in stand houden van bouwwerken zijn gesteld. [met name bedoeld voor gebiedsontwikkeling en transformatie]</al>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art001_lid002">
+                            <Lidnr>2.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Algemene regels</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij nieuw te bouwen woningen geldt een EPC-waarde van 0,2.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>PM</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art001_lid003">
+                            <Lidnr>3.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Vergunningplicht</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Het is verboden zonder omgevingsvergunning een nieuw bouwwerk op te richten en in stand te houden, dan wel een bestaand bouwwerk te wijzigen en het gewijzigde bouwwerk in stand te houden.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij de beoordeling van een aanvraag om een omgevingsvergunning als bedoeld onder a, nemen burgemeester en wethouders het bepaalde in lid 6 in acht.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art001_lid004">
+                            <Lidnr>4.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Vergunningvrije bouwactiviteiten</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Een omgevingsvergunning voor een activiteit als bedoeld in lid 3 is niet vereist in de volgende gevallen:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Regeling vergunningvrij bouwen Bor overnemen</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Regeling vergunningvrij bouwen Bor overnemen</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Regeling vergunningvrij bouwen Bor overnemen</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art001_lid004_001">
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>In aanvulling op het bepaalde onder a geldt ter plaatse van het <ExtRef doc="https://gnm.maps.arcgis.com/apps/webappviewer/index.html?id=2ca471d015b4444fae0e8a81dcd7b6b5">werkingsgebied vergunningvrije bouwactiviteit 1</ExtRef> dat voor een activiteit als bedoeld in lid 3 evenmin een omgevingsvergunning is vereist in de volgende gevallen:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>regel a</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>regel b</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>regel c</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art001_lid004_002">
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>In aanvulling op het bepaalde onder a geldt ter plaatse van het <ExtRef doc="https://gnm.maps.arcgis.com/apps/webappviewer/index.html?id=a6aabb6655344e58808461dc72e0410f">werkingsgebied vergunningvrije bouwactiviteit 2</ExtRef> dat voor een activiteit als bedoeld in lid 3 evenmin een omgevingsvergunning is vereist in de volgende gevallen:
+                                                </Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>regel a</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>regel b</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>regel c</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij het uitoefenen van een activiteit als bedoeld onder a tot en met c worden de regels uit lid 2, voor zover van toepassing, in acht genomen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art001_lid005">
+                            <Lidnr>5.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Locatiespecifieke vergunningvrije bouwactiviteiten</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Een omgevingsvergunning voor een activiteit als bedoeld in lid 3 is niet vereist ter plaatse van het werkingsgebied ‘bouwen vergunningvrij toegestaan’, mits daarbij, voor zover gesteld, de volgende regels in acht worden genomen:</Lijstaanhef>
+                                                <Li id="reg041_hfdst004_art001_lid005_001">
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de bouwhoogte  bedraagt niet meer  dan de ter plaatse van het werkingsgebied ‘maximum bouwhoogte’ bepaalde waarde;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li id="reg041_hfdst004_art001_lid005_002">
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de goothoogte  bedraagt niet meer dan de ter plaatse van het werkingsgebied ‘maximum goothoogte’  bepaalde waarde;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>[regels in verband met bouwen onder maaiveld];</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>4.</LiNr>
+                                                    <Inhoud>
+                                                        <al>etcetera [de bouwregels uit vigerende bestemmingplannen kunnen zo worden omgezet naar regels voor vergunningvrij bouwen]</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij het uitoefenen van een activiteit als bedoeld onder a worden de regels uit lid 2 voor, zover van toepassing, in acht genomen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art001_lid006">
+                            <Lidnr>6.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Beoordelingsregels vergunningplichtige bouwactiviteiten</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Een omgevingsvergunning voor een activiteit als bedoeld in lid 3 moet in elk geval worden geweigerd voor zover de op te richten bebouwing niet is voorzien ter plaatse van het werkingsgebied ‘bouwen na vergunning toegestaan’.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Een omgevingsvergunning voor een activiteit als bedoeld in lid 3 moet verder in elk geval worden geweigerd voor zover naar het oordeel van burgemeester en wethouders sprake is van:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>onaanvaardbare windhinder of windgevaar; [open norm, invullen met wetsinterpretatieve beleidsregel]</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>onaanvaardbare schaduwwerking; [wetsinterpretatieve beleidsregel]</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>onaanvaardbare grondwatereffecten; [wetsinterpretatieve beleidsregel]</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>4.</LiNr>
+                                                    <Inhoud>
+                                                        <al>PM</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>Burgemeester en wethouders kunnen van de aanvrager om een omgevingsvergunning als bedoeld in lid 3 verzoeken door middel van onderzoek aan te tonen dat geen sprake is van de onder b bedoelde effecten.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Indien de aanvrager niet voldoet aan het verzoek als bedoeld onder c, wordt de omgevingsvergunning geweigerd.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>e.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>In aanvulling op het bepaalde onder a en b geldt dat een omgevingsvergunning voor een activiteit als bedoeld in lid 3 slechts kan en moet worden verleend voor zover daarbij, voor zover gesteld, aan de volgende voorwaarden wordt voldaan:</Lijstaanhef>
+                                                <Li id="reg041_hfdst004_art001_lid006_001">
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de bouwhoogte bedraagt niet meer dan de ter plaatse van het werkingsgebied ‘maximum bouwhoogte’ bepaalde waarde;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>etcetera [de bouwregels uit vigerende bestemmingplannen kunnen zo worden omgezet naar regels voor vergunningvrij bouwen]</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid>
+                            <Lidnr>7.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Instandhoudingstermijn</Tussenkop>
+                                <al>Aan een vergunning als bedoeld in lid 3 kan een instandhoudingstermijn worden verbonden.</al>
+                            </Inhoud>
+                        </Lid>
+                    </Artikel>
+                    <Artikel id="reg041_hfdst004_art002">
+                        <Metadata>
+                            <!-- GW: Regelkwalificatie 'algemeen' staat niet in TPOD.xml. -->
+                            <Uitspraak onderwerp="reg041_hfdst004_art002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">inrichten openbare ruimte</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <!-- GW: beschrijving van de activiteiten uit tekst afleiden. -->
+                            <Uitspraak onderwerp="reg041_hfdst004_art002_lid001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">[activiteiten toevoegen]</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art002_lid002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">inrichten openbare ruimte</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art002_lid003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">dempen van een water</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>vergunningplichtig</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art002_lid004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">verharden van een terrein</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>vergunningplichtig</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art002_lid005" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">aanleggen van een weg</Waarde>
+                                            <Waarde type="xs:string">wijzigen van een weg</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>vergunningplichtig</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>4.2</Nummer>
+                            <Opschrift>Het inrichten van de openbare ruimte</Opschrift>
+                        </Kop>
+                        <Lid id="reg041_hfdst004_art002_lid001">
+                            <Lidnr>1.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Gebruiksdoel van de openbare ruimte</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>De openbare ruimte is bedoeld te worden gebruikt ten behoeve van:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>mobiliteit en verkeersinfrastructuur;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>natuurbeheer en -behoud;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>openbaar nut;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>recreatief medegebruik en ander tijdelijk verblijf;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>e.</LiNr>
+                                        <Inhoud>
+                                            <al>waterberging en waterbeheer;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>f.</LiNr>
+                                        <Inhoud>
+                                            <al>PM</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art002_lid002">
+                            <Lidnr>2.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Algemene bepalingen</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>De openbare ruimte is ingericht met het oog op het in het vorig lid gegeven gebruiksdoelen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>De openbare ruimte is openbaar toegankelijk, maar kan met het oog op het algemeen belang worden afgesloten voor openbare toegankelijkheid.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>Het openbaar belang als bedoeld onder b kan zijn grondslag vinden in een bij of krachtens de Omgevingswet gestelde regel, maar ook in enige andere wettelijke bepaling of besluit. [wel of geen besluit ...]</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art002_lid003">
+                            <Lidnr>3.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Vergunningplicht waterdemping</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Het is verboden zonder vergunning van burgemeester en wethouders bestaand water te dempen voor zover het een demping betreft met een oppervlak groter dan PM m<sup>2</sup>.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>De vergunning als bedoeld onder a wordt uitsluitend en moet worden verleend indien is voldaan aan de volgende voorwaarden:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>aaaaaaaaa</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>bbbbbbbbb</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art002_lid004">
+                            <Lidnr>4.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Vergunningplicht verharding</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Het is verboden zonder vergunning van burgemeester en wethouders bestaand onverhard terrein te verharden voor zover de verharding betrekking heeft op een groter oppervlak dan PM m<sup>2</sup>.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>De vergunning als bedoeld onder a wordt uitsluitend en moet worden verleend indien is voldaan aan de volgende voorwaarden:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>aaaaaaaaa</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>bbbbbbbbb</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art002_lid005">
+                            <Lidnr>5.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Vergunningplicht aanleg of wijziging van een weg</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Het is verboden zonder vergunning van burgemeester en wethouders de ligging van een bestaande rijweg te wijzigen, of een nieuwe rijweg aan te leggen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>De vergunning als bedoeld onder a wordt uitsluitend en moet worden verleend indien is voldaan aan de volgende voorwaarden:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>geluidsregeling</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de aanleg of wijziging van de weg is naar het oordeel van burgemeester en wethouders noodzakelijk met het oog op bereikbaarheid of verkeersveiligheid.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                    </Artikel>
+                    <Artikel id="reg041_hfdst004_art003">
+                        <Metadata>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">wonen</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">inrichten en gebruik eigen erf</Waarde>
+                                            <Waarde type="xs:string">uitoefenen beroep aan huis</Waarde>
+                                            <Waarde type="xs:string">uitoefenen bedrijfsmatige activiteiten aan huis</Waarde>
+                                            <Waarde type="xs:string">aanbieden short stay</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid002_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">inrichten en gebruik eigen erf</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid002_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen beroep aan huis</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid002_003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen bedrijfsmatige activiteiten aan huis</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid002_004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">aanbieden short stay</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitoefenen beroep aan huis</Waarde>
+                                            <Waarde type="xs:string">uitoefenen bedrijfsmatige activiteiten aan huis</Waarde>
+                                            <Waarde type="xs:string">aanbieden short stay</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid003_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen beroep aan huis</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid003_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen bedrijfsmatige activiteiten aan huis</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid003_003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">aanbieden short stay</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid003_003" eigenschap="tpod:bevat">
+                                <Reeks>
+                                    <Object type="tpod:Omgevingsnorm">
+                                        <Eigenschap naam="omgevingsnorm">
+                                            <Waarde type="xs:string">maximumAantalKalenderdagenPerJaarAanbiedenShortStay</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="typeOmgevingsnorm">
+                                            <Waarde type="xs:string">maximumAantalWaardeZieWerkingsgebied</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="locatie">
+                                            <Waarde type="imop:objectRef">maximum_aantal_kalenderdagen_per_jaar_30</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="waarde">
+                                            <Object type="WaardeEenheidCombinatie">
+                                                <Eigenschap naam="waarde">
+                                                    <Waarde type="xs:string">30</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="eenheid">
+                                                    <Waarde type="xs:string">dagen per jaar</Waarde>
+                                                </Eigenschap>
+                                            </Object>
+                                        </Eigenschap>
+                                    </Object>
+                                    <Object type="tpod:Omgevingsnorm">
+                                        <Eigenschap naam="omgevingsnorm">
+                                            <Waarde type="xs:string">maximumAantalKalenderdagenPerJaarAanbiedenShortStay</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="typeOmgevingsnorm">
+                                            <Waarde type="xs:string">maximumAantalWaardeZieWerkingsgebied</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="locatie">
+                                            <Waarde type="imop:objectRef">maximum_aantal_kalenderdagen_per_jaar_60</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="waarde">
+                                            <Object type="WaardeEenheidCombinatie">
+                                                <Eigenschap naam="waarde">
+                                                    <Waarde type="xs:string">60</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="eenheid">
+                                                    <Waarde type="xs:string">dagen per jaar</Waarde>
+                                                </Eigenschap>
+                                            </Object>
+                                        </Eigenschap>
+                                    </Object>
+                                </Reeks>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">aanbieden short stay</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>vergunningplichtig</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid004_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">aanbieden short stay</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>verbod</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art003_lid004_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">aanbieden short stay</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>beoordelingsregel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>4.3</Nummer>
+                            <Opschrift>Wonen</Opschrift>
+                        </Kop>
+                        <Lid>
+                            <Lidnr>1.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Locatiebepaling</Tussenkop>
+                                <al>De activiteit wonen is uitsluitend toegestaan daar waar dit blijkt uit de ter plaatse toegedeelde functie en de daarbij behorende regels.</al>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art003_lid002">
+                            <Lidnr>2.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Bijbehorende activiteiten</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Met inachtneming van de hierna volgende regels zijn daar waar de activiteit wonen is toegestaan tevens de volgende activiteiten toegestaan:</Lijstaanhef>
+                                    <Li id="reg041_hfdst004_art003_lid002_001">
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>het inrichten en gebruik van het eigen erf als tuin, waaronder begrepen het oprichten en instandhouden van erfbebouwing;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art003_lid002_002">
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>het uitoefenen van een aan huis verbonden beroep;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art003_lid002_003">
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>het uitoefenen van kleinschalige bedrijfsmatige activiteiten aan huis;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art003_lid002_004">
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>het niet-bedrijfsmatig aanbieden van short stay.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art003_lid003">
+                            <Lidnr>3.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Algemene regels</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Het inrichten en het gebruik van het eigen erf als tuin is toegestaan behoudens waar het eigen erf behoort tot de openbare ruimte.</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Voor zover het eigen erf behoort tot de openbare ruimte, dan is het bepaalde in artikel [4.2 Het inrichten van de openbare ruimte] van toepassing.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Op het oprichten en instandhouden van erfbebouwing is het bepaalde in artikel [4.2 Het oprichten en instandhouden van bouwwerken] van toepassing.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Het uitoefenen van de volgende activiteiten is uitsluitend toegestaan voor zover de activiteit in een woning door de bewoner zelf wordt uitgeoefend, en tot een maximum van 40% van het vloeroppervlak van de woning:</Lijstaanhef>
+                                                <Li id="reg041_hfdst004_art003_lid003_001">
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het uitoefenen van een aan huis verbonden beroep;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li id="reg041_hfdst004_art003_lid003_002">
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het uitoefenen van kleinschalige bedrijfsmatige activiteiten aan huis.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art003_lid003_003">
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>Het niet-bedrijfsmatig aanbieden van short stay is uitsluitend toegestaan daar waar op <ExtRef doc="https://gnm.maps.arcgis.com/apps/webappviewer/index.html?id=766a8d45cd2c4a3ca6cf0ff13411bec8">Beleidskaart short stay</ExtRef> is aangegeven dat short stay is toegestaan, met inachtneming van het daarbij aangegeven maximum aantal kalenderdagen per jaar [statische verwijzing, zichtbaar te maken met een viewer, zie bijvoorbeeld <ExtRef doc="https://maps.amsterdam.nl/overnachtingsbeleid/?LANG=nl">https://maps.amsterdam.nl/overnachtingsbeleid/?LANG=nl</ExtRef>].</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art003_lid004">
+                            <Lidnr>4.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Vergunningplichtige activiteiten</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li id="reg041_hfdst004_art003_lid004_001">
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Het is verboden zonder vergunning van burgemeester en wethouders niet-bedrijfsmatig short stay aan te bieden in andere gebieden dan bedoeld in lid 3, onder c.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art003_lid004_002">
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Burgemeester en wethouders kunnen omgevingsvergunning verlenen om in afwijking van het bepaalde onder a het niet-bedrijfsmatig aanbieden van short stay toe te staan , waarbij de vergunning uitsluitend mag en moet worden verleend indien:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de aanvraag betrekking heeft op een bestaand pand in het gebied dat op <ExtRef doc="https://gnm.maps.arcgis.com/apps/webappviewer/index.html?id=766a8d45cd2c4a3ca6cf0ff13411bec8">Beleidskaart short stay</ExtRef> is aangegeven als short stay vergunningplichtig;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>dit niet leidt tot een onevenredig aantal aanbieders van short stay in de directe omgeving met als gevolg een onaanvaardbare overlast voor de omgeving; [wetsinterpretatieve beleidsregel]</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de aanbieder aantoonbaar die maatregelen in acht neemt die nodig zijn ter voorkoming van een onaanvaardbare overlast voor de omgeving.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                    </Artikel>
+                    <Artikel id="reg041_hfdst004_art004">
+                        <Metadata>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">exploiteren horeca-inrichting</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitbaten café</Waarde>
+                                            <Waarde type="xs:string">uitbaten bar</Waarde>
+                                            <Waarde type="xs:string">aanbieden fastfood</Waarde>
+                                            <Waarde type="xs:string">exploiteren restaurant</Waarde>
+                                            <Waarde type="xs:string">exploiteren dancing</Waarde>
+                                            <Waarde type="xs:string">exploiteren discotheek</Waarde>
+                                            <Waarde type="xs:string">exploiteren sociëteit</Waarde>
+                                            <Waarde type="xs:string">aanbieden zaalaccommodatie</Waarde>
+                                            <Waarde type="xs:string">uitbaten nachtcafé</Waarde>
+                                            <Waarde type="xs:string">uitbaten van met nachtcafé vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren koffie- en theehuis</Waarde>
+                                            <Waarde type="xs:string">exploiteren lunchroom</Waarde>
+                                            <Waarde type="xs:string">exploiteren juicebar</Waarde>
+                                            <Waarde type="xs:string">exploiteren van met koffie- en theehuis, lunchroom en juicebar vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren onderneming met doel het aanbieden van etenswaren en dranken tegen betaling</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitbaten café</Waarde>
+                                            <Waarde type="xs:string">uitbaten bar</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">aanbieden fastfood</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001_003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">exploiteren restaurant</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001_004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">exploiteren dancing</Waarde>
+                                            <Waarde type="xs:string">exploiteren discotheek</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001_005" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">exploiteren sociëteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001_006" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">aanbieden zaalaccommodatie</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001_007" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitbaten nachtcafé</Waarde>
+                                            <Waarde type="xs:string">uitbaten van met nachtcafé vergelijkbare bedrijven</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001_008" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">exploiteren koffie- en theehuis</Waarde>
+                                            <Waarde type="xs:string">exploiteren lunchroom</Waarde>
+                                            <Waarde type="xs:string">exploiteren juicebar</Waarde>
+                                            <Waarde type="xs:string">exploiteren van met koffie- en theehuis, lunchroom en juicebar vergelijkbare bedrijven</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid001_009" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">exploiteren onderneming met doel het aanbieden van etenswaren en dranken tegen betaling</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitbaten café</Waarde>
+                                            <Waarde type="xs:string">uitbaten bar</Waarde>
+                                            <Waarde type="xs:string">aanbieden fastfood</Waarde>
+                                            <Waarde type="xs:string">exploiteren restaurant</Waarde>
+                                            <Waarde type="xs:string">exploiteren dancing</Waarde>
+                                            <Waarde type="xs:string">exploiteren discotheek</Waarde>
+                                            <Waarde type="xs:string">exploiteren sociëteit</Waarde>
+                                            <Waarde type="xs:string">aanbieden zaalaccommodatie</Waarde>
+                                            <Waarde type="xs:string">uitbaten nachtcafé</Waarde>
+                                            <Waarde type="xs:string">uitbaten van met nachtcafé vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren koffie- en theehuis</Waarde>
+                                            <Waarde type="xs:string">exploiteren lunchroom</Waarde>
+                                            <Waarde type="xs:string">exploiteren juicebar</Waarde>
+                                            <Waarde type="xs:string">exploiteren van met koffie- en theehuis, lunchroom en juicebar vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren onderneming met doel het aanbieden van etenswaren en dranken tegen betaling</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>zorgplicht</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">exploiteren horeca-inrichting</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitbaten café</Waarde>
+                                            <Waarde type="xs:string">uitbaten bar</Waarde>
+                                            <Waarde type="xs:string">aanbieden fastfood</Waarde>
+                                            <Waarde type="xs:string">exploiteren restaurant</Waarde>
+                                            <Waarde type="xs:string">exploiteren dancing</Waarde>
+                                            <Waarde type="xs:string">exploiteren discotheek</Waarde>
+                                            <Waarde type="xs:string">exploiteren sociëteit</Waarde>
+                                            <Waarde type="xs:string">aanbieden zaalaccommodatie</Waarde>
+                                            <Waarde type="xs:string">uitbaten nachtcafé</Waarde>
+                                            <Waarde type="xs:string">uitbaten van met nachtcafé vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren koffie- en theehuis</Waarde>
+                                            <Waarde type="xs:string">exploiteren lunchroom</Waarde>
+                                            <Waarde type="xs:string">exploiteren juicebar</Waarde>
+                                            <Waarde type="xs:string">exploiteren van met koffie- en theehuis, lunchroom en juicebar vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren onderneming met doel het aanbieden van etenswaren en dranken tegen betaling</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>vergunningplicht</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid004_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitbaten café</Waarde>
+                                            <Waarde type="xs:string">uitbaten bar</Waarde>
+                                            <Waarde type="xs:string">aanbieden fastfood</Waarde>
+                                            <Waarde type="xs:string">exploiteren restaurant</Waarde>
+                                            <Waarde type="xs:string">exploiteren dancing</Waarde>
+                                            <Waarde type="xs:string">exploiteren discotheek</Waarde>
+                                            <Waarde type="xs:string">exploiteren sociëteit</Waarde>
+                                            <Waarde type="xs:string">aanbieden zaalaccommodatie</Waarde>
+                                            <Waarde type="xs:string">uitbaten nachtcafé</Waarde>
+                                            <Waarde type="xs:string">uitbaten van met nachtcafé vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren koffie- en theehuis</Waarde>
+                                            <Waarde type="xs:string">exploiteren lunchroom</Waarde>
+                                            <Waarde type="xs:string">exploiteren juicebar</Waarde>
+                                            <Waarde type="xs:string">exploiteren van met koffie- en theehuis, lunchroom en juicebar vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren onderneming met doel het aanbieden van etenswaren en dranken tegen betaling</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>vergunningplicht</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid004_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitbaten café</Waarde>
+                                            <Waarde type="xs:string">uitbaten bar</Waarde>
+                                            <Waarde type="xs:string">aanbieden fastfood</Waarde>
+                                            <Waarde type="xs:string">exploiteren restaurant</Waarde>
+                                            <Waarde type="xs:string">exploiteren dancing</Waarde>
+                                            <Waarde type="xs:string">exploiteren discotheek</Waarde>
+                                            <Waarde type="xs:string">exploiteren sociëteit</Waarde>
+                                            <Waarde type="xs:string">aanbieden zaalaccommodatie</Waarde>
+                                            <Waarde type="xs:string">uitbaten nachtcafé</Waarde>
+                                            <Waarde type="xs:string">uitbaten van met nachtcafé vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren koffie- en theehuis</Waarde>
+                                            <Waarde type="xs:string">exploiteren lunchroom</Waarde>
+                                            <Waarde type="xs:string">exploiteren juicebar</Waarde>
+                                            <Waarde type="xs:string">exploiteren van met koffie- en theehuis, lunchroom en juicebar vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren onderneming met doel het aanbieden van etenswaren en dranken tegen betaling</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>beoordelingsregel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid004_003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitbaten café</Waarde>
+                                            <Waarde type="xs:string">uitbaten bar</Waarde>
+                                            <Waarde type="xs:string">aanbieden fastfood</Waarde>
+                                            <Waarde type="xs:string">exploiteren restaurant</Waarde>
+                                            <Waarde type="xs:string">exploiteren dancing</Waarde>
+                                            <Waarde type="xs:string">exploiteren discotheek</Waarde>
+                                            <Waarde type="xs:string">exploiteren sociëteit</Waarde>
+                                            <Waarde type="xs:string">aanbieden zaalaccommodatie</Waarde>
+                                            <Waarde type="xs:string">uitbaten nachtcafé</Waarde>
+                                            <Waarde type="xs:string">uitbaten van met nachtcafé vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren koffie- en theehuis</Waarde>
+                                            <Waarde type="xs:string">exploiteren lunchroom</Waarde>
+                                            <Waarde type="xs:string">exploiteren juicebar</Waarde>
+                                            <Waarde type="xs:string">exploiteren van met koffie- en theehuis, lunchroom en juicebar vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren onderneming met doel het aanbieden van etenswaren en dranken tegen betaling</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>beoordelingsregel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art004_lid004_004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitbaten café</Waarde>
+                                            <Waarde type="xs:string">uitbaten bar</Waarde>
+                                            <Waarde type="xs:string">aanbieden fastfood</Waarde>
+                                            <Waarde type="xs:string">exploiteren restaurant</Waarde>
+                                            <Waarde type="xs:string">exploiteren dancing</Waarde>
+                                            <Waarde type="xs:string">exploiteren discotheek</Waarde>
+                                            <Waarde type="xs:string">exploiteren sociëteit</Waarde>
+                                            <Waarde type="xs:string">aanbieden zaalaccommodatie</Waarde>
+                                            <Waarde type="xs:string">uitbaten nachtcafé</Waarde>
+                                            <Waarde type="xs:string">uitbaten van met nachtcafé vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren koffie- en theehuis</Waarde>
+                                            <Waarde type="xs:string">exploiteren lunchroom</Waarde>
+                                            <Waarde type="xs:string">exploiteren juicebar</Waarde>
+                                            <Waarde type="xs:string">exploiteren van met koffie- en theehuis, lunchroom en juicebar vergelijkbare bedrijven</Waarde>
+                                            <Waarde type="xs:string">exploiteren onderneming met doel het aanbieden van etenswaren en dranken tegen betaling</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>attribuerenBevoegdheidMaatwerkvoorschriftenVergunningvoorschriftenTeStellen</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>4.4</Nummer>
+                            <Opschrift>Het exploiteren van een horecabedrijf</Opschrift>
+                        </Kop>
+                        <Lid id="reg041_hfdst004_art004_lid001">
+                            <Lidnr>1.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Locatiebepaling</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>De volgende activiteiten zijn uitsluitend toegestaan daar waar dit blijkt uit de ter plaatse toegedeelde functie en de daarbij behorende regels:</Lijstaanhef>
+                                    <Li id="reg041_hfdst004_art004_lid001_001">
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>het uitbaten van een café of bar;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid001_002">
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanbieden van fastfood;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid001_003">
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>het exploiteren van een restaurant;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid001_004">
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>het exploiteren van dancing of discotheek;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid001_005">
+                                        <LiNr>e.</LiNr>
+                                        <Inhoud>
+                                            <al>Het exploiteren van een sociëteit;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid001_006">
+                                        <LiNr>f.</LiNr>
+                                        <Inhoud>
+                                            <al>Het aanbieden van zaalaccommodatie voor feesten en partijen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid001_007">
+                                        <LiNr>g.</LiNr>
+                                        <Inhoud>
+                                            <al>Het uitbaten van een nachtcafé en naar de aard daarmee te vergelijken bedrijven;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid001_008">
+                                        <LiNr>h.</LiNr>
+                                        <Inhoud>
+                                            <al>Het exploiteren van een koffie- en theehuis, lunchroom, juicebar en naar de aard daarmee te vergelijken bedrijven;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid001_009">
+                                        <LiNr>i.</LiNr>
+                                        <Inhoud>
+                                            <al>Het exploiteren van een andere onderneming dan genoemd onder a tot en met h, die als doel heeft het aanbieden van etenswaren en dranken tegen betaling , al dan niet in combinatie met ... [vangnet, vanwege verordenend karakter; slechts verboden wat is benoemd]</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art004_lid002">
+                            <Lidnr>2.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Zorgplicht</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Op de exploitant van een van de in het eerste lid genoemde activiteiten rust de bijzondere plicht er zo veel als binnen zijn macht ligt zorg voor te dragen dat gedragingen van bezoekers binnen en in de directe omgeving van het etablissement niet leiden tot onaanvaardbare overlast in de fysieke leefomgeving.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>Tot de bijzondere zorgplicht als bedoeld onder a behoort in elk geval het zo veel mogelijk voorkomen dat bezoekers van het etablissement bij het tijdelijk of definitief verlaten van het pand geluidsoverlast veroorzaken.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art004_lid003">
+                            <Lidnr>3.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Algemene regels</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Bij het uitoefenen van de in het eerste lid bedoelde activiteiten wordt in elk geval het volgende in acht genomen:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>overnemen van toepassing zijnde regels uit het activiteitenbesluit</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>overnemen andere algemene regels, o.a. delen van de APV</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art004_lid004">
+                            <Lidnr>4.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Vergunningplichtige activiteiten</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li id="reg041_hfdst004_art004_lid004_001">
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Het is verboden zonder omgevingsvergunning een van de in het eerste lid bedoelde activiteiten uit te oefenen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid004_002">
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>Een vergunning als bedoeld onder a kan alleen en moet worden verleend indien de uitoefening van de desbetreffende activiteit naar het oordeel van burgemeester en wethouders niet leidt tot een onaanvaardbare overlast op de fysieke leefomgeving.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid004_003">
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Bij de beoordeling als bedoeld onder b betrekken burgemeester en wethouders in elk geval:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het karakter van de omgeving;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de aard en omvang van de activiteit;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de mate van geluidsoverlast;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>4.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de parkeerdruk in de omgeving;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>5.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de regels elders in dit plan;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>6.</LiNr>
+                                                    <Inhoud>
+                                                        <al>overige aspecten die naar het oordeel van burgemeester en wethouders ... [lekkere vangnetbepaling]</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art004_lid004_004">
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Met het oog op de onder c genoemde belangen kunnen burgemeester en wethouders aan de vergunning voorwaarden verbinden.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                    </Artikel>
+                    <Artikel id="reg041_hfdst004_art005">
+                        <Metadata>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen detailhandel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitoefenen reguliere detailhandel</Waarde>
+                                            <Waarde type="xs:string">uitoefenen perifere detailhandel</Waarde>
+                                            <Waarde type="xs:string">exploiteren supermarkt</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in brand- en explosiegevaarlijke stoffen</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in vuurwerk</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid001_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen reguliere detailhandel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid001_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen perifere detailhandel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid001_003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">exploiteren supermarkt</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid001_004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen detailhandel in brand- en explosiegevaarlijke stoffen</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid001_005" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen detailhandel in vuurwerk</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitoefenen reguliere detailhandel</Waarde>
+                                            <Waarde type="xs:string">uitoefenen perifere detailhandel</Waarde>
+                                            <Waarde type="xs:string">exploiteren supermarkt</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in brand- en explosiegevaarlijke stoffen</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in vuurwerk</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>algemeneRegel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen detailhandel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>meldingplicht</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen detailhandel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>vergunningplicht</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid004_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in brand- en explosiegevaarlijke stoffen</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in vuurwerk</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>vergunningplicht</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid004_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitoefenen reguliere detailhandel</Waarde>
+                                            <Waarde type="xs:string">uitoefenen perifere detailhandel</Waarde>
+                                            <Waarde type="xs:string">exploiteren supermarkt</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in brand- en explosiegevaarlijke stoffen</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in vuurwerk</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>beoordelingsregel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid004_003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitoefenen reguliere detailhandel</Waarde>
+                                            <Waarde type="xs:string">uitoefenen perifere detailhandel</Waarde>
+                                            <Waarde type="xs:string">exploiteren supermarkt</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in brand- en explosiegevaarlijke stoffen</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in vuurwerk</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>beoordelingsregel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst004_art005_lid004_004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Reeks>
+                                            <Waarde type="xs:string">uitoefenen reguliere detailhandel</Waarde>
+                                            <Waarde type="xs:string">uitoefenen perifere detailhandel</Waarde>
+                                            <Waarde type="xs:string">exploiteren supermarkt</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in brand- en explosiegevaarlijke stoffen</Waarde>
+                                            <Waarde type="xs:string">uitoefenen detailhandel in vuurwerk</Waarde>
+                                        </Reeks>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>attribuerenBevoegdheidMaatwerkvoorschriftenVergunningvoorschriftenTeStellen</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">plangebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>4.5</Nummer>
+                            <Opschrift>Het uitoefenen van detailhandel</Opschrift>
+                        </Kop>
+                        <Lid id="reg041_hfdst004_art005_lid001">
+                            <Lidnr>1.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Locatiebepaling</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>De volgende activiteiten zijn uitsluitend toegestaan daar waar dit blijkt uit de ter plaatse toegedeelde functie en de daarbij behorende regels:</Lijstaanhef>
+                                                <Li id="reg041_hfdst004_art005_lid001_001">
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het uitoefenen van reguliere detailhandel/of: detailhandel in dagelijkse goederen;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li id="reg041_hfdst004_art005_lid001_002">
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het uitoefenen van perifere detailhandelsvormen; [wetsinterpretatieve beleidsregel of begripsbepaling?]</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li id="reg041_hfdst004_art005_lid001_003">
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het exploiteren van een supermarkt;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li id="reg041_hfdst004_art005_lid001_004">
+                                                    <LiNr>4.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het verkopen van brand- en explosiegevaarlijke stoffen, niet zijnde vuurwerk;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li id="reg041_hfdst004_art005_lid001_005">
+                                                    <LiNr>5.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het verkopen van vuurwerk;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>6.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het verkopen van ...</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>De bij de toegedeelde functie behorende regels kunnen onder meer een branchebeperking inhouden.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art005_lid002">
+                            <Lidnr>2.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Algemene regels</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Het uitoefenen van de in het vorig lid bedoelde activiteiten is uitsluitend toegestaan in een omvang zoals die blijkt uit de ter plaatse toegedeelde functie en de daarbij behorende regels.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Bij het uitoefenen van de in het vorig lid bedoelde activiteiten wordt in elk geval het volgende in acht genomen:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>overnemen van toepassing zijnde regels uit het activiteitenbesluit</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>overnemen andere algemene regels</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art005_lid003">
+                            <Lidnr>3.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Meldingsplichtige activiteiten</Tussenkop>
+                                <al>PM</al>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst004_art005_lid004">
+                            <Lidnr>4.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Vergunningplichtige activiteiten</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li id="reg041_hfdst004_art005_lid004_001">
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Het is verboden zonder omgevingsvergunning een activiteit als bedoeld in het eerste lid, onder a, onder 4 en 5, uit te oefenen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art005_lid004_002">
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>Een vergunning als bedoeld onder a kan alleen en moet worden verleend indien de uitoefening van de desbetreffende activiteit naar het oordeel van burgemeester en wethouders niet leidt tot een onaanvaardbare veiligheidsrisico’s voor de fysieke leefomgeving. [beleidsregels]</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art005_lid004_003">
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Bij de beoordeling als bedoeld onder b betrekken burgemeester en wethouders in elk geval:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>het karakter van de omgeving;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de aard en omvang van de activiteit;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>de mate van veiligheidsrisco;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>4.</LiNr>
+                                                    <Inhoud>
+                                                        <al>overige aspecten die naar het oordeel van burgemeester en wethouders ... [lekkere vangnetbepaling]</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst004_art005_lid004_004">
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Met het oog op de onder c genoemde belangen kunnen burgemeester en wethouders aan de vergunning voorwaarden verbinden.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                    </Artikel>
+                </Hoofdstuk>
+                <Hoofdstuk id="reg041_hfdst005">
+                    <Metadata>
+                        <Uitspraak onderwerp="reg041_hfdst005" eigenschap="tpod:onderwerp">
+                            <Waarde type="xs:string">functietoedeling</Waarde>
+                        </Uitspraak>
+                    </Metadata>
+                    <Kop>
+                        <Label>Hoofdstuk</Label>
+                        <Nummer>5</Nummer>
+                        <Opschrift>Functietoedeling en daarmee verband houdende regels</Opschrift>
+                    </Kop>
+                    <Artikel id="reg041_hfdst005_art001">
+                        <Metadata>
+                            <Uitspraak onderwerp="reg041_hfdst005_art001" eigenschap="tpod:heeftFunctie">
+                                <Object type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">woongebied</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">wonen</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">woongebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst005_art001_lid002_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">wonen</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">wonen_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst005_art001_lid002_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitbaten café</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">cafe_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst005_art001_lid002_003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen reguliere detailhandel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">detailhandel_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst005_art001_lid002_004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">exploiteren supermarkt</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">supermarkt_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>5.1</Nummer>
+                            <Opschrift>Functie woongebied</Opschrift>
+                        </Kop>
+                        <Lid>
+                            <Lidnr>1.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Doel functietoedeling</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al><ExtRef doc="https://gnm.maps.arcgis.com/apps/webappviewer/index.html?id=d6dfd84e34c24328839ad3c77c11a333">Locaties waaraan de functie woongebied is toegedeeld</ExtRef>, zijn bedoeld voor het realiseren en instandhouden van een kwalitatieve en vitale woonomgeving.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>Naast het gebruik voor de gebruiksactiviteit wonen is er ruimte voor andere gebruiksactiviteiten die bijdragen aan het onder a gestelde doel, in de vorm van wijkverzorgende en wijkgeoriënteerde voorzieningen, voor zover deze geen afbreuk doen aan een goede woon- en leefomgevingskwaliteit, een en ander met inachtneming van de overige bepalingen in dit artikel.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>Voor zover de locatie niet is bedoeld voor het uitoefenen van een van de in het volgende lid genoemde activiteiten, dan dienen de gronden te worden ingericht als openbare ruimte zoals bedoeld in artikel [4.2 Het inrichten van de openbare ruimte].</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst005_art001_lid002">
+                            <Lidnr>2.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Regels over gebruiksactiviteiten</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Gronden en bestaande bouwwerken die niet behoren tot de openbare ruimte mogen met inachtneming van worden gebruikt ten behoeve van de volgende gebruiksactiviteiten:</Lijstaanhef>
+                                    <Li id="reg041_hfdst005_art001_lid002_001">
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef><IntRef idref="reg041_hfdst004_art003">wonen</IntRef>, uitsluitend ter plaatse van het werkingsgebied ‘wonen toegestaan’ en, voor zover gesteld, met inachtneming het volgende:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Situering: uitsluitend op de [WAARDE] verdieping;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Omvang: maximaal [WAARDE] woningen;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst005_art001_lid002_002">
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>het uitbaten van een (buurt)café, uitsluitend ter plaatse van het werkingsgebied ‘(buurt)café toegestaan’, en, voor zover gesteld, met inachtneming het volgende:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Situering: uitsluitend op de [WAARDE] verdieping</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Omvang: maximaal [WAARDE] m<sup>2</sup> brutovloeroppervlak;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst005_art001_lid002_003">
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>het uitoefenen van reguliere detailhandel, uitsluitend ter plaatse van het werkingsgebied ‘reguliere detailhandel toegestaan’, en, voor zover gesteld, met inachtneming het volgende:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Situering: uitsluitend op de [WAARDE] verdieping</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Omvang: maximaal [WAARDE] m<sup>2</sup> brutovloeroppervlak;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst005_art001_lid002_004">
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>het exploiteren van een supermarkt, uitsluitend ter plaatse van het werkingsgebied ‘supermarkt toegestaan’, en, voor zover gesteld, met inachtneming het volgende:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Situering: uitsluitend op de [WAARDE] verdieping</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Omvang: maximaal [WAARDE] m<sup>2</sup> brutovloeroppervlak.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                    </Artikel>
+                    <Artikel id="reg041_hfdst005_art002">
+                        <Metadata>
+                            <Uitspraak onderwerp="reg041_hfdst005_art002" eigenschap="tpod:heeftFunctie">
+                                <Object type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">winkelcentrum</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">detailhandel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">winkelcentrum</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst005_art002_lid002_001" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">exploiteren supermarkt</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">supermarkt_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst005_art002_lid002_002" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitoefenen reguliere detailhandel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">detailhandel_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst005_art002_lid002_003" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">uitbaten café</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">cafe_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst005_art002_lid002_004" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">exploiteren restaurant</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">restaurant_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="reg041_hfdst005_art002_lid002_005" eigenschap="tpod:regelOverActiviteit">
+                                <Object type="tpod:Activiteit">
+                                    <Eigenschap naam="activiteit">
+                                        <Waarde type="xs:string">wonen</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="activiteitengroep">
+                                        <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="regelkwalificatie">
+                                        <Waarde>toegestaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">wonen_toegestaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>5.2</Nummer>
+                            <Opschrift>Functie winkelcentrum</Opschrift>
+                        </Kop>
+                        <Lid>
+                            <Lidnr>1.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Doel functietoedeling</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>Locaties waaraan de functie winkelcentrum is toegedeeld, zijn bedoeld voor het realiseren en instandhouden van ...</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>De openbare ruimte is bedoeld voor verkeers- en verblijfsactiviteiten en het daartoe inrichten ervan, alsmede ten behoeve van het inrichten en in stand houden van groen- en watervoorzieningen en het daarbij redelijkerwijze passend recreatief medegebruik.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                        <Lid id="reg041_hfdst005_art002_lid002">
+                            <Lidnr>2.</Lidnr>
+                            <Inhoud>
+                                <Tussenkop>Regels over gebruiksactiviteiten</Tussenkop>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Gronden en bestaand bouwwerken die niet behoren tot de openbare ruimte zijn met inachtneming van de overige bepalingen in dit artikel beoogd te worden gebruikt ten behoeve van de volgende gebruiksactiviteiten:</Lijstaanhef>
+                                    <Li id="reg041_hfdst005_art002_lid002_001">
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>het exploiteren van een supermarkt, en, voor zover gesteld, met inachtneming het volgende:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Situering: uitsluitend op de [WAARDE] verdieping;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Omvang: maximaal [WAARDE] m<sup>2</sup> brutovloeroppervlak;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Aantal: maximaal [WAARDE];</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst005_art002_lid002_002">
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>het uitoefenen van reguliere detailhandel, en, voor zover gesteld, met inachtneming het volgende:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Situering: uitsluitend op de [WAARDE] verdieping;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Omvang: maximaal [WAARDE] m<sup>2</sup> brutovloeroppervlak;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>[...]</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>[...]</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst005_art002_lid002_003">
+                                        <LiNr>e.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>het uitbaten van een (buurt)café, uitsluitend ter plaatse van het werkingsgebied ‘(buurt)café toegestaan’, en, voor zover gesteld, met inachtneming het volgende:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Situering: uitsluitend op de [WAARDE] verdieping;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Omvang: maximaal [WAARDE] m<sup>2</sup> brutovloeroppervlak</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Aantal: maximaal [WAARDE];</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst005_art002_lid002_004">
+                                        <LiNr>f.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>het exploiteren van een restaurant, uitsluitend ter plaatse van het werkingsgebied ‘restaurant toegestaan’, en, voor zover gesteld, met inachtneming het volgende:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Situering: uitsluitend op de [WAARDE] verdieping;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Omvang: maximaal [WAARDE] m<sup>2</sup> brutovloeroppervlak</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Aantal: maximaal [WAARDE];</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li id="reg041_hfdst005_art002_lid002_005">
+                                        <LiNr>g.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>wonen, uitsluitend ter plaatse van het werkingsgebied ‘wonen toegestaan’ en, voor zover gesteld, met inachtneming het volgende:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Situering: uitsluitend op de [WAARDE] verdieping;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>Omvang: maximaal [WAARDE] woningen;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Lid>
+                    </Artikel>
+                </Hoofdstuk>
+            </Lichaam>
+        </Regeling>
+    </Staatscourant>
+</OfficielePublicatie>

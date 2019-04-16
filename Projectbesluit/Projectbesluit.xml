@@ -1,0 +1,1178 @@
+<?xml version="1.0" encoding="utf-8"?><OfficielePublicatie xmlns:gml="http://www.opengis.net/gml/3.2">
+
+    <Metadata>
+        <Uitspraak eigenschap="imop:typeDocument">
+            <Waarde type="xs:string">Projectbesluit</Waarde>
+        </Uitspraak>
+        <Uitspraak eigenschap="imop:conformProfiel">
+            <Waarde type="xs:string">TPOD Projectbesluit V0.90</Waarde>
+        </Uitspraak>
+        <Uitspraak eigenschap="imop:citeertitel">
+            <Waarde>Projectbesluit Zuidas 2018</Waarde>
+        </Uitspraak>
+        <Uitspraak eigenschap="imop:datumLaatsteWijziging">
+            <Waarde type="xs:date">2018-06-12</Waarde>
+        </Uitspraak>
+        <Uitspraak eigenschap="imop:werkingsgebied">
+            <Waarde type="imop:objectRef">werkingsgebied_projectbesluit_zuidas_20180320</Waarde>
+        </Uitspraak>
+    </Metadata>
+    <Staatsblad>
+        <Tekst id="d1e40">
+            <Kop>
+                <Opschrift>Projectbesluit Zuidas 2018</Opschrift>
+            </Kop>
+            <Divisie id="d1e48">
+                <Kop>
+                    <Opschrift>Inleiding</Opschrift>
+                </Kop>
+                <Divisie id="d1e56">
+                    <Kop>
+                        <Opschrift>Algemeen</Opschrift>
+                    </Kop>
+                    <Inhoud>
+                        <al>Zoals ook aangegeven in de Rijksstructuurvisie Infrastructuur en Ruimte (SVIR) en de gemeentelijke structuurvisie Amsterdam 2040 ontwikkelt de Zuidas zich tot internationale toplocatie voor wonen en werken in de metropoolregio Amsterdam. De uitstekende bereikbaarheid, de kwalitatief hoogwaardige omgeving en de economische aantrekkingskracht van Amsterdam vormen de grondslagen voor een succesvolle ontwikkeling. Een ontwikkeling waarmee de internationale concurrentiekracht wordt vergroot en de economische positie van Nederland in Europa en de rest van de wereld versterkt.</al>
+                        <al>Sinds de vaststelling van het Masterplan Zuidas door de gemeenteraad van Amsterdam in 1998 wordt de ontwikkelingsstrategie voor de Zuidas uitgewerkt in verschillende deelprojecten. Eén van deze deelprojecten is het project Zuidasdok van ProRail, Rijkswaterstaat en de gemeente Amsterdam. In de Structuurvisie ZuidasDok en het ambitiedocument zijn de ambities voor de ontwikkeling weergegeven. In de Structuurvisie zijn doelen gesteld om de bereikbaarheid van de noordelijke Randstad te verbeteren én Zuidas zich verder te laten ontwikkelen als internationale toplocatie en hoogwaardig stedelijk gebied. Het ambitiedocument geeft richting aan de infrastructurele ontwikkeling en inpassing van Zuidasdok en is te beschouwen als nadere uitwerking van deze Structuurvisie ZuidasDok. Deze twee documenten samen vormen de basis voor dit bestemmingsplan.</al>
+                    </Inhoud>
+                </Divisie>
+                <Divisie id="d1e74">
+                    <Kop>
+                        <Opschrift>Tracébesluit en bestemmingsplan</Opschrift>
+                    </Kop>
+                    <Inhoud>
+                        <al>Het project Zuidasdok omvat zowel de aanpassingen aan station Amsterdam Zuid ten behoeve van de capaciteitvergroting en de opwaardering tot een volwaardige openbaarvervoerterminal (OVT) als aanpassingen aan de A10, waaronder de uitbreiding naar twee maal zes rijstroken en het - ter hoogte van het plangebied - ondertunnelen van de A10. Het tracébesluit maakt de totale wegverbreding van knooppunt Amstel tot knooppunt De Nieuwe Meer inclusief het plaatselijk ondergronds brengen van de A10 mogelijk. Het bestemmingsplan regelt de openbaarvervoerterminal, de tunneldaken, aangrenzende gronden en een langzaamverkeersverbinding ter hoogte van het Beatrixpark. De infrastructurele aanpassingen en de gebiedsontwikkeling kunnen niet los van elkaar worden gezien. Omdat het hier een integrale gebiedsontwikkeling betreft, is gekozen om het tracébesluit en het bestemmingsplan voor dit gebied zoveel mogelijk parallel te laten lopen.</al>
+                        <al>Het onderhavige bestemmingsplan beoogt voor de gronden die binnen het bestemmingsplangebied vallen het tracébesluit te incorporeren. Het gaat daarbij om de parallel aan het station gelegen gronden, waar de 2 verkeerstunnels zijn voorzien. Daarmee zijn de verbreding van de A10 en de ondertunneling voor dit bestemmingsplan een gegeven.</al>
+                        <al>Het tracébesluit wordt vastgesteld door de Minister van Infrastructuur en Milieu. De gemeenteraad stelt vervolgens het bestemmingsplan Zuidasdok vast, waarbij in aanvulling op de verbreding en de ondertunneling een juridisch planologisch kader wordt geboden voor de verbouw van de openbaarvervoerterminal en de inrichting van de tunneldaken.</al>
+                        <al>Met dit bestemmingsplan wordt voor dit gebied voldaan aan de verplichting om binnen een jaar nadat het tracébesluit onherroepelijk is geworden een bestemmingsplan overeenkomstig het tracébesluit vast te stellen (artikel 13, lid 10 Tracéwet). Voor de overige gronden blijft vooralsnog het tracébesluit het geldende planologisch regime waaraan ontwikkelingen getoetst dienen te worden. Het bestemmingsplan regelt de openbaarvervoerterminal, de functies op de tunneldaken en de langzaamverkeersbrug ter hoogte van de RAI.</al>
+                        <al>In de volgende paragraaf wordt ingegaan op de bevoegdheden omtrent dit plan, waarna aandacht wordt besteed aan de Crisis- en herstelwet. Aan het einde van dit hoofdstuk is de leeswijzer opgenomen, waarin verder inzichtelijk wordt gemaakt hoe deze toelichting en ook regels en verbeelding tot stand zijn gekomen en opgebouwd.</al>
+                    </Inhoud>
+                </Divisie>
+                <Divisie id="d1e101">
+                    <Kop>
+                        <Opschrift>Planning</Opschrift>
+                    </Kop>
+                    <Inhoud>
+                        <al>Het project Zuidasdok doorloopt verschillende fasen volgens het Meerjarenprogramma Infrastructuur, Ruimte en Transport (MIRT). Het MIRT gaat over de financiële investeringen in deze integrale gezamenlijke oplossingen (programma’s en projecten). Momenteel bevindt het project zich in fase twee: de planuitwerkingsfase.</al>
+                        <Tussenkop>Eerste fase: verkenning</Tussenkop>
+                        <al>De eerste fase van het project Zuidasdok was de verkenningsfase. Kern van de verkenningsfase is het trechteringsproces: van veel oplossingsrichtingen trechteren naar een robuuste voorkeursbeslissing met één voorkeursalternatief. Op 9 juli 2012 is overeenstemming over dit voorkeursalternatief bereikt. Op die dag is de Structuurvisie Zuidasdok vastgesteld, inclusief het Milieueffectrapport (met bijlagen). De Structuurvisie beschrijft het (ruimtelijk) kader waarbinnen de ontwikkelingen van Zuidasdok vorm krijgen. In het planMER worden mogelijke milieueffecten in beeld gebracht.</al>
+                        <Tussenkop>Tweede fase: planuitwerking</Tussenkop>
+                        <al>In de huidige fase van het project - de planuitwerkingsfase (2013 - 2016) - worden / zijn een projectMER, een (Ontwerp) tracébesluit en een (Ontwerp) bestemmingsplan gemaakt. Hiervoor is reeds ingegaan op de verhouding tussen tracébesluit en bestemmingsplan. In hoofdstuk 5 wordt ingegaan op het projectMER. (Ontwerp)tracébesluit en (Ontwerp) bestemmingsplan doorlopen in 2015 hun procedures. Eerst wordt het tracébesluit vastgesteld, waarna dit (deels) geïncorporeerd wordt in het bestemmingsplan, bij vaststelling hiervan. Naar verwachting zullen deze in 2016 van kracht zijn. Hierna kan worden gestart met de daadwerkelijke realisatie van het project. Vervolgens wordt in 2027 de afronding van de werkzaamheden aan de A10 verwacht, waarna in 2028 het totale project zal zijn gerealiseerd. Gedurende deze periode van in totaal 12 jaar wordt niet overal tegelijk gewerkt. De overlast op één locatie zal dus niet 12 jaar aanhouden, maar slechts een deel hiervan.</al>
+                    </Inhoud>
+                </Divisie>
+                <Divisie id="d1e128">
+                    <Kop>
+                        <Opschrift>Bevoegdheden</Opschrift>
+                    </Kop>
+                    <Inhoud>
+                        <al>Het plangebied is gelegen binnen de grenzen van het stadsdeel Zuid. Bij besluiten van de gemeenteraad van 1997, 29 oktober 2003 en 13 juli 2011 is de Zuidas, waar het bestemmingsplangebied deel van uitmaakt, aangewezen als grootstedelijk project. Voor grootstedelijke projecten geldt dat alle bevoegdheden op grond van de Wet ruimtelijke ordening bij de centrale stad en dus het college van Burgemeester &amp; Wethouders en de gemeenteraad liggen. De bevoegdheid tot het in ontwerp ter visie leggen en het vaststellen van het onderhavige bestemmingsplan is dus aan de gemeenteraad toegekend.</al>
+                        <al>Na de terinzageligging van het ontwerpbestemmingsplan is de bestuurlijke structuur van de gemeente Amsterdam gewijzigd. De stadsdelen zijn omgezet in Bestuurscommissies, waarbij overigens de term stadsdelen nog wel wordt gebezigd. De bevoegdheid tot vaststelling van bestemmingsplannen is nu voor de gehele gemeente overgegaan naar de gemeenteraad. Voor het onderhavige bestemmingsplan is er in dit verband geen sprake van een wijziging.</al>
+                    </Inhoud>
+                </Divisie>
+                <Divisie id="d1e147">
+                    <Kop>
+                        <Opschrift>Crisis- en herstelwet</Opschrift>
+                    </Kop>
+                    <Inhoud>
+                        <al>Zuidasdok is in het kader van de zevende tranche (inwerkingtreding 15 mei 2014; Stb 2014, nr. 168) opgenomen in bijlage 2 van de Crisis- en herstelwet als overig ruimtelijk project. De ontwikkeling wordt daarin aangehaald als een “Combinatie van stedelijke ontwikkeling en verbetering van bereikbaarheid, zowel via de weg als het openbaar vervoer. Onderdelen van het project zijn herinrichting van de A10-Zuid en de knooppunten Nieuwe Meer en Amstel en herinrichting van de openbaarvervoerterminal.” In de Nota van toelichting bij de 7e tranche staat vermeld dat “de aanwijzing van het project in aanvulling is op de reeds aangewezen gebiedsontwikkeling Zuidas en om zeker te stellen dat ook Zuidasdok, inclusief de infrastructurele onderdelen, onder de werking van de Crisis- en herstelwet valt”.</al>
+                        <Lijst class="Tekens">
+                            <Lijstaanhef>Opname in bijlage 2 van de Crisis- en herstelwet leidt ertoe dat:</Lijstaanhef>
+                            <Li>
+                                <Inhoud>
+                                    <al>het niet verplicht is om alternatieven in het MER op te nemen;</al>
+                                </Inhoud>
+                            </Li>
+                            <Li>
+                                <Inhoud>
+                                    <al>het niet verplicht is om de Commissie voor de m.e.r. over het opgestelde MER advies te vragen;</al>
+                                </Inhoud>
+                            </Li>
+                            <Li>
+                                <Inhoud>
+                                    <al>een decentrale overheid (als belanghebbende) geen beroep kan instellen tegen een besluit van de centrale overheid, tenzij het besluit gericht is tot (een orgaan van) die rechtspersoon of tot het bestuursorgaan dan wel de rechtspersoon waartoe dat bestuursorgaan behoort;</al>
+                                </Inhoud>
+                            </Li>
+                            <Li>
+                                <Inhoud>
+                                    <al>er geen mogelijkheid voor belanghebbenden is voor het aanvoeren van beroepsgronden na afloop van de beroepstermijn;</al>
+                                </Inhoud>
+                            </Li>
+                            <Li>
+                                <Inhoud>
+                                    <al>er een versnelde behandeling door de bestuursrechter van beroep plaatsvindt (uitspraak binnen een half jaar).</al>
+                                </Inhoud>
+                            </Li>
+                        </Lijst>
+                    </Inhoud>
+                </Divisie>
+                <Divisie id="d1e214">
+                    <Kop>
+                        <Opschrift>Leeswijzer</Opschrift>
+                    </Kop>
+                    <Inhoud>
+                        <al>Het bestemmingsplan bestaat uit regels, een verbeelding en gaat vergezeld van een toelichting. Op de verbeelding zijn de bestemmingen in het plangebied weergegeven. Deze bestemmingen zijn gerelateerd aan de in de regels opgenomen juridische regeling. De verbeelding en de planregels vormen samen de bestemmingsplanregeling zoals deze door de gemeenteraad wordt vastgesteld. De toelichting geeft de achtergronden (relevant beleid, resultaten van onderzoeken en gemaakte keuzes) bij de bestemmingsplanregeling en licht deze vanzelfsprekend toe.</al>
+                    </Inhoud>
+                </Divisie>
+            </Divisie>
+            <Divisie id="d1e230">
+                <Kop>
+                    <Opschrift>Artikel 1: Projectbeschrijving</Opschrift>
+                </Kop>
+                <Inhoud>
+                    <Lijst class="Nummers">
+                        <Li>
+                            <Inhoud>
+                                <al>De A10 Zuid wordt verbreed en ingericht met een systeem van hoofd- en parallelrijbanen. Deze worden beschreven in de leden 4 tot en met 7. De A10 Zuid wordt ter hoogte van station Amsterdam Zuid aangelegd in twee tunnels met een lengte van circa 1 km voor de noordelijke hoofdrijbaan en parallelrijbaan en van circa 1.1 km voor de zuidelijke hoofdrijbaan en parallelrijbaan, conform de kilometeraanduidingen in de artikelleden 4 tot en met 7. De hoofdrijbanen en de parallelrijbanen liggen in gescheiden tunnelbuizen met een middentunnelkanaal. De tunnels worden voor wat betreft de toegankelijkheid voor vervoer van gevaarlijke stoffen ingedeeld in categorie C.</al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>Het Projectbesluit voorziet tevens in de aanpassing van de knooppunten De Nieuwe Meer en Amstel en de daarvan onderdeel uitmakende gedeelten van de autosnelwegen A4 (tot km 1.2), A10 West (tot km 22.1), A10 Oost (tot km 15.1)  en A2 (van km 30.8 tot km 32.3). Deze aan passingen worden beschreven in de leden 3 en 8 van dit artikel. </al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>Het knooppunt De Nieuwe Meer wordt als volgt aangepast:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <Lijst class="Nummers">
+                                                <Lijstaanhef>De zuidelijke rijbaan van de A4 verbreedt ter hoogte van km 0.6 naar 4 rijstroken en splitst zich ter hoogte van km 0.3 in:</Lijstaanhef>
+                                                <Li>
+                                                    <Inhoud>
+                                                        <al>naar rechts 2 rijstroken naar de zuidelijke parallelrijbaan van de A10 Zuid; ii. naar links 2 rijstroken naar de zuidelijke hoofdrijbaan van de A10 Zuid. </al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <Lijst class="Nummers">
+                                                <Lijstaanhef>De verbindingsweg A10 West naar A10 Zuid splitst zich ter hoogte van km 21.0 in:</Lijstaanhef>
+                                                <Li>
+                                                    <Inhoud>
+                                                        <al>naar rechts met 1 rijstrook naar de zuidelijke parallelrijbaan van de A10 Zuid; ii. naar links 2 rijstroken naar de zuidelijke hoofdrijbaan A10 Zuid.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <Lijst class="Nummers">
+                                                <Lijstaanhef>De noordelijke parallelrijbaan van de A10 Zuid splitst zich ter hoogte van km 20.9 in:</Lijstaanhef>
+                                                <Li>
+                                                    <Inhoud>
+                                                        <al>naar rechts de verbindingsweg naar de A4 met 2 rijstroken, die ter hoogte van km 0.5 samenvoegen met de 2 stroken vanaf de noordelijke hoofdrijbaan A10 Zuid (3.e.ii) tot 3 doorgaande stroken die vervolgens samenvoegen met de huidige A4;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <Inhoud>
+                                                        <al>naar links de verbindingsweg naar de A10 West met 1 rijstrook.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>De verbindingsweg naar de A10 West (3.c.ii) voegt ter hoogte van km 21.5 samen met de hoofdrijbaan A10 West.  Ter hoogte van km 21.6  voegt 1 rijstrook uit naar de S107 en voegt de doorgaande rijstrook onder het kunstwerk van de S107 in op de bestaande A10 West.</al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>De noordelijke hoofdrijbaan van de A10 Zuid splitst zich ter hoogte van km 0.1 in:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>naar rechts de verbindingsweg naar de A10 West met 2 rijstroken;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>naar links de verbindingsweg naar de A4 met 2 rijstroken, die ter hoogte van km 0.5 samenvoegen met de verbindingsweg vanaf de noordelijke parallelrijbaan A10 Zuid (3.c.i).</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>De overige rijbanen en verbindingswegen in het knooppunt blijven als bestaand.</al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>De nieuwe zuidelijke parallelrijbaan van de A10 Zuid wordt van west naar oost als volgt ingericht:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Van km 20.8 tot km 20.2 bestaat de parallelrijbaan uit 3 rijstroken.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Ter hoogte van km 20.2 verbreedt de parallelrijbaan naar 4 rijstroken.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Ter hoogte van km 20.1 voegen 2 rijstroken rechts uit naar aansluiting 8 (S108) en gaan 2 rijstroken rechtdoor.  De afrit gaat over in meerdere rijstroken bij het kruispunt met de Amstelveenseweg.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Ter hoogte van km 19.8 voegt de 1-strooks toerit vanaf aansluiting 8 (S108) samen tot 2 rijstroken.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Van km 19.5 tot voorbij km 18.5 ligt de parallelrijbaan in de tunnel.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Ter hoogte van km 17.7 voegt 1 rijstrook rechts uit naar aansluiting 9 (S109) en gaan 2 rijstroken rechtdoor.  De afrit verbreedt direct na het uitvoegen naar 2 rijstroken en gaat bij het kruispunt met de Europaboulevard over in meerdere opstelstroken.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>De zuidelijke toerit vanaf aansluiting 9 (S109) bestaat uit drie rijstroken en voegt ter hoogte van km 17.4 samen tot twee rijstroken, die ter hoogte van km 17.3 samenvoegen met de parallelrijbaan tot 4 rijstroken (2+2 weefvak).</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>De nieuwe zuidelijke hoofdrijbaan van de A10 Zuid wordt van west naar oost als volgt ingericht:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>De 2 rijstroken vanaf de A4 (3.a.i) voegen ter hoogte van km 20.5 samen met de 2 rijstroken vanaf de A10 West (3.b.ii) tot 4 rijstroken.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Van km 19.5 tot voorbij km 18.5 ligt de hoofdrijbaan in de tunnel.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>De nieuwe noordelijke parallelrijbaan A10 Zuid wordt van oost naar west als volgt ingericht:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Van km 16.5 tot km 16.9 bestaat de parallelrijbaan uit 3 rijstroken;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Ter hoogte van km 16.9 gaan 2 rijstroken rechtdoor en start het weefvak richting aansluiting 9 (S109).</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Ter hoogte van km 17.3 verbreedt het weefvak naar 2 rijstroken, die ter hoogte van km 17.4 rechts uitvoegen naar aansluiting 9 (S109). De afrit gaat over in meerdere opstelstroken bij het kruispunt met de Europaboulevard.  Ter hoogte van km 18.2 voegt de 1-strooks toerit vanaf aansluiting 9 (S109) via een weefvak in.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Van km 18.5 tot km 19.6 liggen 2 rijstroken in de tunnel.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Ter hoogte van km 19.7 voegt 1 rijstrook rechts uit naar aansluiting 8 (S108) en gaan 2 rijstroken rechtdoor. De afrit gaat over in meerdere opstelstroken bij het kruispunt met de Amstelveenseweg.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Ter hoogte van km 20.5 voegen 2 rijstroken vanaf aansluiting 8 (S108) via een weefvak samen tot 3 rijstroken.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>De nieuwe noordelijke hoofdrijbaan A10 Zuid wordt als volgt ingericht:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>van km 16.5 tot km 17.3 bestaat de hoofdrijbaan uit 5 rijstroken</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>van km 17.3 tot km 20.8 bestaat de hoofdrijbaan uit 4 rijstroken.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>Van km 18.5 tot km 19.6 ligt de hoofdrijbaan in de tunnel.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>Het knooppunt Amstel wordt als volgt aangepast:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <Lijst class="Nummers">
+                                                <Lijstaanhef>De zuidelijke parallelrijbaan van de A10 Zuid splitst zich ter hoogte van km 16.7 in:</Lijstaanhef>
+                                                <Li>
+                                                    <Inhoud>
+                                                        <al>naar rechts de verbindingsweg naar de A10 Oost met 2 rijstroken die samenvoegen met de 3 rijstroken van de hoofdrijbaan A10 zuid naar A10 Oost (8.b.ii) via een weefvak tot 4 rijstroken;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <Inhoud>
+                                                        <al>naar links de verbindingsweg naar de A2 richting Utrecht met 2 rijstroken die samenvoegen met de verbindingsweg vanaf de hoofdrijbaan A10 Zuid (8.b.i) tot 4 rijstroken en ter hoogte van km 15.7 versmallen naar 3 rijstroken.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <Lijst class="Nummers">
+                                                <Lijstaanhef>De zuidelijke hoofdrijbaan van de A10 Zuid verbreedt ter hoogte van km 17.50 van 4 naar 5 rijstroken en splitst zich ter hoogte van km 16.8 in:</Lijstaanhef>
+                                                <Li>
+                                                    <Inhoud>
+                                                        <al>naar rechts de verbindingsweg naar de A2 richting Utrecht met 2 rijstroken die samenvoegen met de verbindingsweg vanaf de parallelrijbaan (8.a.ii);</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <Inhoud>
+                                                        <al>naar links 3 doorgaande rijstroken naar de A10 Oost.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>De verbindingsweg van de S110 naar de A10 Oost vervalt.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>De 2-strooks verbindingsweg van de A10 Oost naar de A2 versmalt ter hoogte van km 16.4 naar 1 rijstrook en voegt samen met de 1-strooks S110 tot 2 rijstroken, die vervolgens samenvoegen met de 3-strooks verbindingsweg vanaf de A10 Zuid (8.b.i) via een weefvak tot de A2 met 4 rijstroken richting Utrecht.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>De 4-strooks verbindingsweg van de A10 Zuid naar de A10 Oost voegt ter hoogte van km 15.5 samen met de 2-strooks verbindingsweg vanaf de A2 Utrecht via een weefvak tot de 5-strooks A10 Oost.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>De overige rijbanen en verbindingswegen in het knooppunt blijven als bestaand.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>Vluchtstroken zijn aanwezig waar deze op de detailkaarten (II) zijn weergegeven.</al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>De maatregelen opgenomen in de leden 1 tot en met 9 worden gerealiseerd binnen de op de detailkaarten (II) aangegeven maatregelvlakken ‘Verkeersdoeleinden, zone Wegverharding’, ‘Verkeersdoeleinden, zone open Tunnelbak’  en ‘Verkeersdoeleinden, zone gesloten Tunnel’. </al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>De aanpassingen en het daarbij behorende ruimtebeslag vinden plaats overeenkomstig de detailkaarten en de kaartbladen met lengteprofielen (II). De kilometeraanduidingen bij de maatregelen genoemd in de leden 2 tot en met 8 en 12 zijn afgerond, voor de exacte maatvoering zijn de detailkaarten maatgevend.  </al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>De hoogteligging van de parallelrijbanen tussen km 20.8 en km 16.9 is gelijk aan hoogteligging van de hoofdrijbanen, zoals weergegeven op de kaartbladen met lengteprofielen bij dit Projectbesluit.</al>
+                            </Inhoud>
+                        </Li>
+                    </Lijst>
+                    <al class="Afstand_na">De hiervoor weergegeven beschrijving van het project wordt hierna in dit besluit aangeduid als ‘(het) Project’. Het Project wordt uitgevoerd binnen de grenzen van het werkingsgebied opgenomen in dit besluit, hierna aangeduid als ‘Projectgebied’.</al>
+                </Inhoud>
+            </Divisie>
+            <Divisie id="d1e757">
+                <Kop>
+                    <Opschrift>Artikel 2: Maatregelen ter voorkoming, beperking of compensatie van nadelige gevolgen Project</Opschrift>
+                </Kop>
+                <Inhoud>
+                    <Lijst class="Nummers">
+                        <Li>
+                            <Inhoud>
+                                <al>De in Tabel 5 opgenomen geluidschermen worden gerealiseerd. Op de detailkaarten zijn de geluidschermen weergegeven als ‘Geluidscherm’.</al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>In Tabel 6 worden de wegdekken aangeduid waar geluidreducerend asfalt van het type tweelaags ZOAB wordt gerealiseerd, dan wel een asfalttype met akoestisch gelijkwaardige eigenschappen. </al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>In de open tunnelbakken wordt geluidsabsorberende wandbekleding aangebracht welke over enkele tientallen meters doorloopt in de gesloten tunnelbakken.  </al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>De voegovergangen van vaste bruggen worden geluidsarm gerealiseerd conform de richtlijn RTD-1007-3. </al>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>Ter beperking van de geluidafstraling van de nieuwe beweegbare Schinkelbrug in de noordelijke parallelrijbaan van de A10 worden de volgende maatregelen getroffen:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>voegovergangen tussen de vaste en beweegbare brugdelen worden aan de zijkant en aan de onderzijde afgesloten;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>zijwanden onder het beweegbare brugdeel worden voorzien van een akoestische absorberende bekleding;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>de constructie van de brugval wordt geoptimaliseerd om de geluidproductie te minimaliseren</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>of andere maatregelen die ten minste dezelfde geluidreducerende eigenschappen hebben.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>Ter beperking van de geluidafstraling van de bestaande beweegbare Schinkelbrug in de noordelijke hoofdrijbaan van de A10 worden de volgende maatregelen getroffen:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>maatregelen aan de voegovergangen tussen de vaste en de beweegbare brugdelen, in ieder geval bestaande uit het afsluiten van de zijkant en de onderzijde van voegovergangen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>zijwanden onder het beweegbare brugdeel worden voorzien van een akoestische absorberende bekleding;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>of andere maatregelen die ten minste dezelfde geluidreducerende eigenschappen hebben. </al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                    </Lijst>
+                    <table class="tabel" frame="all" colsep="1" rowsep="1">
+                        <title>Tabel 5 – Overzicht geluidschermen</title>
+                        <tgroup cols="4">
+                            <colspec colname="col1" colwidth="4082"/>
+                            <colspec colname="col2" colwidth="2733"/>
+                            <colspec colname="col3" colwidth="1047"/>
+                            <colspec colname="col4" colwidth="970"/>
+                            <thead>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>Soort en hoogte afscherming*</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>Locatie</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>Van km</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>Tot km</al>
+                                    </entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>2m hoog tweezijdig geluidabsorberend tussenbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan rechts (tussenberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>16.50Re</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>17.20Re</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>4m hoog tweezijdig geluidabsorberend tussenbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan rechts (tussenberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>17.20Re</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>18.27Re</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>6m hoog tweezijdig geluidabsorberend tussenbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan rechts (tussenberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>18.27Re</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>18.53Re</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>2m hoog transparant reflecterend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan rechts (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>16.84Rex</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>17.20Rex/a</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>5m hoog geluidabsorberend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan rechts (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>17.20Rex/a</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>17.72Rex</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>5m hoog transparant reflecterend zijbermscherm </al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan rechts (zijberm) </al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>17.55Rex/a </al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>18.00Rex/b</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>5m hoog geluidabsorberend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan rechts (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>17.80Rex/b</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>18.03Rex/b</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>4m hoog tweezijdig geluidabsorberend tussenbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan rechts (tussenberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>19.58Re</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>20.72Re</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>3m hoog geluidabsorberend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan rechts (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>19.73Rex</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>20.05Rex/a</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>2m hoog geluidabsorberend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan rechts (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>20.11Rex/b</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>20.35Rex/b</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>2m hoog geluidabsorberend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan rechts (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>20.55Rex</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>20.73Rex</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>2m hoog transparant reflecterend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan rechts (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>20.73Rex</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>20.87Rex</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>3m hoog transparant reflecterend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan rechts (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>19.93Rex/a</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>20.20Rex/b</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>2m hoog tweezijdig geluidabsorberend tussenbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan links (tussenberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>16.91Li</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>18.14Li</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>4m hoog tweezijdig geluidabsorberend tussenbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan links (tussenberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>18.14Li</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>18.44Li</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>8m hoog tweezijdig geluidabsorberend tussenbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan links (tussenberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>19.49Li</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>19.82Li</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>8m hoog tweezijdig geluidabsorberend tussenbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan links (tussenberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>19.82Li</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>20.06Li</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>1m hoog tweezijdig geluidabsorberend tussenbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan links (tussenberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>20.06Li</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>20.50Li</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>3m hoog geluidabsorberend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan links (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>18.14Liy</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>18.35Liy</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>3m hoog geluidabsorberend zijbermscherm</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 parallelrijbaan links (zijberm)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>19.60Liy</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>20.08Li/d</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col4" morerows="0" align="left">
+                                        <al>* geluidreflecterend scherm dient te voldoen aan productklasse A0 volgens NEN-EN 1793-1; geluidabsorberend scherm dient te voldoen aan productklasse A3 volgens NEN-EN 1793-1</al>
+                                    </entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table>
+                    <table class="tabel" frame="all" colsep="1" rowsep="1">
+                        <title>Tabel 6 – Overzicht asfalttypen</title>
+                        <tgroup cols="4">
+                            <colspec colname="col1" colwidth="3534"/>
+                            <colspec colname="col2" colwidth="3553"/>
+                            <colspec colname="col3" colwidth="907"/>
+                            <colspec colname="col4" colwidth="850"/>
+                            <thead>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>Maatregel</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>Locatie</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>Van km</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>Tot km</al>
+                                    </entry>
+                                </row>
+                            </thead>
+                            <tbody>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>tweelaags ZOAB</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A2 hoofdrijbaan links en hoofdrijbaan rechts </al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>30.80</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>32.30</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>tweelaags ZOAB*</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A10 hoofdrijbaan links en hoofdrijbaan rechts en parallelrijbaan links en parallelrijbaan rechts </al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>15.10  </al>
+                                        <al>(A10 Oost)</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>22.10 (A10 West)</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>tweelaags ZOAB</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>A4 hoofdrijbaan links en hoofdrijbaan rechts </al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>0.00</al>
+                                    </entry>
+                                    <entry namest="col4" nameend="col4" morerows="0" align="left">
+                                        <al>1.20</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col4" morerows="0" align="left">
+                                        <al>*Uitgezonderd zijn de volgende weggedeelten waar dicht asfalt beton (of een asfalttype met akoestisch gelijkwaardige eigenschappen) wordt gerealiseerd:</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col4" morerows="0" align="left">
+                                        <Lijst class="Tekens">
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>toe –en afritten S107, S108 en S109;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>kunstwerk verbindingsboog A10 west – A4 km 21.35 tot km 21.48;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>kunstwerk verbindingsboog A4 – A10 west km 0.19 tot km 0.28;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>kunstwerk (beweegbare brugdeel Schinkelbrug) A10 zuid km 20.80Rex – 20.82Rex;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>kunstwerk (beweegbare brugdeel Schinkelbrug) A10 zuid km 20.80Re – 20.82Re;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>kunstwerk (beweegbare brugdeel Schinkelbrug) A10 zuid km 20.79Liy – 20.81Liy;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>kunstwerk (beweegbare brugdeel Schinkelbrug) A10 zuid km 20.79Li – 20.81Li;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>kunstwerk verbindingsboog A10 oost – A2 km 15.78Ret – km 15.83Ret;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>kunstwerk verbindingsboog A10 oost – A2 km 15.90Ret – km 15.96Ret;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>kunstwerk verbindingsboog A10 oost – A10 zuid km 15.92Rex – km 15.98Rex;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>gesloten tunneldeel A10 hoofdrijbaan rechts km 18.53Re – km 19.58Re; • gesloten tunneldeel A10 parallelrijbaan rechts km 18.53Rex – km 19.58Rex.</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>gesloten tunneldeel A10 hoofdrijbaan links km 18.44Li – km 19.49Li;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <Inhoud>
+                                                    <al>gesloten tunneldeel A10 parallelrijbaan links km 18.44Liy – km 19.49Liy.</al>
+                                                </Inhoud>
+                                            </Li>
+                                        </Lijst>
+                                    </entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table>
+                </Inhoud>
+            </Divisie>
+            <Divisie id="d1e1771">
+                <Kop>
+                    <Opschrift>Artikel 3: Tijdelijke maatregelen en voorzieningen</Opschrift>
+                </Kop>
+                <Inhoud>
+                    <Lijst class="Nummers">
+                        <Li>
+                            <Inhoud>
+                                <Lijst class="Nummers">
+                                    <Lijstaanhef>Behalve definitieve werken met het oog op de uitvoering van het Projectbesluit kunnen op de gronden die op de detailkaarten zijn aangeduid als maatregelvlak ‘Verkeersdoeleinden, zone Wegverharding’, ‘Verkeersdoeleinden, Werkterrein’ en maatregelvlak ‘Verkeersdoeleinden, Zoekgebied Werkterrein’ tijdelijke werken ten behoeve van de uitvoering van het Projectbesluit worden uitgevoerd. Onder tijdelijke werken worden onder andere begrepen:</Lijstaanhef>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>tijdelijke verlegging van de rijbanen A10 Zuid in verband met fasering van de uitvoering, waarbij een verlaging van de maximale snelheid van 100 naar 90 km/uur is toegestaan;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>opslagplaatsen, werkplaatsen, installaties, pontons, bouwketen en parkeerplaatsen voor personeel en bezoekers;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>laad- en losplaatsen, afmeervoorzieningen langs vaarwegen en grond- en zanddepots;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>pijpleidingen en transportbanden met bijbehorende voorzieningen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>bouwzones aan weerszijden van de weg ten behoeve van de werkzaamheden;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>damwanden en andere grond- dan wel waterkerende constructies;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <Inhoud>
+                                            <al>tijdelijke bouwwegen, watergangen, energievoorziening, afrastering, watercompensatie, kunstwerken (waaronder bruggen en viaducten), kabels en leidingen, barriers en geluidschermen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Li>
+                        <Li>
+                            <Inhoud>
+                                <al>In afwijking van het gestelde in lid 1 is binnen de maatregelvlakken ‘Verkeersdoeleinden, Zoekgebied Werkterrein’  de op de detailkaarten (II) aangegeven maximale oppervlakte beschikbaar ten behoeve van de in lid 1 omschreven tijdelijke werken.</al>
+                            </Inhoud>
+                        </Li>
+                    </Lijst>
+                    <al class="Afstand_na">Tijdelijke werken mogen niet langer in stand gehouden worden dan zes maanden na de ingebruikname van het tracé.</al>
+                </Inhoud>
+            </Divisie>
+            <Divisie id="d1e1875">
+                <Kop>
+                    <Opschrift>Artikel 4: Wijziging regels omgevingsplan</Opschrift>
+                </Kop>
+                <Inhoud>
+                    <al>Dit besluit wijzigt de regels van het omgevingsplan van de gemeente (………). De wijziging van deze regels, inclusief de daarbij behorende gewijzigde Verbeelding, zijn opgenomen in <b>bijlage (-)</b>.</al>
+                </Inhoud>
+            </Divisie>
+            <Divisie id="d1e1893">
+                <Kop>
+                    <Opschrift>Artikel 9: Verkeersbesluit</Opschrift>
+                </Kop>
+                <Inhoud>
+                    <al>De maximum rijsnelheden op de A10 Zuid en de van de knooppunten De Nieuwe Meer en Amstel onderdeel uitmakende gedeelten van de A4, A10 West, A10 Oost en A2 zijn weergeven in Tabel 1.  </al>
+                    <table class="tabel" frame="all" colsep="1" rowsep="1">
+                        <title>Tabel 1 – Rijsnelheden</title>
+                        <tgroup cols="3">
+                            <colspec colname="col1" colwidth="2721"/>
+                            <colspec colname="col2" colwidth="4120"/>
+                            <colspec colname="col3" colwidth="1998"/>
+                            <tbody>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>Rijbaan</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>Van km - tot km (indicatief)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>Maximumsnelheid</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>Zuidelijke hoofdrijbaan</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>1.0 (A4)/20.5 (A10 Zuid ) - 32.3 (A2)/15.1 (A10 Oost)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>100 km/u</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>Zuidelijke parallelrijbaan</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>0.3 - 15.9 (A10 Oost)/16.5 (A2) </al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>80 km/u</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>Noordelijke hoofdrijbaan</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>15.1 (A10 Oost)/32.2 (A2) – 20.9 (A10 Zuid)/1.0 (A4)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>100 km/u</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>Noordelijke parallelrijbaan</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al>15.3 - 21.4 (A10 west)/1.3 (A4)</al>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>80 km/u</al>
+                                    </entry>
+                                </row>
+                                <row>
+                                    <entry namest="col1" nameend="col1" morerows="0" align="left">
+                                        <al>Verbindingsweg parallelrijbaan A10 </al>
+                                        <al>Zuid richting hoofdrijbaan A10 Oost</al>
+                                    </entry>
+                                    <entry namest="col2" nameend="col2" morerows="0" align="left">
+                                        <al class="Standaard"/>
+                                    </entry>
+                                    <entry namest="col3" nameend="col3" morerows="0" align="left">
+                                        <al>50 km/u</al>
+                                    </entry>
+                                </row>
+                            </tbody>
+                        </tgroup>
+                    </table>
+                    <al>Dit besluit geldt vanwege de hiervoor aangegeven maximum rijsnelheden, op grond van artikel 4.6, eerste lid onder a van het Omgevingsbesluit, als verkeersbesluit als bedoeld in artikel 15 van de Wegenverkeerswet 1994.</al>
+                </Inhoud>
+            </Divisie>
+        </Tekst>
+    </Staatsblad>
+    <Locaties>
+        <Geometrie id="werkingsgebied_projectbesluit_zuidas_20180320.geom">
+            <gml:Polygon srsName="urn:ogc:def:crs:EPSG::28992" gml:id="werkingsgebied_projectbesluit_zuidas_20180320.geom.0">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>116891.97416349384 483629.3271399776 116910.17911758118 483619.21327659569 117029.52270548712 483617.19050391932 117057.84152295633 483605.0538678611 117088.1831131019 483598.985549832 117124.5930212766 483617.19050391932 117197.41283762598 483694.05586562149 117241.91383650617 483752.71627323626 117270.23265397537 483815.42222620378 117298.55147144457 483900.37867861142 117316.75642553192 483847.78658902575 117365.30296976485 483750.69350055989 117440.14555879059 483633.37268533034 117468.4643762598 483603.03109518474 117512.96537513997 483603.03109518474 117597.9218275476 483627.30436730123 117674.78718924972 483696.07863829785 117705.12877939529 483766.87568197085 117715.24264277716 483837.67272564385 117715.24264277716 483920.60640537512 117707.15155207168 484052.08662933926 117717.26541545353 484054.10940201563 117717.26541545353 484076.35990145575 117743.56146024636 484082.42821948486 117733.44759686451 484478.89166405372 117810.31295856663 484484.95998208283 117816.38127659576 484369.66193952964 117781.99414109743 484363.59362150053 117794.13077715566 484345.38866741321 117790.08523180292 484319.09262262034 117790.08523180292 484304.93321388576 117824.47236730123 484311.00153191487 117796.15354983203 484094.56485554308 117806.26741321389 484090.51931019034 117820.42682194849 483742.60240985441 117850.76841209407 483621.23604927206 117895.26941097424 483554.48455095181 117953.92981858904 483528.188506159 118032.81795296753 483495.82414333703 118162.27540425533 483495.82414333703 118161.76971108622 483528.188506159 118181.99743784995 483528.188506159 118181.99743784995 483505.93800671888 118244.70339081748 483509.98355207162 118248.74893617022 483530.21127883537 118570.36979171332 483556.50732362818 118800.96587681971 483564.59841433365 118853.55796640538 483572.68950503919 118859.62628443449 483663.71427547588 118875.80846584548 483663.71427547588 118881.87678387458 483623.25882194843 118908.17282866742 483631.34991265397 118928.40055543113 483621.23604927206 119298.56795520718 483647.53209406493 119298.56795520718 483625.28159462486 119367.34222620382 483621.23604927206 119383.52440761479 483639.44100335945 119389.5927256439 483667.75982082862 119421.95708846586 483669.78259350499 119415.88877043674 483623.25882194843 119622.21158342666 483637.41823068308 119624.23435610303 483651.57763941766 119664.68980963046 483651.57763941766 119664.68980963046 483633.37268533034 120176.45129675254 483663.71427547588 120178.47406942891 483677.87368421047 120241.18002239642 483679.8964568869 120237.13447704368 483667.75982082862 120388.84242777157 483673.82813885773 120384.79688241883 483728.44300111977 120500.09492497201 483728.44300111977 120554.70978723405 483698.10141097422 120647.75733034716 483704.16972900333 120647.75733034716 483681.91922956327 120706.41773796194 483669.78259350499 120715.52021500561 483683.94200223964 120745.86180515119 483681.91922956327 120749.90735050393 483657.64595744677 120816.6588488242 483649.55486674129 120834.86380291155 483629.3271399776 120911.72916461367 483613.14495856658 120994.66284434492 483576.73505039193 121063.43711534156 483538.30236954085 121128.16584098546 483491.77859798429 121194.91733930573 483429.07264501677 121203.00843001121 483404.79937290028 121219.19061142219 483404.79937290028 121221.21338409856 483437.16373572225 121263.69161030237 483435.14096304588 121263.69161030237 483398.73105487117 121340.5569720045 483325.9112385218 121403.26292497202 483259.15974020155 121433.60451511759 483228.81815005594 121678.36000895858 483020.47256438964 121678.36000895858 482982.03988353861 121747.13427995522 482925.40224860021 121763.31646136619 482917.31115789473 121785.56696080629 482882.92402239639 121832.09073236283 482854.60520492715 121858.38677715567 482870.78738633817 121870.5234132139 482858.65075027995 121872.54618589027 482834.37747816346 121958.00833146699 482763.07474132132 122065.2152833147 482686.20937961922 122190.62718924975 482607.32124524069 122243.21927883542 482583.04797312425 122318.06186786118 482579.00242777151 122453.58763717809 482609.34401791706 122538.5440895857 482631.59451735718 122645.75104143341 482641.70838073903 122639.68272340429 482718.57374244113 122633.61440537518 482744.869787234 122611.36390593508 482759.02919596859 122611.36390593508 482777.23415005591 122645.75104143341 482763.07474132132 122655.86490481526 482746.89255991037 122657.88767749164 482696.32324300107 122676.09263157898 482698.34601567744 122678.11540425535 482720.5965151175 122700.36590369545 482720.5965151175 122716.54808510642 482619.45788129891 122789.3679014558 482548.66083762591 122890.5065352744 482473.81824860018 122928.93921612545 482453.59052183642 123036.14616797316 482471.79547592381 123079.13008734606 482496.06874804024 123135.76772228446 482514.27370212757 123170.15485778279 482528.43311086221 123465.47966853308 482680.14106159005 123505.9351220605 482607.32124524069 123194.42812989926 482437.40834042546 123166.10931243005 482443.47665845457 123131.72217693173 482417.18061366177 123127.67663157899 482398.97565957438 122994.17363493844 482338.29247928323 122971.92313549835 482350.42911534145 122953.71818141101 482344.36079731234 122959.78649944013 482330.20138857776 122907.19440985446 482303.39965061587 122856.62509294516 482262.94419708842 122816.16963941773 482214.39765285549 122802.01023068312 482139.55506382976 122779.75973124303 482125.39565509517 122775.71418589029 482020.21147592383 122787.85082194852 481807.31465173559 122816.16963941773 481679.87997312419 122844.48845688693 481580.76411198196 122905.17163717809 481428.55046808498 122957.76372676375 481313.2524255318 122998.21918029118 481242.4553818588 122949.67263605827 481220.20488241874 122905.17163717809 481301.11578947358 122783.80527659578 481586.32673684199 122708.96268757002 481845.2416394176 122694.80327883542 481936.26640985435 122672.55277939534 481934.24363717798 122587.59632698771 482098.08822396409 122514.77651063833 482170.90804031346 122437.9111489362 482215.40903919365 122357.00024188132 482253.84172004467 122257.88438073911 482330.70708174683 122181.01901903699 482371.16253527428 121934.24075251963 482530.96157670766 121867.48925419936 482587.59921164607 121778.487256439 482599.73584770429 121780.51002911536 482553.21207614773 121750.16843896979 482551.18930347136 121744.10012094068 482646.76531242987 121719.82684882422 482745.8811735721 121693.53080403138 482768.13167301222 121697.57634938412 482733.74453751388 121665.21198656218 482745.8811735721 121661.16644120944 482794.42771780503 121632.84762374024 482804.54158118687 121596.43771556554 482826.792080627 121483.16244568872 482915.79407838732 121428.54758342668 482966.36339529662 121390.11490257562 482974.4544860021 121313.24954087348 482974.4544860021 121290.9990414334 482956.24953191477 121137.26831802914 482962.31784994388 121141.31386338189 482980.52280403121 121157.49604479286 483004.7960761477 121167.60990817472 483016.93271220592 121165.58713549834 483144.36739081732 121134.23415901457 483230.33522956324 121124.12029563272 483191.90254871215 121083.66484210528 483191.90254871215 121089.73316013439 483250.56295632693 121089.73316013439 483268.76791041426 120899.59252855544 483390.13427099655 120895.5469832027 483377.99763493834 120818.68162150057 483416.43031578942 120816.6588488242 483436.65804255311 120745.86180515119 483454.8629966405 120689.22417021278 483475.0907234042 120638.65485330348 483477.11349608056 120505.15185666294 483477.11349608056 120505.15185666294 483469.02240537509 120228.032 483458.90854199324 120226.00922732364 483448.79467861139 120177.46268309071 483444.74913325859 120175.43991041434 483460.93131466961 119973.16264277717 483444.74913325859 119718.29328555432 483430.589724524 119712.2249675252 483420.47586114216 119633.33683314671 483414.40754311305 119631.31406047034 483432.61249720037 119465.44670100784 483416.43031578942 119467.46947368422 483373.9520895856 119449.26451959687 483365.86099888012 119453.31006494962 483329.45109070541 119325.87538633819 483331.47386338178 119327.89815901456 483408.33922508394 119161.01941321389 483398.22536170209 119126.63227771557 483365.86099888012 119076.06296080627 483333.49663605815 118976.94709966406 483337.54218141094 118934.46887346025 483327.42831802904 118855.58073908175 483327.42831802904 118851.53519372901 483402.27090705483 118620.93910862262 483380.02040761471 118627.00742665173 483353.7243628219 118596.66583650616 483353.7243628219 118584.52920044793 483373.9520895856 118244.70339081748 483341.58772676368 118202.22516461366 483325.40554535267 118190.08852855544 483248.54018365056 118188.06575587906 483222.2441388577 118163.79248376261 483218.19859350496 118171.88357446808 483313.26890929445 118076.81325867861 483232.35800223961 118042.4261231803 483189.87977603578 118003.99344232923 483228.31245688687 118105.13207614781 483319.33722732356 117916.50852407615 483325.40554535267 117904.37188801792 483305.17781858897 117760.75502799552 483307.20059126534 117756.70948264278 483313.26890929445 117803.23325419932 483321.36 117764.80057334827 483335.51940873452 117655.57084882419 483361.81545352738 117590.84212318029 483351.70159014553 117499.81735274356 483353.7243628219 117327.88167525196 483418.45308846579 117224.720268757 483434.63526987674 117170.10540649496 483440.70358790585 117162.01431578948 483469.02240537509 116907.14495856663 483473.06795072783 116911.19050391937 483517.56894960802 117149.87767973125 483513.52340425528 117267.1984949608 483509.47785890254 117400.70149160134 483495.31845016789 117530.15894288913 483464.97686002235 117704.11739305711 483428.56695184764 117722.32234714445 483456.88576931687 117574.65994176932 483497.34122284426 117354.1777200448 483551.9560851063 117141.78658902575 483560.04717581184 116921.30436730123 483572.18381187005 116901.0766405375 483572.18381187005 116901.0766405375 483572.18381187005 116891.97416349384 483629.3271399776</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>117545.83543113102 483553.97885778267 117606.51861142217 483507.45508622617 117693.49783650615 483473.06795072783 117742.04438073908 483466.99963269872 117756.20378947369 483503.40954087343 117655.0651556551 483537.79667637171 117588.31365733483 483558.02440313547 117588.31365733483 483558.02440313547 117545.83543113102 483553.97885778267</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>117752.15824412095 483602.5254020156 117744.06715341545 483655.11749160127 117683.38397312431 483608.59372004471 117719.79388129899 483600.50262933923 117752.15824412095 483602.5254020156</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>117770.36319820829 483462.95408734598 117827.0008331467 483448.79467861139 117800.70478835386 483491.27290481515 117778.45428891378 483489.25013213878 117770.36319820829 483462.95408734598</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>117752.15824412095 483454.8629966405 117723.83942665174 483424.5214064949 117804.75033370662 483410.36199776031 117879.59292273236 483402.27090705483 117841.1602418813 483436.65804255311 117752.15824412095 483454.8629966405</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>117845.20578723405 483471.04517805146 117913.98005823069 483414.40754311305 117956.4582844345 483400.24813437846 118122.32564389698 483408.33922508394 118120.30287122061 483460.93131466961 117988.82264725644 483450.81745128776 117873.52460470326 483471.04517805146 117845.20578723405 483471.04517805146</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>118244.19769764839 483465.48255319154 118252.28878835386 483416.93600895861 118865.18890929452 483455.36868980963 118855.07504591266 483516.05187010084 118575.93241657336 483493.80137066072 118304.88087793953 483471.55087122065 118254.31156103023 483467.50532586791 118244.19769764839 483465.48255319154</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>118919.80377155656 483522.12018812995 118925.87208958567 483461.4370078388 119605.52370884659 483505.93800671893 119597.43261814112 483576.73505039199 119140.28599328108 483544.37068757002 119010.82854199329 483530.21127883543 118919.80377155656 483522.12018812995</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>120243.70848824189 483613.14495856664 120241.68571556552 483546.39346024639 120340.80157670774 483546.39346024639 120472.2818006719 483566.62118701008 120581.51152519598 483564.59841433371 120712.99174916015 483546.39346024639 120710.96897648378 483609.0994132139 120567.35211646138 483625.28159462492 120441.94021052633 483621.23604927212 120243.70848824189 483613.14495856664</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>120747.37888465846 483592.91723180295 120747.37888465846 483524.14296080632 120826.26701903697 483499.86968868983 120917.2917894737 483455.36868980963 120919.31456215007 483441.20928107505 121010.33933258679 483388.61719148938 121107.43242105265 483313.77460246364 121153.9561926092 483364.34391937294 121034.61260470326 483463.45978051517 120804.01651959687 483576.73505039199 120747.37888465846 483592.91723180295</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>121191.37748712208 483246.51741097419 121215.65075923855 483222.2441388577 121391.63198208289 483082.67282418808 121581.77261366184 482930.96487346018 121610.09143113105 482957.26091825304 121525.13497872344 483032.10350727878 121452.31516237406 483098.85500559903 121304.65275699891 483236.40354759234 121227.78739529678 483288.99563717801 121191.37748712208 483246.51741097419</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>121782.02710862266 482773.18860470317 121798.20929003363 482765.09751399769 121899.34792385221 482682.16383426648 122079.3746920493 482542.5925195968 122099.60241881302 482581.02520044788 122030.82814781638 482629.57174468081 121955.98555879062 482682.16383426648 121877.09742441213 482746.89255991037 121810.34592609186 482801.50742217241 121782.02710862266 482773.18860470317</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>122324.63587905938 482562.31455319148 122328.68142441212 482550.1779171332 122389.36460470328 482566.36009854422 122488.4804658455 482580.5195072788 122595.6874176932 482594.67891601339 122646.2567346025 482588.61059798428 122646.2567346025 482610.86109742435 122547.14087346027 482602.77000671887 122405.54678611425 482576.47396192607 122340.81806047035 482564.33732586785 122324.63587905938 482562.31455319148</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+                <gml:interior>
+                    <gml:LinearRing>
+                        <gml:posList>122543.09532810753 482254.85310638294 122547.14087346027 482224.51151623734 122617.9379171333 482173.9421993281 122698.84882418816 482127.41842777154 122686.71218812994 482184.05606270995 122563.32305487126 482248.78478835383 122543.09532810753 482254.85310638294</gml:posList>
+                    </gml:LinearRing>
+                </gml:interior>
+            </gml:Polygon>
+        </Geometrie>
+        <Locatiegroep id="werkingsgebied_projectbesluit_zuidas_20180320">
+            <Geometrie idref="werkingsgebied_projectbesluit_zuidas_20180320.geom"/>
+        </Locatiegroep>
+    </Locaties>
+</OfficielePublicatie>

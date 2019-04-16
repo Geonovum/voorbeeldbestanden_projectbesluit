@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficielePublicatie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns="http://www.overheid.nl/imop/def#" xsi:schemaLocation="http://www.overheid.nl/imop/def# http://technische-documentatie.oep.overheid.nl/poc-toepassingsprofiel/schemas/imop/0.91/xsd/imop_0.91.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd">
+    <Metadata>
+        <Uitspraak eigenschap="imop:citeertitel">
+            <Waarde type="xs:string">Omgevingsplan Amsterdam</Waarde>
+        </Uitspraak>
+        <Uitspraak eigenschap="imop:datumLaatsteWijziging">
+            <Waarde type="xs:date">2014-12-17</Waarde>
+        </Uitspraak>
+    </Metadata>
+    <Gemeenteblad>
+        <Regeling id="reg021">
+            <RegelingOpschrift>
+                <al>Omgevingsplan Amsterdam</al>
+            </RegelingOpschrift>
+            <Lichaam id="reg021_001">
+                <Hoofdstuk id="reg021_hfdst001">
+                    <Kop>
+                        <Label>Hoofdstuk</Label>
+                        <Nummer>1</Nummer>
+                        <Opschrift>Algemene regels</Opschrift>
+                    </Kop>
+                    <Artikel id="reg021_hfdst001_art001">
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>1.1</Nummer>
+                            <Opschrift>Begrippen</Opschrift>
+                        </Kop>
+                        <Inhoud>
+                            <al>In deze regels wordt verstaan onder:</al>
+                            <Begrippenlijst>
+                                <Begrip>
+                                    <LiNr>1</LiNr>
+                                    <Term>omgevingsplan</Term>
+                                    <Definitie>
+                                        <al>Het omgevingsplan van de gemeente Amsterdam, zoals vervat in de bestandenset Y, laatstelijk gewijzigd bij besluit van 17-12-2014.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>2</LiNr>
+                                    <Term>omgevingsplangebied</Term>
+                                    <Definitie>
+                                        <al>Werkingsgebied van het omgevingsplan.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>3</LiNr>
+                                    <Term>besluitgebied</Term>
+                                    <Definitie>
+                                        <al>Werkingsgebied van het besluit tot wijziging van het omgevingsplan.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>4</LiNr>
+                                    <Term>activiteit</Term>
+                                    <Definitie>
+                                        <al>Ieder handelen of nalaten dat gevolgen heeft of kan hebben voor de fysieke leefomgeving.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>5</LiNr>
+                                    <Term>detailhandel</Term>
+                                    <Definitie>
+                                        <al>Het bedrijfsmatig te koop of te huur aanbieden, hieronder begrepen de uitstalling ten verkoop of verhuur, het verkopen, verhuren en/of leveren van goederen en diensten aan degenen die deze goederen en diensten kopen of huren voor gebruik, verbruik of aanwending anders dan in de uitoefening van een beroeps- of bedrijfsactiviteit.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>6</LiNr>
+                                    <Term>equivalent geluidsniveau Leq (één minuut)</Term>
+                                    <Definitie>
+                                        <al>Het energetisch gemiddelde van de fluctuerende niveaus van het ter plaatse, gedurende één minuut optredende geluid.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>7</LiNr>
+                                    <Term>bouwwerk</Term>
+                                    <Definitie>
+                                        <al>Elke constructie van enige omvang van hout, steen, metaal of ander materiaal, die hetzij direct of indirect met de grond verbonden is, hetzij direct of indirect steun vindt in of op de grond.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>8</LiNr>
+                                    <Term>gebouw</Term>
+                                    <Definitie>
+                                        <al>Elk bouwwerk dat een voor mensen toegankelijke, overdekte, geheel of gedeeltelijk met wanden omsloten ruimte vormt.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>9</LiNr>
+                                    <Term>peil</Term>
+                                    <Definitie>
+                                        <al>Onder het peil wordt verstaan het N.A.P., tenzij anders in de regels aangegeven.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>10</LiNr>
+                                    <Term>dunnen</Term>
+                                    <Definitie>
+                                        <al>Vellen dat geschiedt als verzorgingsmaatregel ter bevordering van de groei van het overblijvende houtgewas.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>11</LiNr>
+                                    <Term>herbeplanten</Term>
+                                    <Definitie>
+                                        <al>Door aanplant, bezaaiing of natuurlijke verjonging dan wel op andere wijze realiseren van een nieuw houtgewas.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>12</LiNr>
+                                    <Term>houtgewas</Term>
+                                    <Definitie>
+                                        <al>Eén of meerdere bomen, boomvormers of struiken of hakhout.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>13</LiNr>
+                                    <Term>vellen</Term>
+                                    <Definitie>
+                                        <al>Rooien of verrichten van andere handelingen die de dood of ernstige beschadiging van een houtgewas tot gevolg kunnen hebben.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>14</LiNr>
+                                    <Term>bruto bouwoppervlak (bvo)</Term>
+                                    <Definitie>
+                                        <al>De totale oppervlakte van de bouwlagen met inbegrip van de bouwconstructies, magazijnen, dienstruimten, bergingen etc.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>15</LiNr>
+                                    <Term>groenvoorziening</Term>
+                                    <Definitie>
+                                        <al>Ruimten in de open lucht, waaronder in ieder geval worden begrepen (bos)parken, plantsoenen, groenvoorzieningen en open speelplekken, met de daarbij behorende sloten, vijvers en daarmee gelijk te stellen wateren.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>16</LiNr>
+                                    <Term>zakelijke dienstverlening</Term>
+                                    <Definitie>
+                                        <al>Het verlenen van diensten die bestaan uit het verlenen van economische of commerciële diensten aan derden, waarvan de uitoefening geschiedt in een rechtstreeks contact met het publiek, zoals banken, reisbureaus.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>17</LiNr>
+                                    <Term>spoorwegvoorzieningen</Term>
+                                    <Definitie>
+                                        <al>Dienstgebouwen, stations, rails, perrons, overkappingen, fietsenstallingen, viaducten en onderdoorgangen, taluds, geluidsschermen, (keer-)muren, transformatorgebouwen, stationsvoorzieningen en bijbehorende kantoren al dan niet met baliefunctie, alsmede vergelijkbare gebouwen en bouwwerken ten behoeve van railvervoer.</al>
+                                    </Definitie>
+                                </Begrip>
+                            </Begrippenlijst>
+                        </Inhoud>
+                    </Artikel>
+                    <Artikel id="reg021_hfdst001_art002">
+                        <Kop>
+                            <Label>Artikel</Label>
+                            <Nummer>1.2</Nummer>
+                            <Opschrift>Meet- en rekenregels</Opschrift>
+                        </Kop>
+                        <Inhoud>
+                            <al>Bij toepassing van deze regels wordt als volgt gemeten en gerekend:</al>
+                            <Begrippenlijst>
+                                <Begrip>
+                                    <LiNr>1</LiNr>
+                                    <Term>de bouwdiepte van een bouwwerk</Term>
+                                    <Definitie>
+                                        <al>Vanaf peil tot aan het laagste punt van het bouwwerk, met uitzondering van fundering of ondergeschikte onderdelen van het bouwwerk.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>2</LiNr>
+                                    <Term>de bouwhoogte van een bouwwerk</Term>
+                                    <Definitie>
+                                        <al>Vanaf het peil tot aan het hoogste punt van een gebouw of een bouwwerk, geen gebouw zijnde, met uitzondering van ondergeschikte bouwdelen, zoals schoorstenen, antennes en naar de aard daarmee gelijk te stellen bouwonderdelen.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>3</LiNr>
+                                    <Term>de goothoogte van een bouwwerk</Term>
+                                    <Definitie>
+                                        <al>Vanaf het peil tot aan de bovenkant van de goot c.q. de druiplijn, het boeibord of een daarmee gelijk te stellen constructiedeel.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>4</LiNr>
+                                    <Term>dB(A)</Term>
+                                    <Definitie>
+                                        <al>Geluidsniveau in decibellen, gemeten met een genormeerd (A)filter dat corrigeert voor het menselijk gehoor.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>5</LiNr>
+                                    <Term>dB(C)</Term>
+                                    <Definitie>
+                                        <al>Geluidsniveau in decibellen, gemeten met een genormeerd (C)filter dat speciaal geschikt is voor hoge geluidsniveaus in lage frequenties (bass-tonen).</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>6</LiNr>
+                                    <Term>de grondoppervlakte van een bouwwerk</Term>
+                                    <Definitie>
+                                        <al>Tussen de buitengevels en/of het hart van de scheidingsmuren, daar waar die buitengevels het peil raken.</al>
+                                    </Definitie>
+                                </Begrip>
+                                <Begrip>
+                                    <LiNr>7</LiNr>
+                                    <Term>de brutovloeroppervlakte van een gebouw</Term>
+                                    <Definitie>
+                                        <al>De bebouwde oppervlakte van de afzonderlijke bouwlagen bij elkaar opgeteld.</al>
+                                    </Definitie>
+                                </Begrip>
+                            </Begrippenlijst>
+                        </Inhoud>
+                    </Artikel>
+                </Hoofdstuk>
+                <Hoofdstuk id="reg021_hfdst002">
+                    <Kop>
+                        <Label>Hoofdstuk</Label>
+                        <Nummer>2</Nummer>
+                        <Opschrift>Functietoedeling  en bijbehorende activiteiten</Opschrift>
+                    </Kop>
+                    <Afdeling id="reg021_hfdst002_afd003">
+                        <Metadata>
+                            <Uitspraak onderwerp="reg021_hfdst002_afd003" eigenschap="tpod:heeftFunctie">
+                                <Object type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Kantoor - 1</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">kantoor</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">bestemming_kantoor</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.3</Nummer>
+                            <Opschrift>Kantoor - 1</Opschrift>
+                        </Kop>
+                        <Artikel id="reg021_hfdst002_afd003_art009">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.9</Nummer>
+                                <Opschrift>Doel functietoedeling</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Het werkingsgebied van de functie ‘Kantoor - 1’ is bedoeld voor gebruiksactiviteiten die passen in een stadscentrum met een overwegend stedelijke inrichting en die geen onevenredige afbreuk doen aan het stedelijke karakter of aan de beleving van het bezoekende publiek.</al>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd003_art010">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.10</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie ‘Kantoor - 1’ mag de locatie in ieder geval worden gebruikt voor de volgende gebruiksactiviteiten:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>het exploiteren van een kantoor;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>het uitoefenen van zakelijke dienstverlening;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>het uitoefenen van detailhandel;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>het exploiteren van een horeca I, horeca III en horeca IV-inrichting;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>e.</LiNr>
+                                        <Inhoud>
+                                            <al>het uitoefenen van maatschappelijke dienstverlening;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>f.</LiNr>
+                                        <Inhoud>
+                                            <al>het uitoefenen van consumentverzorgende dienstverlening;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>g.</LiNr>
+                                        <Inhoud>
+                                            <al>het exploiteren van een instelling voor culturele voorzieningen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>h.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van parkeervoorzieningen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>i.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van nutsvoorzieningen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>j.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van pleinen en daarmee vergelijkbare verblijfsruimten;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>k.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van openbaar groen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>l.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van de openbare ruimte, waaronder in ieder geval worden begrepen voorzieningen voor de waterhuishouding, voetpaden, fietspaden, wegen en voorzieningen die het verblijf in de openbare ruimte vergemakkelijken, zoals verlichting, prullenbakken en overig straatmeubilair.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd003_art011">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.11</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die verboden zijn</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie ‘Kantoor – 1’ is het verboden de locatie en de daarop voorkomende bouwwerken te gebruiken:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>voor het exploiteren van een seksinrichting;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>als staan- of ligplaats voor voor (menselijk of dierlijk) verblijf geschikte, al dan niet aan hun bestemming onttrokken, vaar- of voertuigen, arken of andere objecten, voor zover die niet als bouwwerk zijn aan te merken.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd003_art012">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.12</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegelaten na voorafgaande melding</Opschrift>
+                            </Kop>
+                            <Lid>
+                                <Lidnr>1</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Meldingplichtige gebruiksactiviteiten</Tussenkop>
+                                    <al>Ter plaatse van het werkingsgebied van de functie ‘Kantoor - 1’ is het verboden de gebruiksactiviteit ‘het exploiteren van een hospice’ te verrichten zonder dat daarvoor aan het bevoegd gezag een melding is gedaan.</al>
+                                </Inhoud>
+                            </Lid>
+                            <Lid>
+                                <Lidnr>2</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Indieningsvereisten melding</Tussenkop>
+                                    <Lijst type="expliciet">
+                                        <Lijstaanhef>Bij het doen van de melding moeten de volgende indieningsvereisten in acht genomen worden:</Lijstaanhef>
+                                        <Li>
+                                            <LiNr>a.</LiNr>
+                                            <Inhoud>
+                                                <al>de melding moet worden gedaan door middel van het inzenden van het bij deze regels behorende Formulier Melding;</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>b.</LiNr>
+                                            <Inhoud>
+                                                <al>toegevoegd moet worden een terreininrichtingstekening.</al>
+                                            </Inhoud>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Lid>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd003_art013">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.13</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegelaten nadat daarvoor omgevingsvergunning is verleend</Opschrift>
+                            </Kop>
+                            <Lid>
+                                <Lidnr>1</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Vergunningplichtige gebruiksactiviteiten</Tussenkop>
+                                    <al>Ter plaatse van het werkingsgebied van de functie ‘Kantoor - 1’ is het verboden om zonder omgevingsvergunning de gebruiksactiviteit ‘het uitoefenen van detailhandel in de vorm van een supermarkt’ te verrichten.</al>
+                                </Inhoud>
+                            </Lid>
+                            <Lid>
+                                <Lidnr>2</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Indieningsvereisten aanvraag omgevingsvergunning</Tussenkop>
+                                    <Lijst type="expliciet">
+                                        <Lijstaanhef>Bij het indienen van de aanvraag om omgevingsvergunning moeten de volgende indieningsvereisten in acht genomen worden:</Lijstaanhef>
+                                        <Li>
+                                            <LiNr>a.</LiNr>
+                                            <Inhoud>
+                                                <al>de aanvraag moet worden ingediend door middel van het inzenden van het bij deze regels behorende Formulier Aanvraag omgevingsvergunning;</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>b.</LiNr>
+                                            <Inhoud>
+                                                <al>toegevoegd moet worden een terreininrichtingstekening;</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>c.</LiNr>
+                                            <Inhoud>
+                                                <al>toegevoegd moet worden een DistributiePlanologischOnderzoeksrapportage.</al>
+                                            </Inhoud>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Lid>
+                            <Lid>
+                                <Lidnr>3</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Beoordelingsregels aanvraag omgevingsvergunning</Tussenkop>
+                                    <Lijst type="expliciet">
+                                        <Lijstaanhef>De omgevingsvergunning wordt alleen verleend als aan de volgende regels wordt voldaan:</Lijstaanhef>
+                                        <Li>
+                                            <LiNr>a.</LiNr>
+                                            <Inhoud>
+                                                <al>uit de DistributiePlanologischOnderzoeksrapportage is gebleken dat er voldoende distributieve ruimte is voor de vestiging van een supermarkt; en</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>b.</LiNr>
+                                            <Inhoud>
+                                                <al>uit de DistributiePlanologischOnderzoeksrapportage is gebleken dat de vestiging van een supermarkt op de betreffende locatie er niet toe leidt dat de inwoners van de rest van het stedelijk gebied niet langer op een aanvaardbare afstand van hun woning kunnen voorzien in hun eerste levensbehoeften.</al>
+                                            </Inhoud>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Lid>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd003_art014">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.14</Nummer>
+                                <Opschrift>Bevoegdheid tot stellen maatwerkvoorschriften en verbinden voorschriften aan omgevingsvergunning</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Ter voorkoming van onevenredig nadelige gevolgen voor de fysieke leefomgeving kunnen burgemeester en wethouders bij besluit maatwerkvoorschriften stellen dan wel aan de in artikel 2.13 bedoelde omgevingsvergunning voorschriften verbinden.</al>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling id="reg021_hfdst002_afd004">
+                        <Metadata>
+                            <Uitspraak onderwerp="reg021_hfdst002_afd004" eigenschap="tpod:heeftFunctie">
+                                <Object type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Verkeer</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">verkeer</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">bestemming_verkeer</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.4</Nummer>
+                            <Opschrift>Verkeer</Opschrift>
+                        </Kop>
+                        <Artikel id="reg021_hfdst002_afd004_art015">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.15</Nummer>
+                                <Opschrift>Doel functietoedeling</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Het werkingsgebied van de functie ‘Verkeer’ is bedoeld voor gebruiksactiviteiten die passen in een verkeer gebied met een mengeling van verkeergebied en bij het verkeergebied passende functies op het gebied van bedrijvigheid en maatschappelijke voorzieningen die geen onevenredige afbreuk doen aan het gemengde karakter waarvan de nadruk ligt op het wonen.</al>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd004_art016">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.16</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie ‘Verkeer’ mag de locatie in ieder geval worden gebruikt voor de volgende gebruiksactiviteiten:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van straten en wegen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van voet- en fietspaden;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van pleinen en daarmee vergelijkbare verblijfsruimten;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van verkeerskundige voorzieningen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>e.</LiNr>
+                                        <Inhoud>
+                                            <al>het aanleggen en instandhouden van waterlopen en waterpartijen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd004_art017">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.17</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die verboden zijn</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Ter plaatse van het werkingsgebied van de functie ‘Verkeer’ is het verboden de locatie en de daarop voorkomende bouwwerken te gebruiken als staan- of ligplaats voor voor (menselijk of dierlijk) verblijf geschikte, al dan niet aan hun bestemming onttrokken, vaar- of voertuigen, arken of andere objecten, voor zover die niet als bouwwerk zijn aan te merken.</al>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd004_art018">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.18</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegelaten na voorafgaande melding</Opschrift>
+                            </Kop>
+                            <Lid>
+                                <Lidnr>1</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Meldingplichtige gebruiksactiviteiten</Tussenkop>
+                                    <al>Ter plaatse van het werkingsgebied van de functie ‘Verkeer’ is het verboden de gebruiksactiviteit ‘onderhoud werkzaamheden (bijv. de aanleg van duikers, grondverzet, bouwrijp maken van grond en opslag van grond)’ te verrichten zonder dat daarvoor aan het bevoegd gezag een melding is gedaan.</al>
+                                </Inhoud>
+                            </Lid>
+                            <Lid>
+                                <Lidnr>2</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Indieningsvereisten melding</Tussenkop>
+                                    <Lijst type="expliciet">
+                                        <Lijstaanhef>Bij het doen van de melding moeten de volgende indieningsvereisten in acht genomen worden:</Lijstaanhef>
+                                        <Li>
+                                            <LiNr>a.</LiNr>
+                                            <Inhoud>
+                                                <al>de melding moet worden gedaan door middel van het inzenden van het bij deze regels behorende Formulier Melding;</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>b.</LiNr>
+                                            <Inhoud>
+                                                <al>toegevoegd moet worden een terreininrichtingstekening.</al>
+                                            </Inhoud>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Lid>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd004_art019">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.19</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegelaten nadat daarvoor omgevingsvergunning is verleend</Opschrift>
+                            </Kop>
+                            <Lid>
+                                <Lidnr>1</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Vergunningplichtige gebruiksactiviteiten</Tussenkop>
+                                    <al>Ter plaatse van het werkingsgebied van de functie ‘Verkeer’ is het verboden om zonder omgevingsvergunning de gebruiksactiviteit ‘het aanleggen en instandhouden van viaducten en stationsgebouwen’ te verrichten.</al>
+                                </Inhoud>
+                            </Lid>
+                            <Lid>
+                                <Lidnr>2</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Indieningsvereisten aanvraag omgevingsvergunning</Tussenkop>
+                                    <Lijst type="expliciet">
+                                        <Lijstaanhef>Bij het indienen van de aanvraag om omgevingsvergunning moeten de volgende indieningsvereisten in acht genomen worden:</Lijstaanhef>
+                                        <Li>
+                                            <LiNr>a.</LiNr>
+                                            <Inhoud>
+                                                <al>de aanvraag moet worden ingediend door middel van het inzenden van het bij deze regels behorende Formulier Aanvraag omgevingsvergunning;</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>b.</LiNr>
+                                            <Inhoud>
+                                                <al>toegevoegd moet worden een terreininrichtingstekening;</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>c.</LiNr>
+                                            <Inhoud>
+                                                <al>toegevoegd moet worden een DistributiePlanologischOnderzoeksrapportage.</al>
+                                            </Inhoud>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Lid>
+                            <Lid>
+                                <Lidnr>3</Lidnr>
+                                <Inhoud>
+                                    <Tussenkop>Beoordelingsregels aanvraag omgevingsvergunning</Tussenkop>
+                                    <al>De omgevingsvergunning wordt alleen verleend als de gebruiksactiviteit ‘het aanleggen en instandhouden van viaducten en stationsgebouwen’ niet leidt tot onevenredig nadelige gevolgen voor de fysieke leefomgeving.</al>
+                                </Inhoud>
+                            </Lid>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd004_art020">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.20</Nummer>
+                                <Opschrift>Bevoegdheid tot stellen maatwerkvoorschriften en verbinden voorschriften aan omgevingsvergunning</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Ter voorkoming van onevenredig nadelige gevolgen voor de fysieke leefomgeving kunnen burgemeester en wethouders bij besluit maatwerkvoorschriften stellen dan wel aan de in artikel 3.19 bedoelde omgevingsvergunning voorschriften verbinden.</al>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling id="reg021_hfdst002_afd005">
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.5</Nummer>
+                            <Opschrift>Beschermd monument</Opschrift>
+                        </Kop>
+                        <Artikel id="reg021_hfdst002_afd005_art021">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.21</Nummer>
+                                <Opschrift>Doel functietoedeling</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Het doel van het toedelen van de functie ‘Beschermd monument’ is het beschermen van de karakteristieke elementen van het aanwezige monument. Bij strijd tussen dit doel en de gebruiksactiviteiten die zijn toegestaan ingevolge de overige functies die ter plaatse van het werkingsgebied van de functie ‘Beschermd monument’ aan dezelfde locatie zijn toegedeeld heeft de functie ‘Beschermd monument’ voorrang.</al>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd005_art022">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.22</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Ter plaatse van het werkingsgebied van de functie ‘Beschermd monument’ mag de locatie worden gebruikt voor de gebruiksactiviteit ‘behoud en herstel van de cultuurhistorische waarden’ van het beschermde monument.</al>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="reg021_hfdst002_afd005_art023">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.23</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die verboden zijn</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Ter plaatse van het werkingsgebied van de functie ‘Beschermd monument’ is het verboden de locatie en de daarop voorkomende bouwwerken te gebruiken voor gebruiksactiviteiten die een onaanvaardbare inbreuk vormen op het karakter van het beschermde monument.</al>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                </Hoofdstuk>
+                <Hoofdstuk id="reg021_hfdst003">
+                    <Kop>
+                        <Label>Hoofdstuk</Label>
+                        <Nummer>3</Nummer>
+                        <Opschrift>Overige activiteiten</Opschrift>
+                    </Kop>
+                    <Afdeling id="reg021_hfdst003_afd001">
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>3.1</Nummer>
+                            <Opschrift>Bouwactiviteit</Opschrift>
+                        </Kop>
+                        <Paragraaf id="reg021_hfdst003_afd001_par001">
+                            <Kop>
+                                <Label>Paragraaf</Label>
+                                <Nummer>3.1.1</Nummer>
+                                <Opschrift>Algemene bouwregels</Opschrift>
+                            </Kop>
+                            <Artikel id="reg021_hfdst003_afd001_par001_art001">
+                                <Kop>
+                                    <Label>Artikel</Label>
+                                    <Nummer>3.1</Nummer>
+                                    <Opschrift>Bouwactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                                </Kop>
+                                <Inhoud>
+                                    <Lijst type="expliciet">
+                                        <Lijstaanhef>Ter plaatse van het werkingsgebied ‘bouwactiviteiten die zonder vergunning of melding zijn toegestaan’ is geen vergunning voor de bouwactiviteit vereist indien deze activiteit betrekking heeft op:</Lijstaanhef>
+                                        <Li>
+                                            <LiNr>a.</LiNr>
+                                            <Inhoud>
+                                                <al>gewoon onderhoud van een bouwwerk, voor zover maatvoering en vormgeving van dat bouwwerk niet wijzigen;</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>b.</LiNr>
+                                            <Inhoud>
+                                                <al>straatmeubilair;</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>c.</LiNr>
+                                            <Inhoud>
+                                                <al>bouwwerken, geen gebouw zijnde, in voorerfgebied mits de bouwhoogte niet hoger is dan 1 meter;</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>d.</LiNr>
+                                            <Inhoud>
+                                                <al>bouwwerken in achtererfgebied, mits de bouwhoogte niet hoger is dan 3 meter en de grondoppervlakte niet groter is dan 30 m<sup>2</sup>.</al>
+                                            </Inhoud>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Artikel>
+                            <Artikel id="reg021_hfdst003_afd001_par001_art002">
+                                <Kop>
+                                    <Label>Artikel</Label>
+                                    <Nummer>3.2</Nummer>
+                                    <Opschrift>Bouwactiviteiten die verboden zijn</Opschrift>
+                                </Kop>
+                                <Inhoud>
+                                    <al>Het bouwen van lichtmasten, hoogspanningsmasten en bovenleidingportalen is verboden.</al>
+                                </Inhoud>
+                            </Artikel>
+                            <Artikel id="reg021_hfdst003_afd001_par001_art003">
+                                <Kop>
+                                    <Label>Artikel</Label>
+                                    <Nummer>3.3</Nummer>
+                                    <Opschrift>Bouwactiviteiten die zijn toegestaan nadat daarvoor omgevingsvergunning is verleend</Opschrift>
+                                </Kop>
+                                <Lid>
+                                    <Lidnr>1</Lidnr>
+                                    <Inhoud>
+                                        <Tussenkop>Vergunningplichtige bouwactiviteiten</Tussenkop>
+                                        <al>Het is verboden om zonder omgevingsvergunning bedrijfsgebouwen, kantoorgebouwen en woningen te bouwen.</al>
+                                    </Inhoud>
+                                </Lid>
+                                <Lid>
+                                    <Lidnr>2</Lidnr>
+                                    <Inhoud>
+                                        <Tussenkop>Indieningsvereisten aanvraag omgevingsvergunning</Tussenkop>
+                                        <Lijst type="expliciet">
+                                            <Lijstaanhef>Bij het indienen van de aanvraag om omgevingsvergunning moeten de volgende indieningsvereisten in acht genomen worden:</Lijstaanhef>
+                                            <Li>
+                                                <LiNr>a.</LiNr>
+                                                <Inhoud>
+                                                    <al>de aanvraag moet worden ingediend door middel van het inzenden van het bij deze regels behorende Formulier Aanvraag omgevingsvergunning;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <LiNr>b.</LiNr>
+                                                <Inhoud>
+                                                    <al>toegevoegd moet worden een terreininrichtingstekening;</al>
+                                                </Inhoud>
+                                            </Li>
+                                            <Li>
+                                                <LiNr>c.</LiNr>
+                                                <Inhoud>
+                                                    <al>toegevoegd moeten worden een volledige set bouwtekeningen conform BIM-model.</al>
+                                                </Inhoud>
+                                            </Li>
+                                        </Lijst>
+                                    </Inhoud>
+                                </Lid>
+                                <Lid>
+                                    <Lidnr>3</Lidnr>
+                                    <Inhoud>
+                                        <Tussenkop>Beoordelingsregels aanvraag omgevingsvergunning</Tussenkop>
+                                        <al>De omgevingsvergunning wordt alleen verleend als het bouwwerk voldoet aan de bouwregels die in paragraaf 3.1.2 zijn gesteld.</al>
+                                    </Inhoud>
+                                </Lid>
+                            </Artikel>
+                        </Paragraaf>
+                        <Paragraaf id="reg021_hfdst003_afd001_par002">
+                            <Kop>
+                                <Label>Paragraaf</Label>
+                                <Nummer>3.1.2</Nummer>
+                                <Opschrift>Bouwregels per type bebouwing</Opschrift>
+                            </Kop>
+                            <Artikel id="reg021_hfdst003_afd001_par002_art004">
+                                <Kop>
+                                    <Label>Artikel</Label>
+                                    <Nummer>3.4</Nummer>
+                                    <Opschrift>Bouwregels kantoorgebouwen</Opschrift>
+                                </Kop>
+                                <Inhoud>
+                                    <Lijst type="expliciet">
+                                        <Lijstaanhef>Voor het bouwen en instandhouden van kantoorgebouwen gelden de volgende regels:</Lijstaanhef>
+                                        <Li>
+                                            <LiNr>a.</LiNr>
+                                            <Inhoud>
+                                                <al>Een kantoorgebouw moet worden gesitueerd binnen het bouwvlak.</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>b.</LiNr>
+                                            <Inhoud>
+                                                <al>De maximum oppervlakte van een kantoorgebouw is gelijk aan het bouwvlak, met inachtneming van de ter plaatse van het werkingsgebied ‘maximum bebouwingspercentage’ bepaalde percentage.</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>c.</LiNr>
+                                            <Inhoud>
+                                                <al>De maximum goothoogte van een kantoorgebouw is de ter plaatse van het werkingsgebied ‘maximum goothoogte bedrijfsgebouw’ bepaalde waarde.</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>d.</LiNr>
+                                            <Inhoud>
+                                                <al>De maximum bouwhoogte van een kantoorgebouw is de ter plaatse van het werkingsgebied ‘maximum bouwhoogte bedrijfsgebouw’ bepaalde waarde.</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>e.</LiNr>
+                                            <Inhoud>
+                                                <al>De afstand tussen een kantoorgebouw en de zijdelingse perceelsgrens bedraagt ten minste 3 meter.</al>
+                                            </Inhoud>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Artikel>
+                            <Artikel id="reg021_hfdst003_afd001_par002_art005">
+                                <!-- GW 13-06-2018: De uitwerking van omgevingsnormen is niet definitief. -->
+                                <Metadata>
+                                    <Uitspraak onderwerp="reg021_hfdst003_afd001_par002_art005" eigenschap="tpod:bevat">
+                                        <Reeks>
+                                            <Object type="tpod:Omgevingsnorm">
+                                                <Eigenschap naam="omgevingsnorm">
+                                                    <Waarde type="xs:string">maximumBouwhoogte</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="typeOmgevingsnorm">
+                                                    <Waarde type="xs:string">maatvoeringBouwen</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="locatie">
+                                                    <Waarde type="imop:objectRef">maximum_bouwhoogte_viaduct</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="waarde">
+                                                    <Object type="WaardeEenheidCombinatie">
+                                                        <Eigenschap naam="waarde">
+                                                            <Waarde type="xs:string">15</Waarde>
+                                                        </Eigenschap>
+                                                        <Eigenschap naam="eenheid">
+                                                            <Waarde type="xs:anyURI">http://measures.nl/units/metersBovenMaaiveld</Waarde>
+                                                        </Eigenschap>
+                                                    </Object>
+                                                </Eigenschap>
+                                            </Object>
+                                            <Object type="tpod:Omgevingsnorm">
+                                                <Eigenschap naam="omgevingsnorm">
+                                                    <Waarde type="xs:string">maximumBouwhoogte</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="locatie">
+                                                    <Waarde type="imop:objectRef">maximum_bouwhoogte_station</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="typeOmgevingsnorm">
+                                                    <Waarde type="xs:string">maatvoeringBouwen</Waarde>
+                                                </Eigenschap>
+                                                <Eigenschap naam="waarde">
+                                                    <Object type="WaardeEenheidCombinatie">
+                                                        <Eigenschap naam="waarde">
+                                                            <Waarde type="xs:string">5</Waarde>
+                                                        </Eigenschap>
+                                                        <Eigenschap naam="eenheid">
+                                                            <Waarde type="xs:anyURI">http://measures.nl/units/metersBovenMaaiveld</Waarde>
+                                                        </Eigenschap>
+                                                    </Object>
+                                                </Eigenschap>
+                                            </Object>
+                                        </Reeks>
+                                    </Uitspraak>
+                                </Metadata>
+                                <Kop>
+                                    <Label>Artikel</Label>
+                                    <Nummer>3.5</Nummer>
+                                    <Opschrift>Bouwregels verkeer</Opschrift>
+                                </Kop>
+                                <Inhoud>
+                                    <Lijst type="expliciet">
+                                        <Lijstaanhef>Voor het het aanleggen en instandhouden van viaducten en stationsgebouwen gelden de volgende regels:</Lijstaanhef>
+                                        <Li>
+                                            <LiNr>a.</LiNr>
+                                            <Inhoud>
+                                                <al>Een viaduct of stationsgebouw moet worden gesitueerd binnen het bouwvlak.</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>b.</LiNr>
+                                            <Inhoud>
+                                                <al>Wanneer het viaduct of stationsgebouw ouder dan 50 jaar is dient deze gemoderniseerd te worden.</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>c.</LiNr>
+                                            <Inhoud>
+                                                <al>De maximum bouwhoogte van een viaduct is de ter plaatse van het werkingsgebied ‘maximum bouwhoogte viaduct’ bepaalde waarde.</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>d.</LiNr>
+                                            <Inhoud>
+                                                <al>De maximum bouwhoogte van een station is de ter plaatse van het werkingsgebied ‘maximum bouwhoogte station’ bepaalde waarde.</al>
+                                            </Inhoud>
+                                        </Li>
+                                        <Li>
+                                            <LiNr>e.</LiNr>
+                                            <Inhoud>
+                                                <al>De afstand tussen een viaduct en de zijdelingse perceelsgrens bedraagt ten minste 4 meter.</al>
+                                            </Inhoud>
+                                        </Li>
+                                    </Lijst>
+                                </Inhoud>
+                            </Artikel>
+                        </Paragraaf>
+                    </Afdeling>
+                </Hoofdstuk>
+            </Lichaam>
+        </Regeling>
+    </Gemeenteblad>
+    <Locaties>
+        <Geometrie id="geo_maximum_bouwhoogte_station">
+            <!-- nog in te vullen -->
+        </Geometrie>
+        <Geometrie id="geo_maximum_bouwhoogte_viaduct">
+            <!-- nog in te vullen -->
+        </Geometrie>
+        <Geometrie id="geo_bestemming_kantoor">
+            <!-- nog in te vullen -->
+        </Geometrie>
+        <Geometrie id="geo_bestemming_verkeer">
+            <!-- nog in te vullen -->
+        </Geometrie>
+        <Locatiegroep id="maximum_bouwhoogte_station">
+            <Geometrie idref="geo_maximum_bouwhoogte_station"/>
+        </Locatiegroep>
+        <Locatiegroep id="maximum_bouwhoogte_viaduct">
+            <Geometrie idref="geo_maximum_bouwhoogte_viaduct"/>
+        </Locatiegroep>
+        <Locatiegroep id="bestemming_kantoor">
+            <Geometrie idref="geo_bestemming_kantoor"/>
+        </Locatiegroep>
+        <Locatiegroep id="bestemming_verkeer">
+            <Geometrie idref="geo_bestemming_verkeer"/>
+        </Locatiegroep>
+    </Locaties>
+</OfficielePublicatie>

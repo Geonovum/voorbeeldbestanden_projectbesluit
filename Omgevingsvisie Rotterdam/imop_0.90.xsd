@@ -1,0 +1,3843 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:doc="http://technische-documentatie.oep.overheid.nl/namespaces/doc" xmlns:imop="http://www.overheid.nl/imop/def#" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:sch="http://purl.oclc.org/dsdl/schematron"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.overheid.nl/imop/def#">
+    <!-- 
+        
+        versie 0.86
+        
+        laatste edit 2018-02-01
+        - sub/sup binnen Waarde toestaan         
+    -->
+
+    <!-- TODO: mathML voor formules?? -->
+
+    <!-- TODO: waarom kan je Locatieverwijzing niet in een Locatiegroep plaatsen? -->
+
+    <xs:import schemaLocation="https://www.w3.org/2001/xml.xsd" namespace="http://www.w3.org/XML/1998/namespace"/>
+
+    <!--<xs:import schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd" namespace="http://www.opengis.net/gml/3.2"/>-->
+
+    <xs:annotation>
+        <xs:documentation>Dit schema ondersteunt centrale en decentrale besluiten en consolidaties</xs:documentation>
+        <xs:documentation>Het rootelement voor besluiten is officiele-publicatie; het rootelement voor consolidaties is toestand</xs:documentation>
+        <xs:documentation>nog bepalen of toestanden een aanhef / sluiting nodig hebben (deze worden toch niet veranderd), het is wel mogelijk om bijlagen op te nemen. Het is nog een open issue hoe om te gaan met (het consolideren van) een
+            nota-toelichting</xs:documentation>
+        <!-- wet-besluit element (zoals in STB) zinvol? (in aanvulling op regeling element) -->
+    </xs:annotation>
+
+    <xs:annotation>
+        <xs:documentation>
+            <p>Voor xs:appinfo worden de volgende custom elementen gebruikt:</p>
+            <ul>
+                <li>type: geeft aan wat voor soort element gedefinieerd wordt;</li>
+                <li>entity: geeft een formele naam aan het element (indien deze afwijkt van de XML Schema naam);</li>
+                <li>ignore: geeft aan dat dit element een hulpconstruct is die verder geen betekenis heeft</li>
+            </ul>
+        </xs:documentation>
+    </xs:annotation>
+
+    <xs:annotation>
+        <xs:appinfo>
+            <sch:ns uri="http://www.overheid.nl/imop/def#" prefix="imop"/>
+        </xs:appinfo>
+    </xs:annotation>
+
+    <!-- root element voor bladen -->
+    <xs:element name="OfficieelBericht">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>document</type>
+                <entity>imop:OfficieelBerichtDocument</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="imop:Metadata"/>
+                <xs:choice>
+                    <xs:element ref="imop:Regeling"/>
+                    <xs:element ref="imop:Tekst"/>
+                </xs:choice>
+                <xs:element minOccurs="0" ref="imop:Locaties"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- root element voor bladen -->
+    <xs:element name="OfficielePublicatie">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>document</type>
+                <entity>imop:OfficielePublicatieDocument</entity>
+                <!-- OfficielePublicatieVersie? -->
+                <!-- subklasse van imop:Versie -->
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="imop:Metadata"/>
+                <xs:group ref="imop:bladen"/>
+                <xs:element minOccurs="0" ref="imop:Locaties"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- rootelement voor consolidaties -->
+    <!-- TODO: hier wordt gebruik gemaakt van generiek regeling element, als aanhef en regeling-sluiting niet nodig zijn, dan dichtzetten -->
+    <xs:element name="Toestand">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>document</type>
+                <entity>imop:ToestandDocument</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="imop:Metadata"/>
+                <xs:element ref="imop:Regeling"/>
+                <xs:element minOccurs="0" ref="imop:Locaties"/>
+                <!-- ook niet-formele bijlage nodig? vraag is dan hoe dit qua consolidatie werkt -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- 
+        
+        IMOP betreft enerzijds het coderen van de lopende tekst en anderzijds het toevoegen van extra informatie aan die gecodeerde lopende tekst
+        Het coderen van de lopende tekst leidt bv tot Artikel start en eind tag met daarbinnen de tekst van een artikel
+        Het kan dan nodig zijn om extra informatie toe te voegen, dit is dan geen onderdeel van de lopende tekst, maar gekoppeld aan de gecodeerde lopende tekst, bv het Artikel
+        Traditioneel wordt dit metadata genoemd, maar die naam wekt mogelijk de suggestie dat het niet belangrijk is. Deze suggestie is onjuist. 
+        Informatie die geen onderdeel is van de lopende tekst kan namelijk nog steeds gebruikt worden bij generatie van de juridische verbeelding; op het moment dat het in de verbeelding zit, is het even belangrijk als de lopende tekst (indien die daar ook inzit)
+        Een betere naam is daarom misschien "ExtraData" of "AanvullendeData" of "NietLopendeTekstData".
+        
+        Volgende vraag is welke informatie dan in "ExtraData" komt te zitten. In IMOP is ervoor gekozen om dit te beschrijven aan de hand van Uitspraken, die een bundeling zijn van een eigenschap, een waarde (van die eigenschap) en optioneel een onderwerp.
+        De Eigenschap beschrijft welk aspect van het gecodeerde object wordt beschreven. De waarde beschrijft wat de waarde van de Eigenschap is. Het is ook denkbaar dat een Uitspraak over een ander gecodeerd object gaat dan de ouder waarbij de Uitspraak is geplaatst.
+        
+        Voorbeeld: het Artikel (object dat de tekst vertegenwoordigt) heeft dan bijvoorbeeld een eigenschap dcterms:subject met als waarde een string (uit een waardenlijst). 
+        Stel dat het bewuste artikel over twee onderwerpen gaat ("wonen" en "werken"). Dan kan dit uitgedrukt worden in twee Uitspraken (ieder met 1 waarde) of in 1 Uitspraak met een Lijst als waarde, die dan vervolgens "wonen" en "werken" bevat.
+        IMOP heeft een grote voorkeur voor de tweede variant. Dit kan afgedwongen worden door de combinatie van @eigenschap en @onderwerp als unieke key te zien. Om technische redenen gebeurt dit echter niet in deze XSD. 
+        
+        In HTML4 is er ook nog een @scheme attribuut (gesneuveld in HTML5). Dit werd wel gebruikt om aan te geven uit welke waardelijst een waarde kwam. IMOP ondersteunt dit attribuut niet:
+        - het verdient sowieso voorkeur om waarden als URI op te nemen - en dan zit de waardenlijst in zekere zin in de waarde opgesloten
+        - als er meer informatie over de waarde moet worden vastgelegd, dan is het Object element de aangewezen kandidaat. Dus zoals Object {label: "de leesbare waarde"; waardenlijst: http://www.xyz.nl/lijst1}  
+        
+        XML keuzen en argumentatie daarachter:
+        - element voor Uitspraak - alternatief is om dit meteen een Eigenschap te laten zijn (en dus impliciet te zeggen dat een Metadata container zelf eigenlijk een Object is (bv via substitutionGroup)). Dit is echter niet lekker omdat a) je dan geen plaats meer hebt voor optionele @onderwerp en b)   
+        - element voor Waarde - het was mogelijk geweest om dit als textNode rechtstreeks op Uitspraak te doen, maar dan krijg je mixed content en dat is ongewenst
+        - element voor Object
+        - element voor Lijst - vanwege consistentie, eigenlijk niet nodig (want je zou ook cardinaliteit van kinderen kunnen verhogen), maar nu heb je max 1 kind van uitspraak (of een Object of een Waarde of een Lijst)
+        
+        
+    -->
+
+    <xs:element name="Metadata" type="imop:uitsprakenType">
+        <xs:annotation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="uitsprakenType">
+        <xs:sequence>
+            <xs:element ref="imop:Uitspraak" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="id">
+            <!-- nodig voor generatie testbestanden -->
+        </xs:attribute>
+    </xs:complexType>
+
+    <xs:element name="Uitspraak">
+        <xs:complexType>
+            <xs:choice>
+                <xs:element ref="imop:Object"/>
+                <xs:element ref="imop:Waarde"/>
+                <xs:element ref="imop:Reeks"/>
+            </xs:choice>
+            <xs:attribute name="eigenschap" use="required"/>
+            <xs:attribute name="onderwerp" type="xs:IDREF">
+                <xs:annotation>
+                    <xs:documentation>
+                        <p>Het attribuut onderwerp is bedoeld om aan te geven dat de Uitspraak over de gecodeerde XML object gaat waarnaar in de waarde wordt verwezen. Met andere woorden: "over" of "about".</p>
+                        <p>Bij afwezigheid van dit onderwerp gaat de Uitspraak over het ouder element van de Metadata container waartoe de Uitspraak behoort.</p>
+                        <p>De waarde van onderwerp moet een id zijn binnen hetzelfde document. Dit wordt afgedwongen via het type xs:IDREF. Hierdoor kan uitspraak *niet* over externe resources gaan. </p>
+                        <p>Omwille van de leesbaarheid van de XML is het aan te raden om alleen te verwijzen naar id values die zijn gezet op kinderen van de ouder van de Metadata container waartoe de Uitspraak behoort.</p>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Object">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Element Object representeert een complexe datastructuur als waarde van een Uitspraak. Met complex wordt hier bedoeld: een of meer key-value paren (uitgedrukt als Eigenschap/@naam - Waarde elementen).</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <notRestrictable/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <xs:element minOccurs="0" maxOccurs="unbounded" name="Eigenschap">
+                            <xs:complexType>
+                                <xs:choice>
+                                    <xs:element ref="imop:Object"/>
+                                    <xs:element ref="imop:Waarde"/>
+                                    <xs:element ref="imop:Reeks"/>
+                                </xs:choice>
+                                <xs:attribute name="naam" use="required" type="xs:NMTOKEN">
+                                    <xs:annotation>
+                                        <xs:documentation>
+                                            <p>Deze waarde moet uniek zijn binnen siblings.</p>
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                </xs:attribute>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                    <!-- TODO: bepalen of @type verplicht moet zijn. Er zal heel vaak sprake zijn van "anonieme" objecten (bv combinatie van uri en label). Hier zou je een basis type voor kunnen afdwingen, maar toegevoegde waarde is onduidelijk. -->
+                    <xs:attribute name="type" type="xs:NMTOKEN"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Reeks">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Een Reeks is een geordende rij van Waarde, Object of Reeks elementen. Conceptueel is het gelijk aan een array in JSON, met dien verstande dat de kinderen van een Reeks allemaal hetzelfde type moeten hebben (dus of Waarden, of
+                    Objecten, of Reeksen).</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:choice>
+                        <xs:element ref="imop:Waarde" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Object" minOccurs="0" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Reeks" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:choice>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Waarde">
+        <!-- sub/sup mogelijk gemaakt binnen tekst van Waarde -->
+        <xs:complexType mixed="true">
+            <xs:complexContent mixed="true">
+                <xs:extension base="imop:blockType">
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:element ref="imop:sup"/>
+                        <xs:element ref="imop:sub"/>
+                    </xs:choice>
+                    <xs:attribute name="type">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="xs:decimal"/>
+                                <xs:enumeration value="xs:date"/>
+                                <xs:enumeration value="xs:anyURI"/>
+                                <xs:enumeration value="xs:string"/>
+                                <xs:enumeration value="imop:literalRef">
+                                    <xs:annotation>
+                                        <xs:documentation>
+                                            <p>de waarde van dit attribuut MOET bestaan in het document als @id</p>
+                                            <p>Betekenis van deze attribuutwaarde is: de text() van het XML element met dit @id wordt hier gebruikt als literal</p>
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                </xs:enumeration>
+                                <xs:enumeration value="imop:objectRef">
+                                    <xs:annotation>
+                                        <xs:documentation>
+                                            <p>de waarde van dit attribuut MOET bestaan in het document als @id</p>
+                                            <p>Betekenis van deze attribuutwaarde is: de @id waarde van het XML element wordt hier gebruikt als object reference</p>
+                                        </xs:documentation>
+                                    </xs:annotation>
+                                </xs:enumeration>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:group name="bladen">
+        <!-- door dit een group te stoppen, kan het later eventueel uitgebreid worden via redefine -->
+        <xs:choice>
+            <xs:element ref="imop:Staatscourant"/>
+            <xs:element ref="imop:Staatsblad"/>
+            <xs:element ref="imop:Tractatenblad"/>
+            <xs:element ref="imop:Bladgeneriek"/>
+        </xs:choice>
+    </xs:group>
+
+    <!-- CONTAINER TYPE HIERARCHIE -->
+    <!-- Er zijn twee soorten containers: containers die zelf weer containers bevatten en containers die blocks bevatten.Een subtype van de 1e zijn containers die verplicht beginnen met een kop en dan een keuze uit containers. 
+        Dit wordt uitgedrukt via een hierarchie. -->
+    <xs:element name="ContainerBase" type="xs:anyType" abstract="true">
+        <!-- TODO: heeft dit nog wel zin??? -->
+        <xs:annotation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="containerBaseType">
+        <xs:attribute name="id" type="xs:ID"/>
+        <xs:attributeGroup ref="imop:pseudoCssAttributeGroup"/>
+        <xs:attributeGroup ref="imop:langAttributeGroup"/>
+    </xs:complexType>
+
+    <xs:complexType name="containerBlocksType">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Een container die 1 of meer block elementen bevat.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <xs:choice maxOccurs="unbounded">
+                        <xs:group ref="imop:blocks_volledigeGroup"/>
+                    </xs:choice>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="containerMetadataMetBlocksType">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Een container die een optioneel metadata blok heeft en dan 1 of meer block elementen bevat. </p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <xs:element ref="imop:Metadata" minOccurs="0"/>
+                    <xs:choice maxOccurs="unbounded">
+                        <xs:group ref="imop:blocks_volledigeGroup"/>
+                    </xs:choice>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="containerContainersType">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Een container die 1 of meer container elementen bevat.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <xs:group ref="imop:containerGroup" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="containerMetadataMetContainersType">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Een container die een optioneel metadata blok heeft en dan 1 of meer container elementen bevat.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <xs:element ref="imop:Metadata" minOccurs="0"/>
+                    <xs:group ref="imop:containerGroup" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="containerMetadataKopMetContainersType">
+        <xs:annotation>
+            <xs:documentation>
+                <p>In XSD leidt extension altijd tot een sequence die erachter wordt geplaatst.</p>
+                <p class="op_migratie">Let op: metadata element komt nu VOOR de kop</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <xs:element ref="imop:Metadata" minOccurs="0"/>
+                    <xs:element ref="imop:Kop"/>
+                    <!-- de rest komt hier via extension bij -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="structuurelementContainerType">
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <!-- eigenlijk was dit ContainerMetadataKopMetContainersType maar dat past niet lekker -->
+                <xs:sequence>
+                    <xs:element ref="imop:Metadata" minOccurs="0"/>
+                    <xs:element ref="imop:Kop"/>
+                <!-- imop:Redactioneel verplaatst naar de extensions van dit type -->
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- CONTAINER TYPE HIERARCHIE einde -->
+
+    <!-- BLOCKS TYPE HIERARCHIE -->
+    <!-- omdat dit toch een diverse set is, niet al teveel streven naar perfect objectmodel -->
+    <!-- verschil met container is onder andere dat block ook opmaak gerichte attributen mag hebben en rdfa attributen -->
+
+    <!-- TODO: al-groep en citaat zijn eigenlijk "virtuele containers op blockniveau". Ze mogen niet recursief zijn, en ook niet mixed -->
+
+    <xs:element name="BlockBase" type="xs:anyType" abstract="true"/>
+
+    <xs:complexType name="blockType" abstract="true">
+        <xs:attribute name="id" type="xs:ID"/>
+        <xs:attributeGroup ref="imop:pseudoCssAttributeGroup"/>
+        <xs:attributeGroup ref="imop:langAttributeGroup"/>
+    </xs:complexType>
+
+    <xs:complexType name="blockContainerVirtueelType" abstract="true">
+        <xs:complexContent>
+            <xs:extension base="imop:blockType">
+                <!-- je kan hier niet teveel doen, want al-groep mag alleen al en citaat mag alles behalve citaat, dus doe dit bij definitie van deze elementen zelf -->
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+        <xs:complexContent mixed="true">
+            <xs:extension base="imop:blockType">
+                <xs:choice maxOccurs="unbounded" minOccurs="0">
+                    <xs:group ref="imop:inlineMaximaalMarkerPopupGroup"/>
+                </xs:choice>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- BLOCK TYPE HIERARCHIE einde -->
+
+    <!-- INLINE TYPE HIERARCHIE -->
+    <xs:element name="InlineBase" type="xs:anyType" abstract="true"/>
+
+    <xs:complexType name="inlineBaseType" abstract="true">
+        <xs:attribute name="id" type="xs:ID"/>
+        <xs:attributeGroup ref="imop:pseudoCssAttributeGroup"/>
+        <xs:attributeGroup ref="imop:langAttributeGroup"/>
+    </xs:complexType>
+
+    <xs:complexType name="inlineSimpleType">
+        <xs:annotation>
+            <xs:documentation>base type voor inline elementen (alleen tekst, geen kindelementen). Omdat attributen verschillen per geval, ontbreken ze hier.</xs:documentation>
+        </xs:annotation>
+        <!-- TODO: uitzoeken of deze @id en @class nodig heeft -->
+        <xs:simpleContent>
+            <xs:extension base="xs:string"/>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="inlineComplexType">
+        <xs:annotation>
+            <xs:documentation>
+                <p>base type voor inlines die zelf ook weer een inline kind mogen hebben. Op dit niveau wordt alleen het inline element als toegestaan kind vastgelegd - eventuele andere toegestane kinderen worden bij ieder element zelf gedefinieerd
+                    (zodat ongewenste recursie kan worden voorkomen)</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent mixed="true">
+            <xs:extension base="imop:inlineBaseType">
+                <xs:sequence maxOccurs="unbounded" minOccurs="0">
+                    <xs:element ref="imop:Inline" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- INLINE TYPE HIERARCHIE einde -->
+
+    <!-- MARKER TYPE HIERARCHIE -->
+    <!-- marker is een leeg element, je zou dit dus ook kunnen definieren als base class voor inline, maar hier uit elkaar getrokken -->
+    <xs:element name="MarkerBase" type="xs:anyType"/>
+
+    <xs:complexType name="markerBaseType" abstract="true">
+        <xs:attribute name="id" type="xs:ID"/>
+        <xs:attributeGroup ref="imop:pseudoCssAttributeGroup"/>
+        <xs:attributeGroup ref="imop:langAttributeGroup"/>
+    </xs:complexType>
+
+    <xs:complexType name="markerEmptyElementType">
+        <xs:complexContent>
+            <xs:extension base="imop:markerBaseType"> </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- MARKER TYPE HIERARCHIE einde -->
+
+    <!-- POPUP TYPE HIERARCHIE -->
+    <!-- element within an inline flow of text, create full and fully independent structures that do not meddle nor interact with the text and inline elements that surround them. -->
+    <!-- TODO: verder uitwerken -->
+    <xs:element name="PopupBase" type="xs:anyType"/>
+
+    <xs:complexType name="popupBaseType" abstract="true">
+        <xs:attribute name="id" type="xs:ID" use="required"/>
+        <xs:attributeGroup ref="imop:pseudoCssAttributeGroup"/>
+        <xs:attributeGroup ref="imop:langAttributeGroup"/>
+    </xs:complexType>
+    <!-- POPUP TYPE HIERARCHIE einde -->
+
+    <!-- BLADEN -->
+    <!--idee is dat staatscourant, tractatenblad en staatsblad een eigen contentmodel hebben terwijl gemeenteblad, provincieblad, etc. hetzelfde zijn.  
+        Die laatste worden daarom generiek afgehandeld via bladGeneriek -->
+    <xs:element name="Staatscourant">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Staatscourant</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerMetadataMetContainersType">
+                    <!-- let op: overerving van optionele metadata sectie (ivm consistentie) -->
+                    <xs:sequence>
+                        <xs:element ref="imop:Bladaanduiding"/>
+
+                        <xs:choice>
+                            <xs:element ref="imop:Regeling"/>
+                            <!-- hier iets als niet-regeling-tekst -->
+                        </xs:choice>
+
+                        <xs:element minOccurs="0" ref="imop:Nawerk">
+                            <xs:annotation>
+                                <xs:documentation>Hier komen zaken die strikt genomen niet tot de regeling behoren maar wel bij de publicatie moeten worden meegenomen.</xs:documentation>
+                                <xs:documentation>informatie over bezwaar kan hier ook geplaatst worden</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- TODO: contentmodel voor staatsblad en tractatenblad nog specifiek maken 
+         (wet-)besluit sowieso relevant voor staatsblad, mogelijk ook relevant voor staatscourant
+         voor staatsblad en tractatenblad kan gekozen worden om eerst een legacy implementatie te maken. Dit heeft echter wel consequenties, bv qua namespace afhandeling
+    -->
+    <xs:element name="Staatsblad" type="imop:bladGeneriekType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Staatsblad</entity>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Tractatenblad" type="imop:bladGeneriekType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Tractatenblad</entity>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <!-- generieke oplossing voor gemeenteblad etc. Mocht er ooit een situatie ontstaan dat er onderlinge afwijkingen komen in het contentmodel dan is dit de plaats waar aanpassingen moeten komen -->
+    <xs:element name="Bladgeneriek" abstract="true">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="bladGeneriekType">
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <!-- group maken tbv uitbreidbaarheid? -->
+                    <xs:choice>
+                        <xs:element ref="imop:Regeling"/>
+                        <xs:element ref="imop:Tekst"/>
+                    </xs:choice>
+                    <xs:element ref="imop:Nawerk" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="Blad" substitutionGroup="imop:Bladgeneriek">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Blad</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:bladGeneriekType">
+                    <xs:attribute name="aanduiding" use="required">
+                        <xs:simpleType>
+                            <xs:restriction base="xs:string">
+                                <xs:enumeration value="deelgemeente"/>
+                                <xs:enumeration value="ander_openbaar_lichaam"/>
+                                <xs:enumeration value="koninkrijksdeel"/>
+                                <xs:enumeration value="nederlandse_antillen"/>
+                                <xs:enumeration value="samenwerkingsorgaan"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Elementen gemeenteblad, provincieblad, waterschapsblad en bladgemeenschappelijke regeling hebben identiek contentmodel. 
+        Het is logischer om dit in de toekomst naar element blad te veranderen. Gebruik substitutiongroup om dit uit te drukken. -->
+    <xs:element name="Gemeenteblad" type="imop:bladGeneriekType" substitutionGroup="imop:Bladgeneriek"/>
+    <xs:element name="Provincieblad" type="imop:bladGeneriekType" substitutionGroup="imop:Bladgeneriek">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:ProviciaalBlad</entity>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="Waterschapsblad" type="imop:bladGeneriekType" substitutionGroup="imop:Bladgeneriek"/>
+    <xs:element name="BladGR" type="imop:bladGeneriekType" substitutionGroup="imop:Bladgeneriek"/>
+    <!-- BLADEN einde -->
+
+    <!-- CONTENTMODELLEN -->
+    <xs:element name="Regeling">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Regeling</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Element Regeling is bedoeld voor documenten waarbij het hoofdbestanddeel (inhoudelijk gezien) wordt gevormd door Artikel(en), al dan niet gegroepeerd in Hoofdstuk(ken) of andere structuurelementen.</p>
+                <p>Zonder Artikel heeft Regeling geen zin en kan beter element Tekst gebruikt worden (zie hieronder).</p>
+                <div class="op_migratie">
+                    <p>In OP is er een element wet-besluit en een element regeling met daarbinnen respectievelijk een wettekst en een regeling-tekst. Gezien de beperkte verschillen tussen beide elementen is besloten om deze samen te voegen in een
+                        imop:Regeling.</p>
+                    <p>De verschillen tussen wet-besluit en regeling en de gekozen oplossing om die verschillen op te lossen, waren:</p>
+                    <ul>
+                        <li>plaatsing optionele officiele-inhoudsopgave - vraag of dit uberhaupt nodig is, zo ja dan binnen toepassingsprofiel oplossen (custom object serialiseren als bijlage)</li>
+                        <li>aanwezigheid (optionele) tekstplaatsing en bezwaarschrift elementen in regeling element - kan binnen toepassingsprofiel worden opgelost (custom object serialiseren als bijlage)</li>
+                        <li>meer structuurelementen in wettekst (boek; deel; etc.) - toevoegen aan imop:Regeling en inperken via toepassingsprofiel</li>
+                        <li>optionele officiele-inhoudsopgave binnen wettekst - zo goed als nooit gebruikt (3x in trb) daarom overbodig</li>
+                    </ul>
+                </div>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:group ref="imop:regelingContentmodelGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- TODO: nog bepalen of er een goede XSD manier is om onderscheid te maken tussen "Regeling_in_officieel-bericht", "Regeling_in_toestand" en "Regeling_in_blad" 
+               voorbeelden van verschillen: afhandeling aanhef, sluiting; afhandeling wijzig-artikel en dergelijke
+    -->
+
+    <xs:group name="regelingContentmodelGroup">
+        <xs:sequence>
+            <xs:element minOccurs="0" ref="imop:RegelingOpschrift">
+                <xs:annotation>
+                    <xs:documentation>
+                        <p>Opschrift gebruiken als generieke term (dus ook voor algemene kop). Onduidelijk of er regelingen bestaan zonder opschrift ??? zo nee, dan minOccurs verwijderen en check op lege content inbouwen </p>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element minOccurs="0" ref="imop:Aanhef">
+                <xs:annotation>
+                    <xs:documentation>Is hier optioneel omdat toestand mogelijk geen aanhef nodig heeft. Dit maakt het ook makkelijker in toepassingsprofiel. Denkbaar dat er een ander subtype regeling komt voor de bladen waarin aanhef wel verplicht
+                        is</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element ref="imop:Lichaam"/>
+            <xs:element minOccurs="0" ref="imop:Sluiting">
+                <xs:annotation>
+                    <xs:documentation>Is hier optioneel omdat toestand mogelijk geen regeling-sluiting nodig heeft</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:choice maxOccurs="unbounded">
+                <xs:element maxOccurs="unbounded" minOccurs="0" ref="imop:Bijlage">
+                    <xs:annotation>
+                        <!-- is het nog nodig om een soort introtekst voor bijlagen mogelijk te maken?  -->
+                        <xs:documentation>Het betreft hier de bijlagen die formeel tot de regeling behoren (zie AvdLR 24). Toelichting, inhoudsopgave etc. zit in containerelement nawerk (buiten de regeling)</xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <xs:element minOccurs="0" ref="imop:Toelichting">
+                    <xs:annotation>
+                        <xs:documentation>binnen RO is het nodig om nota-toelichting te hebben. voor nu als choice in regeling gestopt, onduidelijk hoe semantiek hiervan werkt ivm consolideren </xs:documentation>
+                    </xs:annotation>
+                </xs:element>
+                <!-- TODO: in de praktijk komt er ook nog zoiets voor als bezwaarschrift (zie bv autorisatiebesluiten in stcrt). 
+                    Toevoegen als eigen element, afschuiven naar "bijlage" of generiek container element hier mogelijk mmaken?  -->
+            </xs:choice>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:element name="Tekst" type="imop:divisieComplexType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Tekst</entity>
+                <ignore/>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Element Tekst is bedoeld voor documenten waarbij het hoofdbestanddeel (inhoudelijk gezien) wordt gevormd door (vrije) tekst.</p>
+                <p>Indien er "echt" Artikelen voorkomen in de tekst (dus niet bijvoorbeeld een artikelsgewijze toelichting) dan moet gekozen worden voor element Regeling .</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:group name="tekstContentmodelGroup">
+        <xs:sequence>
+            <xs:sequence>
+                <xs:element ref="imop:Tussenkop" minOccurs="0"/>
+                <xs:element ref="imop:al" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+            <xs:element ref="imop:Divisie" minOccurs="0" maxOccurs="unbounded"/>
+
+        </xs:sequence>
+    </xs:group>
+
+    <!-- TODO: bepalen of contentmodel voor circulaires nodig is; dit zou naast Tekst en Regeling komen) -->
+    <!-- in OP is er ook een contentmodel Circulaire. Dit is een soort mengvorm van tekst en regeling, gebundeld als "rondzendbrief"
+        in de optionele aanhef van een circulaire staan briefkenmerken als datum; betreft
+        in de circulaire-tekst kan divisie, tekst of artikel structuur gekozen worden of een combinatie daarvan
+        het is niet duidelijk in hoeverre circulaires ook (altijd) geconsolideerd worden. Indien dit niet het geval is, dan zou de artikel structuur niet essentieel zijn (want kan als tekst worden gecodeerd). In stcrt-2016-4673 wordt eea wel als
+        artikel gecodeerd maar in de PDF niet als een normaal artikel weergegeven.
+        circulaire-divisie wordt veelal gebruikt als divisie (dus voor hierarchische ordening, inclusief recursie) maar soms ook wel gebruikt als wijzig-artikel (zie stcrt-2016-34463)
+    -->
+
+
+    <!-- specifieke elementen -->
+    <xs:element name="Bladaanduiding">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Bladaanduiding</entity>
+                <notRestrictable/>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:choice>
+                        <xs:element maxOccurs="2" name="Titelregel" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+                            <xs:annotation>
+                                <xs:appinfo>
+                                    <type>Block</type>
+                                </xs:appinfo>
+                                <xs:documentation>Bijvoorbeeld in regel 1 de tekst "GEMEENTEBLAD" en dan in titelregel 2 de tekst "Officiële uitgave van gemeente {gemeentenaam}."</xs:documentation>
+                                <xs:documentation>Hier is een duidelijke, in schematron uit te drukken relatie tussen de inhoud van bladaanduiding en het bovenliggende element. Dit zou ook in XSD uitgedrukt kunnen worden maar dan kan je dus niet meer
+                                    bladGeneriek gelijk hebben voor alle drie de bladen </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:choice>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- BLOCK GROUPS -->
+    <xs:group name="blocks_minimaleGroup">
+        <xs:choice>
+            <xs:element ref="imop:al"/>
+            <xs:element ref="imop:Groep"/>
+            <xs:element ref="imop:Begrippenlijst"/>
+            <xs:element ref="imop:Lijst"/>
+            <xs:element ref="imop:Figuur"/>
+            <xs:element ref="imop:Tussenkop"/>
+        </xs:choice>
+    </xs:group>
+
+    <xs:group name="blocks_volledigeGroup">
+        <xs:choice>
+            <xs:group ref="imop:blocks_minimaleGroup"/>
+            <xs:element ref="imop:Citaat"/>
+            <xs:choice>
+                <xs:element ref="imop:table"/>
+                <xs:element ref="imop:table_html5"/>
+            </xs:choice>
+        </xs:choice>
+    </xs:group>
+
+    <xs:group name="blocks_behalve_citaatGroup">
+        <xs:choice>
+            <xs:group ref="imop:blocks_minimaleGroup"/>
+            <xs:choice>
+                <xs:element ref="imop:table"/>
+                <xs:element ref="imop:table_html5"/>
+            </xs:choice>
+        </xs:choice>
+    </xs:group>
+
+    <xs:group name="blocks_behalve_tableGroup">
+        <!-- deze wordt gebruikt in contentmodel van td en th omdat je hier wilt voorkomen dat er geneste tabellen ontstaan -->
+        <xs:choice>
+            <xs:group ref="imop:blocks_minimaleGroup"/>
+            <xs:element ref="imop:Citaat"/>
+        </xs:choice>
+    </xs:group>
+    <!-- tov op ontbreken de volgende elementen: adres adreslijst specificatielijst formule -->
+    <!-- BLOCK GROUPS einde -->
+
+    <!-- CONTAINER GROUPS -->
+    <xs:group name="containerGroup">
+        <!-- Group containerGroup is bedoeld om alle elementen te bevatten die gebruikt mogen worden in ContainerContainerType en containerMetadataMetContainersType
+             Dit zijn dus effectief alle container in container elementen die overal gebruikt mogen worden
+             Een subklasse (extension) van ContainerContainerType voegt hier zelf weer elementen aan toe die alleen in dat specifieke geval mogen
+            -->
+        <!-- TODO: uitzoeken of dit nog nut heeft -->
+        <xs:choice> </xs:choice>
+    </xs:group>
+    <!-- CONTAINER GROUPS einde -->
+
+    <xs:element name="Nawerk">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Nawerk</entity>
+            </xs:appinfo>
+            <xs:documentation>Hier komen nota-toelichting, inhoudsopgave etc. (onderdelen die niet tot de regeling behoren) (zie AvdLR 23 en 24). Indien niet relevant dan blijft dit element leeg. Informatie over bezwaar kan hier ook geplaatst
+                worden</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerMetadataMetContainersType">
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:element ref="imop:Toelichting"/>
+                        <xs:element ref="imop:Inhoudsopgave">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    <p>Volgens de Aanwijzingen voor de regelgeving is een officiele-inhoudsopgave GEEN onderdeel van de regeling</p>
+                                    <p>gebruikers verwachten de inhoudsopgave VOOR de regeling tekst, dit moet via transformatie naar verschijningsvorm geregeld worden.</p>
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element ref="imop:Bijlage">
+                            <xs:annotation>
+                                <xs:documentation>Voor bijlagen die formeel geen onderdeel van de regeling zijn</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="NawerkContainer">
+                            <xs:annotation>
+                                <xs:appinfo>
+                                    <type>Container</type>
+                                </xs:appinfo>
+                                <xs:documentation>
+                                    <p>Generieke container met verplicht gebruik van @soort ten behoeve van nadere duiding van de rol van het container door extensie van ContainerBlockType krijg je ook optioneel metadata block </p>
+                                </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:complexContent>
+                                    <xs:extension base="imop:containerMetadataMetBlocksType">
+                                        <xs:attribute name="soort" use="required" type="imop:nawerkSoortenSimpleType"/>
+                                    </xs:extension>
+                                </xs:complexContent>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:choice>
+                    <!--<xs:group maxOccurs="unbounded" minOccurs="0" ref="imop:nawerkGroup"/> group voegt hier vooralsnog niets toe (want 1 gebruiker) dus verwijderd -->
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- <xs:group name="nawerkGroup">
+        
+    </xs:group>-->
+
+    <xs:simpleType name="nawerkSoortenSimpleType">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Via dit attribuut kan een betekenis worden toegekend aan een generieke container in nawerk.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="bezwaarschrift">
+                <xs:annotation>
+                    <xs:documentation>Bij lokale regelgeving wordt dit niet aangeraden maar als het dan moet dan in ieder geval niet in de regeling (zie oa AvdlR 93)</xs:documentation>
+                    <xs:documentation>Bij nationale regelgeving wordt dit wel gebruikt maar met een raar out-of-line contentmodel (met behulp van eigen element bezwaarschrift en attribuut @locatie ("voor-sluiting" | "na-sluiting"))
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="voorblad">
+                <!-- hiermee zou je dingen kunnen doen als:
+                                                
+                                    BIJLAGEN BEHOREND BIJ
+                                    VERORDENING
+                                    VAN UTRECHT 201
+                                    3, NR. 33
+                                    <al>Bijlagen 1 t/m 6</al>
+                                    <al>VERVALLEN</al>
+                                 -->
+            </xs:enumeration>
+            <xs:enumeration value="geschiedenis">
+                <xs:annotation>
+                    <xs:documentation>Zie bv gmb-2013-91 (tekst na sluiting)
+                        <!-- Afkondiging van de verordening is geschied op 3 februari 1993, zodat deze verordening in werking is
+                                          getreden op 6 februari 1993. </nadruk>
+                                          </al>
+                                          <al>
+                                          <nadruk type="vet">Publicatie van de tweede wijziging is geschied op 17 juli 1996, zodat deze in werking is getreden op 25
+                                          juli 1996.</nadruk>
+                                          </al>
+                                          <al>
+                                          <nadruk type="vet">De derde wijziging is in werking getreden op 6 februari 1998.</nadruk>
+                                          </al>
+                                          -->
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- BLOCKS instanties -->
+    <xs:element name="al" type="imop:alBaseType">
+        <!-- omwille foutgevoeligheid is dit element nog lowercase. Handhaven??? -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Alinea</entity>
+                <ignore/>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Binnen Regeling kan een al ook gebruikt worden als volzin. Hier is echter geen specifiek element voor.</p>
+                <!-- TODO: bepalen of we toch een volzin willen, of attribuut rol="volzin" op al -->
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="alBaseType">
+        <xs:complexContent>
+            <xs:extension base="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+                <!-- <xs:attributeGroup ref="imop:al_op_AttributeGroup"/> -->
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:attributeGroup name="alAttributeGroup">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Legacy OP attributen: @opmaak_type afhandelen met @font-weight/@font-style; @align afhandelen via @text-align; @opmaak via @text-indent</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:attributeGroup ref="imop:pseudoCssAttributeGroup"/>
+    </xs:attributeGroup>
+
+
+    <!-- STRUCTUURELEMENTEN (containers tbv groepering artikelen) -->
+    <xs:element name="Hcontainer">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Dit is de generieke hierarchische containeder, die gebruikt kan worden indien het toepassingsprofiel het toestaat en er meer niveau's van groepering van artikelen nodig zijn dan standaard geboden worden</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:structuurelementContainerType">
+                    <xs:choice>
+                        <xs:group ref="imop:structuurelementenGroup"/>
+                        <xs:element ref="imop:Hcontainer"/>
+                    </xs:choice>
+                    <xs:attributeGroup ref="imop:hcontainerAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="hcontainerAttributeGroup">
+        <!-- verplicht gebruik rol attribuut om betekenis nader te duiden. -->
+        <xs:attribute name="rol" use="required"/>
+    </xs:attributeGroup>
+    
+    <xs:attribute name="ref">
+        <xs:annotation>
+            <xs:documentation>
+                <p>De waarde van @ref is een identifier van een Artikel, Hoofdstuk, etc. Bij een wijziging van alleen het opschrift of metadata van een structuurelement kan hiermee worden voorkomen dat de alle kinderen by value moeten
+                    worden meegegeven; by reference is dan een optimalisatie.</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    <xs:annotation>
+        <xs:appinfo>
+            <sch:pattern>
+                <sch:rule context="imop:Afdeling[@ref] | imop:Boek[@ref] | imop:Deel[@ref] | imop:Hoofdstuk[@ref] | imop:Paragraaf[@ref] | imop:Titel[@ref]">
+                    <sch:assert test="count(element())=0">Een structuurelement met @ref mag geen kindelementen hebben.</sch:assert>
+                </sch:rule>
+            </sch:pattern>
+        </xs:appinfo>
+    </xs:annotation>
+
+    <xs:group name="structuurelementenGroup">
+        <!-- let op: hier worden GEEN eisen gesteld aan samenstelling zoals bv hoofdstuk kan niet onder paragraaf (maar wel andersom); dat kan eventueel via additionele schematron -->
+        <!-- toch hoofdstuk/hoofdstuk etc voorkomen?? -->
+        <xs:choice>
+            <xs:element maxOccurs="unbounded" ref="imop:Hoofdstuk"/>
+            <xs:element maxOccurs="unbounded" ref="imop:Paragraaf"/>
+            <xs:element maxOccurs="unbounded" ref="imop:Afdeling"/>
+            <xs:element maxOccurs="unbounded" ref="imop:Boek"/>
+            <xs:element maxOccurs="unbounded" ref="imop:Deel"/>
+            <xs:element maxOccurs="unbounded" ref="imop:Titel"/>
+            <xs:element maxOccurs="unbounded" ref="imop:Artikel"/>
+        </xs:choice>
+    </xs:group>
+
+    <xs:element name="Afdeling">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Afdeling</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:structuurelementContainerType">
+                    <xs:choice >
+                        <xs:element ref="imop:Paragraaf" maxOccurs="unbounded"/>
+                        <!-- onderstaande elementen mogen strikt genomen niet volgens AvR maar moeten via Schematron uitgezet worden indien gewenst in een documenttype -->
+                        <xs:element ref="imop:Hoofdstuk" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Titel" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Boek" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Deel" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Artikel" maxOccurs="unbounded"/>
+                        <!-- fallback element -->
+                        <xs:element ref="imop:Hcontainer" maxOccurs="unbounded"/>
+                        <!-- voor situaties dat er (nog) geen echte content is --> 
+                        <xs:element ref="imop:Redactioneel" />
+                    </xs:choice>
+                    <xs:attribute ref="imop:ref"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Boek">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Boek</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:structuurelementContainerType">
+                    <xs:choice>
+                        <xs:element ref="imop:Hoofdstuk" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Deel" maxOccurs="unbounded"/>
+                        <!-- onderstaande elementen mogen strikt genomen niet volgens AvR maar moeten via Schematron uitgezet worden indien gewenst in een documenttype -->
+                        <xs:element ref="imop:Paragraaf" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Titel" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Afdeling" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Artikel" maxOccurs="unbounded"/>
+                        <!-- fallback element -->
+                        <xs:element ref="imop:Hcontainer" maxOccurs="unbounded"/>
+                        <!-- voor situaties dat er (nog) geen echte content is --> 
+                        <xs:element ref="imop:Redactioneel" />
+                    </xs:choice>
+                    <xs:attribute ref="imop:ref"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Deel">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Deel</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:structuurelementContainerType">
+                    <xs:choice>
+                        <xs:element ref="imop:Hoofdstuk" maxOccurs="unbounded"/>
+                        <!-- onderstaande elementen mogen strikt genomen niet volgens AvR maar moeten via Schematron uitgezet worden indien gewenst in een documenttype -->
+                        <xs:element ref="imop:Titel" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Afdeling" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Boek" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Paragraaf" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Artikel" maxOccurs="unbounded"/>
+                        <!-- fallback element -->
+                        <xs:element ref="imop:Hcontainer" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Redactioneel" />
+                    </xs:choice>
+                    <xs:attribute ref="imop:ref"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Hoofdstuk">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Hoofdstuk</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:structuurelementContainerType">
+                    <xs:choice>
+                        <xs:element ref="imop:Paragraaf" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Titel" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Afdeling" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Artikel" maxOccurs="unbounded"/>
+                        <!-- onderstaande elementen mogen strikt genomen niet volgens AvR maar moeten via Schematron uitgezet worden indien gewenst in een documenttype -->
+                        <xs:element ref="imop:Boek" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Deel" maxOccurs="unbounded"/>
+                        <!-- fallback element -->
+                        <xs:element ref="imop:Hcontainer" maxOccurs="unbounded"/>
+                        <!-- voor situaties dat er (nog) geen echte content is --> 
+                        <xs:element ref="imop:Redactioneel" />
+                    </xs:choice>
+                    <xs:attribute ref="imop:ref"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Paragraaf">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Paragraaf</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:structuurelementContainerType">
+                    <xs:choice>
+                        <xs:element ref="imop:Artikel" maxOccurs="unbounded"/>
+                        <!-- onderstaande elementen mogen strikt genomen niet volgens AvR maar moeten via Schematron uitgezet worden indien gewenst in een documenttype -->
+                        <xs:element ref="imop:Hoofdstuk" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Titel" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Afdeling" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Boek" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Deel" maxOccurs="unbounded"/>
+                        <!-- fallback element -->
+                        <xs:element ref="imop:Hcontainer" maxOccurs="unbounded"/>
+                        <!-- voor situaties dat er (nog) geen echte content is --> 
+                        <xs:element ref="imop:Redactioneel" />
+                    </xs:choice>
+                    <xs:attribute ref="imop:ref"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Titel">
+        <!-- In OP heette dit element titeldeel, maar juridisch is het een titel - waarschijnlijk was dit zo omdat DTD niet kon omgaan met titel binnen kop en titel als structuurelement (geen lokale namen) -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Titel</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:structuurelementContainerType">
+                    <xs:choice>
+                        <xs:element ref="imop:Afdeling" maxOccurs="unbounded"/>
+                        <!-- onderstaande elementen mogen strikt genomen niet volgens AvR maar moeten via Schematron uitgezet worden indien gewenst in een documenttype -->
+                        <xs:element ref="imop:Hoofdstuk" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Paragraaf" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Artikel" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Boek" maxOccurs="unbounded"/>
+                        <xs:element ref="imop:Deel" maxOccurs="unbounded"/>
+                        <!-- fallback element -->
+                        <xs:element ref="imop:Hcontainer" maxOccurs="unbounded"/>
+                        <!-- voor situaties dat er (nog) geen echte content is --> 
+                        <xs:element ref="imop:Redactioneel" />
+                    </xs:choice>
+                    <xs:attribute ref="imop:ref"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Redactioneel" type="imop:containerBlocksType">
+        <xs:annotation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+            <xs:documentation><p>In bijzondere gevallen kunnen hier notities of opmerkingen worden geplaatst die geen onderdeel van de tekst of de structuur vormen.</p>
+            <p>Het is expliciet *niet* de bedoeling om dit element te misbruiken om hier tekst te plaatsen die eigenlijk in een (nota van) toelichting hoort te staan.</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Artikel">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Artikel</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Artikel extends StructuurelementContainerType maar dit is puur vanwege XSD techniek, en is niet in tegenspraak met het inhoudelijke feit dat artikel wezenlijk anders is dan hoofdstuk, etc.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:structuurelementContainerType">
+                    <xs:sequence>
+                        <xs:choice minOccurs="1">
+                            <xs:element maxOccurs="unbounded" ref="imop:Lid"/>
+                            <xs:element ref="imop:Inhoud"/>
+                            <!-- in sommige gevallen is in het verleden een lijst direct onder artikel terecht gekomen in combinatie met een lid (zie stcrt-2011-2263 en stcrt-2011-22069). Dit is expliciet niet de bedoeling: als er eenmaal gekozen wordt voor een lid structuur dan kunnen er geen lijst of al siblings aanwezig zijn -->
+                        </xs:choice>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:artikelAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="artikelAttributeGroup">
+        <xs:annotation>
+            <xs:documentation>
+                <p>De legacy OP attributen @code en @type werden bijna nooit gebruikt. Gebruik een metadata statement om hetzelfde effect te bereiken.</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attributeGroup>
+
+    <xs:element name="Lid">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Lid</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <!-- lid zien als een lijstitem? (is artikel dan equivalent van de lijst?) of als een block? of als een container met een verplichte kop? (maar dan wel een andere kop dan verder in hcontainers).
+            aanwijzingen voor de regelgeving: lid is max. 1 alinea met een nummer
+        als er nog een metadata of werkingsgebied op lidniveau nodig blijkt te zijn, dan is container onvermijdelijk -->
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <xs:element ref="imop:Lidnr"/>
+                        <xs:element ref="imop:Inhoud"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Lidnr">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Inline</type>
+            </xs:appinfo>
+            <xs:documentation>De nummering van lid is hard gecodeerd (dus niet impliciet af te leiden), ook de punt erachter moet daadwerkelijk vastgelegd worden.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value=".{1,2000}"/>
+                <!-- pattern maxLength op 2000 gezet ivm toolprobleem -->
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="Inhoud" type="imop:containerBlocksType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <ignore/>
+                <!-- eigenlijk is dit een soort "hulpcontainer", want het is alleen bedoeld om block kinderen te kunnen groeperen maar heeft zelf niet echt betekenis -->
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Divisie" type="imop:divisieComplexType">
+        <!--
+         divisie wordt gepositioneerd als container. recursie in divisie zelf is nodig omdat er anders geen hierarchie mee kan worden uitgedrukt. divisie kan zelf nooit semantische elementen bevatten, hooguit via citaat (nog uitwerken)
+         waarden van @soort worden vrijgegeven
+         nieuw: inhoud overgang
+      -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Divisie</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Element Divisie representeert paragrafen van een tekst. Divisies kunnen worden genest. Er is voor een recursief model van een (1) soort divisie gekozen en niet voor het nesten van verschillende divisie-elementen waarvan de namen
+                    worden onderscheiden met een expliciet hierarchisch nummer (als: div1, div2, div3, etc.). Het hier gekozen model biedt maximale flexibiliteit en minimale beperkingen.</p>
+                <p>Idee van Divisie is dat er verplicht een Kop is op ieder niveau. Dit zou betekenen dat er geen tekst voor de kop kan worden geplaatst. Om dit toch mogelijk te maken, is Inhoud optioneel gemaakt ipv een choice tussen Inhoud en
+                    Divisie. Hiermee kan "koptekst" gesimuleerd worden zonder dat basismodel van blocks en containers geweld aan wordt gedaan.</p>
+                <p class="op_migratie">Vergeleken met OP is het onderscheid tussen container en block consequenter doorgevoerd (in OP kon divisie als kind een block hebben maar ook een divisie - wat eigenlijk een container zou moeten zijn)</p>
+            </xs:documentation>
+        </xs:annotation>
+        <!-- divisieComplexType zodat het ook als type voor Tekst gebruikt kan worden -->
+    </xs:element>
+
+    <xs:complexType name="divisieComplexType">
+        <xs:complexContent>
+            <xs:extension base="imop:containerMetadataKopMetContainersType">
+                <xs:sequence>
+                    <!-- TODO: mix van verdere structuur en content (inhoud) moet mogelijk zijn (?) -->
+                    <!-- TODO: choice hierboven eruit, Inhoud optioneel, Divisie herhaalbaar -->
+                    <xs:element ref="imop:Inhoud" minOccurs="0"/>
+                    <xs:element ref="imop:Divisie" maxOccurs="unbounded" minOccurs="0"/>
+                </xs:sequence>
+                <xs:attributeGroup ref="imop:divisieAttributeGroup"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:attributeGroup name="divisieAttributeGroup">
+        <!-- @startpagina-div vervangen door @page-break-before pseudo CSS -->
+        <xs:attribute name="soort" type="imop:OP_divisie_soort_SimpleType">
+            <xs:annotation>
+                <xs:documentation>
+                    <p>Hiermee kan de auteur aanduiden wat voor soort divisie het om gaat. Dit is ter compensatie voor het feit dat hoofdstuk, etc. elementen niet toegestaan zijn waar een divisie is toegestaan.</p>
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:simpleType name="OP_divisie_soort_SimpleType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Titel"/>
+            <xs:enumeration value="Deel"/>
+            <xs:enumeration value="Hoofdstuk"/>
+            <xs:enumeration value="Paragraaf"/>
+            <!--<xs:enumeration value="Sub-paragraaf"/>-->
+            <xs:enumeration value="Onbekend"/>
+            <xs:enumeration value="Afdeling"/>
+            <xs:enumeration value="Boek"/>
+            <xs:enumeration value="Bijlage"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- einde hcontainer -->
+
+    <!-- begin MARKER elementen -->
+
+    <!-- TODO: bepalen of dit echt wel nodig is, moeten we hier niet veel strakker op zitten dat dit NIET de bedoeling is
+        (nu is het gedeeltelijk een kopie van Akoma Ntoso -->
+
+    <xs:element name="Marker">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Marker</type>
+                <ignore/>
+            </xs:appinfo>
+            <xs:documentation>generiek marker element (via @name moet verplicht soort marker worden aangegeven)</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:markerBaseType">
+                    <xs:attribute name="name" type="xs:string" use="required"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Br" type="imop:markerEmptyElementType"/>
+
+    <xs:element name="EOP" type="imop:eolEopType" substitutionGroup="imop:MarkerBase">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Marker</type>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <!-- TODO: eol weglaten ten faveure van br? (lijkt dubbelop) -->
+    <xs:element name="EOL" type="imop:eolEopType" substitutionGroup="imop:MarkerBase">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Marker</type>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="eolEopType">
+        <xs:annotation>
+            <xs:documentation>the complex type eolType is shared by eol and eop elements as being able to specify a position within the next word in which the break can happen </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="imop:markerEmptyElementType">
+                <xs:attribute name="breakat" type="xs:integer"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="Omissie">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Een omissie is een 'weglating' van tekst. Bijvoorbeeld binnen een Daar waar iets in de tekst is weggelaten wordt dit aangegeven met een <code>omissie</code>. Een omissie in tekst kan herkenbaar worden gemaakt door op die plaats
+                        <code>(...)</code> af te beelden.</p>
+                <p>OP @plaatsing als voetnoot niet toegestaan.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:markerEmptyElementType">
+                    <xs:attribute name="reden"/>
+                    <xs:attribute name="bron"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!--<xs:element name="Img">
+        vervangen door element Illustratie  
+        
+        <!-\- TODO: zou handig zijn wanneer plaatje dit element gebruikt (in plaats van illustratie, want nu heb je eigenlijk twee dingen voor hetzelfde) -\->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Marker</type>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:markerEmptyElementType">
+                    <xs:attribute name="breakat" type="xs:integer"/>
+                    <xs:attributeGroup ref="imop:imgAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="imgAttributeGroup">
+        <xs:attribute name="src" type="xs:anyURI" use="required"/>
+        <xs:attribute name="alt"/>
+    </xs:attributeGroup>-->
+
+    <xs:element name="Nootref">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Marker</type>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:markerBaseType">
+                    <xs:attributeGroup ref="imop:nootrefAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="nootrefAttributeGroup">
+        <xs:attribute name="refid" type="xs:IDREF" use="required"/>
+    </xs:attributeGroup>
+
+    <!-- marker groups -->
+    <xs:group name="markerElementenGroup">
+        <xs:choice>
+            <xs:element ref="imop:EOL"/>
+            <xs:element ref="imop:EOP"/>
+            <xs:element ref="imop:Nootref"/>
+            <!--deze group is niet meer nodig <xs:group ref="imop:HTMLmarkerGroup"/>-->
+            <xs:element ref="imop:Marker"/>
+        </xs:choice>
+    </xs:group>
+
+    <!-- <xs:group name="HTMLmarkerGroup">
+        <!-\-<xs:choice>
+            <xs:element ref="imop:Br"/>
+            <xs:element ref="imop:Img"/>
+        </xs:choice>-\->
+    </xs:group>-->
+    <!-- MARKER einde -->
+
+    <!-- POPUP elementen -->
+    <xs:element name="Noot">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>popup</type>
+                <ignore/>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Een noot staat in de flow van de tekst maar wordt afhankelijk van de verschijningsvorm "elders" afgebeeld, bv PDF als voetnoot</p>
+                <p>Een noot kan een volledig block contentmodel bevatten voor de "body" van de noot</p>
+            </xs:documentation>
+            <!-- TODO: vgl met authorialNote in AN -->
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:popupBaseType">
+                    <xs:sequence>
+                        <xs:element minOccurs="0" ref="imop:NootNummer"/>
+                        <xs:element ref="imop:Inhoud">
+                            <xs:annotation>
+                                <xs:documentation>
+                                    <p>Omwille van de consistentie (bv met li) wordt hier een inhoud element gebruikt</p>
+                                </xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:nootAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="nootAttributeGroup">
+        <xs:attribute default="voet" name="type">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="voet"/>
+                    <xs:enumeration value="marge"/>
+                    <xs:enumeration value="eind"/>
+                    <xs:enumeration value="tabel"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:group name="popupElementenGroup">
+        <xs:choice>
+            <xs:element ref="imop:Noot"/>
+            <!--<xs:element ref="imop:popup"/>-->
+        </xs:choice>
+    </xs:group>
+
+    <xs:element name="NootNummer">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Inline</type>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value=".{1,20}"/>
+                <!-- pattern maxLength op 20 gezet, meer is een indicatie voor een probleem-->
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+
+    <!-- margetekst achtige faciliteit mogelijk maken?
+        het OP element margetekst (voorheen in divisie) is out-of-line content en moet opgelost worden door een referentie naar het id attribuut van de content container (dus niet de divisie)
+    -->
+    <!-- einde POPUP -->
+
+    <!-- regeling opschrift start -->
+    <xs:element name="RegelingOpschrift">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Opschrift</entity>
+            </xs:appinfo>
+            <xs:documentation>Een opschrift is de formele aanduiding zoals gedefinieerd in AvdlR 60</xs:documentation>
+            <xs:documentation>Volgens AvdlR 23 is het opschrift onderdeel van de regeling, vandaar dat dit verplaatst is van preceding-sibling tov regeling element naar child</xs:documentation>
+            <xs:documentation>Voorheen was dit element kop, maar om duidelijker onderscheid te krijgen tussen de verschillende koppen hier een meer betekenisvolle naam gegeven</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence maxOccurs="1">
+                <xs:element name="al" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+                    <xs:annotation>
+                        <xs:appinfo>
+                            <type>Block</type>
+                            <entity>imop:Alinea</entity>
+                        </xs:appinfo>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- regeling aanhef start -->
+    <xs:element name="Aanhef" type="imop:aanhefType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Aanhef</entity>
+                <notRestrictable/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="aanhefType">
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:choice maxOccurs="unbounded">
+                    <!--  informeel: opvolging van al's met optioneel beschrijving voor soort / rol
+               issue: sommige constructies zijn eigenlijk meer containers en lenen zich dus niet voor al
+               issue: noodzaak voor lijst en / of table?
+         -->
+                    <xs:element name="al">
+                        <!-- TODO: marker en popup hierin schuiven? -->
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <type>Block</type>
+                                <entity>imop:Alinea</entity>
+                            </xs:appinfo>
+                        </xs:annotation>
+                        <xs:complexType>
+                            <xs:complexContent mixed="true">
+                                <xs:extension base="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+                                    <xs:attribute name="soort">
+                                        <xs:simpleType>
+                                            <xs:restriction base="xs:string">
+                                                <xs:enumeration value="aan-wie"/>
+                                                <xs:enumeration value="in-afschrift-aan"/>
+                                                <xs:enumeration value="kenmerk"/>
+                                                <xs:enumeration value="origine"/>
+                                                <xs:enumeration value="datum"/>
+                                                <xs:enumeration value="informatie"/>
+                                                <xs:enumeration value="relatie"/>
+                                                <xs:enumeration value="onbepaald"/>
+                                                <xs:enumeration value="considerans">
+                                                    <xs:annotation>
+                                                        <xs:documentation>Volgens AvdLR is er wel een mogelijkheid tot een considerans in lokale regelingen</xs:documentation>
+                                                    </xs:annotation>
+                                                </xs:enumeration>
+                                                <xs:enumeration value="wie"/>
+                                                <xs:enumeration value="wij"/>
+                                                <xs:enumeration value="afkondiging">
+                                                    <xs:annotation>
+                                                        <xs:documentation>In 99% vd gevallen is de afkondiging een enkele alinea. In die gevallen waar het er echt twee of meer zijn, moet er maar een br element gebruikt worden (in plaats van twee keer
+                                                            attribuut waarde afkondiging).</xs:documentation>
+                                                    </xs:annotation>
+                                                </xs:enumeration>
+                                            </xs:restriction>
+                                        </xs:simpleType>
+                                    </xs:attribute>
+                                </xs:extension>
+                            </xs:complexContent>
+                        </xs:complexType>
+                    </xs:element>
+                    <!-- in uitzonderlijke gevallen zou je ook een lijst moeten kunnen gebruiken of een al-groep (table lijkt niet nodig; tussenkop is ongewenst -->
+                    <xs:element ref="imop:Lijst"/>
+                    <xs:element ref="imop:Groep"/>
+                </xs:choice>
+                <xs:attributeGroup ref="imop:aanhefAttributeGroup"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:attributeGroup name="aanhefAttributeGroup">
+        <!--<xs:attributeGroup ref="imop:coreopt"/>-->
+    </xs:attributeGroup>
+    <!-- regeling aanhef einde -->
+
+    <!-- LICHAAM start -->
+    <xs:element name="Lichaam">
+        <!-- voorheen regeling-tekst -->
+        <xs:complexType>
+            <xs:annotation>
+                <xs:appinfo>
+                    <type>Container</type>
+                    <entity>imop:Lichaam</entity>
+                </xs:appinfo>
+                <xs:documentation>
+                    <p>Dit element is bedoeld voor artikel(en) en eventuele groeperende niveau's ertussenin (hoofdstuk; paragraaf; etc,). Indien de auteur vrije tekst wil gebruiken, dan is dit niet de beste plaats. In uitzonderingsgevallen kan via
+                        element redactioneel een of meer opmerkingen geplaatst worden (zoals "in bewerking" / "komt nog") </p>
+                </xs:documentation>
+            </xs:annotation>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <xs:element ref="imop:Metadata" minOccurs="0"/>
+                        <xs:choice>
+                            <xs:choice maxOccurs="unbounded" minOccurs="0">
+                                <xs:annotation>
+                                    <xs:documentation>
+                                        <p>Aanwijzingen van de regelgeving stellen additionele eisen maar omdat deze niet in alle gevallen haalbaar / wenselijk zullen zijn, wordt op deze plaats (in de XSD) alles toegestaan en moeten eventuele verdere
+                                            restricties via Schematron gedaan worden.</p>
+                                    </xs:documentation>
+                                </xs:annotation>
+                                <xs:element ref="imop:Boek" maxOccurs="unbounded"/>
+                                <xs:element ref="imop:Deel" maxOccurs="unbounded"/>
+                                <xs:element ref="imop:Hoofdstuk" maxOccurs="unbounded"/>
+                                <xs:element ref="imop:Paragraaf" maxOccurs="unbounded"/>
+                                <xs:element ref="imop:Afdeling" maxOccurs="unbounded"/>
+                                <xs:element ref="imop:Titel" maxOccurs="unbounded"/>
+                                <xs:element ref="imop:Artikel" maxOccurs="unbounded"/>
+                                <xs:element ref="imop:WijzigArtikel" maxOccurs="unbounded"/>
+                            </xs:choice>
+                            <xs:element ref="imop:Redactioneel"/>
+                            <!-- issue: hier divisie toestaan? Die zit niet standaard in blocksopt. Zie bv cvdr 424/157492_1.xml voor relevant voorbeeld -->
+                        </xs:choice>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- REGELING-TEKST einde -->
+
+    <!-- REGELING-SLUITING -->
+    <xs:element name="Sluiting" type="imop:SluitingType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <!-- eigenlijk is dit een soort "hulpcontainer", want het is alleen bedoeld om block kinderen te kunnen groeperen maar heeft zelf niet echt betekenis -->
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+    <!--
+      overgang naar een simpeler model voor alle sluitingen (regeling-sluiting / nota-toelichting / bijlage)
+      in principe gewoon opvolging van al's met optioneel rol attribuut voor vormgeving lijkt genoeg
+
+      in hoeverre ondertekening beter als container kan worden gedaan is discussiepunt (in gvop oud en op is het mixed en dat is sowieso fout omdat het twee blocks bevat) maar verder wel nuttig.
+      Er is echter wel iets nodig om extra witruimte voor en na ondertekeningsblok te maken, dus toch een container met alleen al blocks
+
+      slotformulering/lijst of slotformulering/al-groep is nog nooit gebruikt en wordt dus verwijderd
+   -->
+    <xs:complexType name="SluitingType">
+        <!-- sluiting gelijkgetrokken voor regeling-sluiting; bijlage-sluiting; nota-toelichting-sluiting -->
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:choice maxOccurs="unbounded" minOccurs="0">
+                    <!-- hier zit je met het issue dat je eigenlijk alleen al elementen wilt maar toch ook ondertekening blok wilt kunnen honoreren (ongewenste mix van container en block elementen) -->
+                    <!-- het veelgebruikte model van twee ondertekeningen naast elkaar in de output suggereert een tabel maar dat is ongewenst (het zijn twee blokken die in de vormgeving naast elkaar geplaatst moeten worden, desnoods met een tabel zoals in HTML) -->
+                    <xs:element name="al" type="imop:alInSluitingType">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <type>Block</type>
+                            </xs:appinfo>
+                        </xs:annotation>
+                    </xs:element>
+                    <xs:element ref="imop:Groep">
+                        <!-- TODO: uitzoeken hoe dit generieker opgelost kan worden. 
+                             is het mogelijk om lokale al te "injecteren" in dit contentmodel? -->
+                    </xs:element>
+                    <xs:element name="Ondertekening">
+                        <xs:annotation>
+                            <xs:appinfo>
+                                <type>Container</type>
+                            </xs:appinfo>
+                            <xs:documentation>In afwijking tot de andere onderdelen van sluiting is Ondertekening een container</xs:documentation>
+                        </xs:annotation>
+                        <!-- TODO: type van maken? bv ivm class attribuut? -->
+                        <xs:complexType>
+                            <xs:choice maxOccurs="unbounded">
+                                <!-- TODO: uitzoeken of dit niet beter via algemeen al element kan
+                                     is het echt belangrijk om @rol beschikbaar te hebben? kan annotatie niet zelfde effect geven?
+                                     of: andere technische oplossing voor "injecteren" enumeratie @rol?
+                                    -->
+                                <xs:element name="al">
+                                    <xs:annotation>
+                                        <xs:appinfo>
+                                            <type>Block</type>
+                                        </xs:appinfo>
+                                    </xs:annotation>
+                                    <xs:complexType>
+                                        <xs:complexContent>
+                                            <xs:extension base="imop:alBaseType">
+                                                <xs:attribute name="rol">
+                                                    <xs:simpleType>
+                                                        <xs:restriction base="xs:string">
+                                                            <xs:enumeration value="naam"/>
+                                                            <xs:enumeration value="functie"/>
+                                                            <xs:enumeration value="organisatie"/>
+                                                        </xs:restriction>
+                                                    </xs:simpleType>
+                                                </xs:attribute>
+                                            </xs:extension>
+                                        </xs:complexContent>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:choice>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="alInSluitingType">
+        <xs:complexContent>
+            <xs:extension base="imop:alBaseType">
+                <xs:attribute name="rol">
+                    <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                            <xs:enumeration value="slotformulering"/>
+                            <xs:enumeration value="gegeven"/>
+                            <xs:enumeration value="goedkeuring"/>
+                            <xs:enumeration value="dagtekening"/>
+                            <xs:enumeration value="dagtekening_plaats"/>
+                            <xs:enumeration value="dagtekening_datum"/>
+                            <!-- ondertekening loopt via element hieronder -->
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <!-- REGELING-SLUITING einde -->
+
+    <!-- BIJLAGE -->
+    <xs:element name="Bijlage" type="imop:bijlageType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Bijlage</entity>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="bijlageType">
+        <xs:complexContent>
+            <xs:extension base="imop:containerMetadataKopMetContainersType">
+                <xs:sequence>
+                    <xs:choice>
+                        <xs:element ref="imop:Inhoud"/>
+                        <xs:element maxOccurs="unbounded" ref="imop:Divisie"/>
+                        <xs:element ref="imop:Aanduidingen"/>
+                    </xs:choice>
+                    <xs:element minOccurs="0" ref="imop:Sluiting"/>
+                </xs:sequence>
+                <xs:attributeGroup ref="imop:bijlageAttributeGroup"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:attributeGroup name="bijlageAttributeGroup">
+        <xs:annotation>
+            <xs:documentation>
+                <p>@startpagina-div vervangen door @page-break-before</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attributeGroup>
+    <!-- BIJLAGE einde -->
+
+    <!-- NAWERK -->
+    <!-- Toelichting, officiele inhoudsopgave, tekst als bezwaarschrift etc.) -->
+    <xs:element name="Toelichting" type="imop:toelichtingType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Toelichting</entity>
+                <notRestrictable/>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Een Toelichting kan meerdere vormen aannemen. Een "nota van toelichting" is van toepassing op een algemene maatregel van bestuur of een ander koninklijk besluit van regelende aard. In andere gevallen wordt gesproken over
+                    "toelichting". Een "memorie van toelichting" is een apart Kamerstuk (bij een voorstel van wet).</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="toelichtingType">
+        <xs:complexContent>
+            <xs:extension base="imop:containerMetadataMetContainersType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" ref="imop:Kop"/>
+                    <xs:choice>
+                        <xs:annotation>
+                            <xs:documentation>
+                                <p>Het idee is hier dat of een volledige geneste divisiestructuur wordt gebruikt, of blocks zonder divisie. In het laatste geval worden de blocks dan gebundeld in een inhoud element.</p>
+                            </xs:documentation>
+                        </xs:annotation>
+                        <xs:element ref="imop:Inhoud"/>
+                        <xs:element ref="imop:Divisie"/>
+                    </xs:choice>
+                    <xs:element minOccurs="0" ref="imop:Sluiting"/>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" ref="imop:Bijlage"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="Inhoudsopgave" type="imop:inhoudsopgaveType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:OfficieleInhoudsopgave</entity>
+                <notRestrictable/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="inhoudsopgaveType">
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <xs:element minOccurs="0" ref="imop:Kop"/>
+                    <xs:choice>
+                        <xs:choice>
+                            <xs:element ref="imop:table"/>
+                            <xs:element ref="imop:table_html5"/>
+                        </xs:choice>
+                        <xs:element maxOccurs="unbounded" ref="imop:al"/>
+                    </xs:choice>
+                </xs:sequence>
+                <xs:attributeGroup ref="imop:inhoudsopgaveAttributegroup"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:attributeGroup name="inhoudsopgaveAttributegroup">
+        <!-- TODO: bepalen welke attributen nodig zijn (nu alleen @id geerfd) -->
+    </xs:attributeGroup>
+
+    <!-- nota toelichting is qua aanpak gelijk aan bijlage -->
+    <!-- NAWERK einde -->
+
+    <!-- GEDEELDE ELEMENTEN -->
+    <xs:element name="Bron">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Bron</entity>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <!-- als er meer dan 1 regel nodig is, dan hard br gebruiken (alternatief is container ipv block maar dat heeft weer andere nadelen) -->
+        <xs:complexType>
+            <xs:complexContent mixed="true">
+                <xs:extension base="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+                    <xs:attributeGroup ref="imop:bronAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="bronAttributeGroup"> </xs:attributeGroup>
+
+    <xs:element name="Bijschrift">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Bijschrift</entity>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent mixed="true">
+                <xs:extension base="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+                    <xs:attributeGroup ref="imop:bijschriftAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="bijschriftAttributeGroup">
+        <xs:attribute default="onder" name="locatie">
+            <!-- TODO: is hier een pseudo CSS equivalent? -->
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="boven"/>
+                    <xs:enumeration value="onder"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:element name="Citaat">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Citaat</entity>
+                <ignore/>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Een citaat is een letterlijke overname van tekst uit een andere publicatie. Een citaat bestaat tenminste uit een volledige alinea. Een citaat wordt doorgaans in zijn geheel tussen aanhalingstekens geplaatst of in een afwijkende
+                    typografie afgebeeld. Aanhalingstekens maken geen onderdeel uit van de tekst van een citaat; deze worden gegenereerd.</p>
+                <!-- mag een citaat meer zijn dan tekst (dus plaatje of formule) -->
+            </xs:documentation>
+        </xs:annotation>
+        <!-- in OP mocht table niet, onduidelijk waarom, beperking (voorlopig) gehandhaafd -->
+        <!-- TODO: Schematron rule voor minimaal 1 alinea -->
+        <!-- TODO: vergelijken met quotedStructure van AN: zou goed zijn om te splitsen in citaat (algemeen) en citaat (structuur) waarbij je in de laatste hele artikel fragmenten etc kan plaatsen -->
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:group ref="imop:blocks_behalve_citaatGroup"/>
+                    </xs:choice>
+                    <xs:attributeGroup ref="imop:citaatAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="citaatAttributeGroup">
+        <xs:attribute name="bron"/>
+        <xs:attribute name="url"/>
+        <xs:attribute name="auteur"/>
+    </xs:attributeGroup>
+
+    <!-- LIJST -->
+    <xs:element name="Lijst">
+        <!-- lijst is vanwege compositie een block (mix met al en table) maar had ook conceptueel een container kunnen zijn, daarom BlockContainerVirtueelType -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Lijst</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Een Lijst - ook wel opsomming genoemd - is een recursieve structuur. Er is aanzienlijke variatie ten aanzien van de nummering. Aanwijziging 100 van de Aanwijzingen voor de Regelgeving beschrijft de nummering bij een opsomming
+                    binnen een Artikel (eerste niveau a. b. c.; tweede niveau 1°. 2°. 3°.). Voor andere lijsten geldt dat soms geen nummering wordt gewenst, of dat asterisk, mdash of ndash wordt gebruikt. Via enkele attributen wordt deze variatie
+                    afgedekt.</p>
+                <p>Het is in ieder geval niet de bedoeling dat nummering altijd wordt gegenereerd. De voorkeur is om de nummering expliciet op te nemen in de XML. Dit geeft een garantie dat de intentie van de auteur het beste bewaard blijft. Dit is
+                    ook in lijn met het idee dat de XML een uitwisselingsformaat is. Uiteraard kan een auteursomgeving ervoor zorgen dat de gebruiker niet zelf nummers moet intypen, maar op het moment van serialisatie is het vaak wenselijk om de
+                    nummering expliciet te laten zijn.</p>
+                <p>Er zijn enkele afhankelijkheden tussen attributen van Lijst en het contentmodel van Lijst die niet in XSD uitgedrukt k</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Lijstaanhef" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+                            <xs:annotation>
+                                <xs:appinfo>
+                                    <type>Block</type>
+                                </xs:appinfo>
+                                <xs:documentation>Dit betreft maximaal 1 alinea die eindigt op ":". De : moet hard in de tekst staat (wordt niet gegenereerd)</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element maxOccurs="unbounded" ref="imop:Li"/>
+                        <xs:element minOccurs="0" name="Lijstsluiting" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+                            <xs:annotation>
+                                <xs:appinfo>
+                                    <type>Block</type>
+                                </xs:appinfo>
+                                <xs:documentation>Dit betreft maximaal 1 al die logisch gezien bij de lijst hoort. In de praktijk komt dit veel minder vaak voor dan een Lijstaanhef.</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:lijstAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="lijstAttributeGroup">
+        <xs:attribute name="type" default="expliciet">
+            <xs:annotation>
+                <xs:documentation>
+                    <p>Via @type kan het soort lijst worden gedefinieerd. Er is gekozen voor een onderscheid tussen expliciete lijsten waarin alle lijstnummers hard worden gecodeerd en ongemarkeerde lijsten waarin de lijstnummering via een extern
+                        mechanisme kan worden toegevoegd in de verbeelding - indien dat gewenst is. Een ongemarkeerde lijst heeft default geen lijstnummering. Bij een expliciete lijst is het niet alleen mogelijk om nummers of letters te gebruiken,
+                        maar streepjes, asteriks.</p>
+                </xs:documentation>
+            </xs:annotation>
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="expliciet">
+                        <xs:annotation>
+                            <xs:documentation>
+                                <p>Lijstnummer wordt hard gecodeerd in LiNr. Implicatie is dat dit kindelement van Li dan verplicht is.</p>
+                                <p>Bij een expliciete lijst is het niet alleen mogelijk om nummers of letters te gebruiken, maar ook streepjes, asteriks (feitelijk alle denkbare unicode tekens).</p>
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="ongemarkeerd">
+                        <xs:annotation>
+                            <xs:documentation>
+                                <p>Geen lijstnummering in de XML. Implicatie is dat kindelement LiNr van Li dan verboden is. Via class attribuut kan in de verbeelding eventueel een opsomming worden gerealiseerd conform CSS 2.1. Dit is echter niet
+                                    verplicht.</p>
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:annotation>
+        <xs:appinfo>
+            <sch:pattern>
+                <sch:rule context="imop:Lijst[@type='ongemarkeerd']">
+                    <sch:assert test="count(imop:Li/imop:LiNr)=0">Een Lijst van type 'ongemarkeerd' mag geen LiNr elementen hebben.</sch:assert>
+                </sch:rule>
+                <sch:rule context="imop:Lijst[@type='expliciet']">
+                    <sch:assert test="count(imop:Li[not(imop:LiNr)]=0">Een Lijst van type 'expliciet' heeft verplicht altijd LiNr elementen.</sch:assert>
+                </sch:rule>
+            </sch:pattern>
+        </xs:appinfo>
+    </xs:annotation>
+
+    <xs:element name="Li">
+        <!-- TODO: elementnaam hernoemen naar Lijstitem? -->
+        <!-- lijst item is een block met als speciaal kenmerk dat deze weer een lijst kan bevatten, waardoor de lijststructuur recursief wordt -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Lijstitem</entity>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockType">
+                    <xs:sequence>
+                        <xs:element ref="imop:LiNr" minOccurs="0"/>
+                        <!-- omwille van de consistentie is ervoor gekozen om gebruik te maken van inhoud element (zie ook lid, artikel, etc.)
+                             het is dan wel netter om de mogelijke recursie van lijst buiten inhoud om te houden
+                             deze beslissing heeft effect op conversie bestaande content
+                        -->
+                        <xs:choice>
+                            <xs:element ref="imop:Lijst"/>
+                            <xs:element ref="imop:Inhoud">
+                                <!-- TODO: Schematron of XSD constructie die ervoor zorgt dat lijst NIET binnen deze Inhoud mag -->
+                            </xs:element>
+                        </xs:choice>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:liAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="liAttributeGroup">
+        <!-- OP attribuut waarde verwijderd (nooit gebruikt) -->
+    </xs:attributeGroup>
+
+    <xs:element name="LiNr">
+        <!-- TODO: hernoemen naar Nummer of Lijstitemnr? -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Inline</type>
+                <entity>imop:LijstitemNummer</entity>
+                <ignore/>
+            </xs:appinfo>
+            <xs:documentation>in het verleden was dit optioneel maar in de paar gevallen dat het element ontbrak was er duidelijk sprake van een fout, daarom verplicht in Lijst</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value=".{0,20}"/>
+                <!-- pattern maxLength op 20 gezet, meer is een indicatie voor een probleem-->
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+
+    <xs:element name="Begrippenlijst">
+        <!-- alhoewel begrippenlijst een speciaal soort lijst is, is het teveel gedoe in XSD om dit ook via extension / restriction complexType zichtbaar te maken -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Begrippenlijst</entity>
+                <notRestrictable/>
+            </xs:appinfo>
+            <xs:documentation>De traditionele naam van dit element was definitielijst. Het is duidelijker om de volgende regel te hanteren: Begrip = Term + Definitie. Op basis van deze regel zijn alle elementnamen aangepast.</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:sequence>
+                        <!-- TODO: uitzoeken of lijstaanhef hier zinvol is -->
+                        <xs:element maxOccurs="unbounded" ref="imop:Begrip"/>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:begrippenlijstAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="begrippenlijstAttributeGroup">
+        <xs:attribute name="plaatsing">
+            <!-- TODO: bepalen wat hier het nut van is -->
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="tabel"/>
+                    <xs:enumeration value="inline"/>
+                    <xs:enumeration value="tekst"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <!-- diverse OP attributen verwijderd -->
+        <!-- type is altijd expliciet of ongemarkeerd en het verschil tussen beide is onduidelijk -->
+    </xs:attributeGroup>
+
+    <xs:element name="Begrip">
+        <!-- dit past niet helemaal lekker in het model. Ivm consistentie met lijst dit als block beschouwen maar eigenlijk is het meer een soort virtuele container -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Begrip</entity>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:sequence>
+                        <xs:element minOccurs="0" ref="imop:LiNr">
+                            <!-- linr leidt potentieel tot verwarring want je zou hier begripsnummer verwachten -->
+                            <!-- deze komt vaak voor zonder li.nr dus optioneel laten -->
+                        </xs:element>
+                        <xs:element ref="imop:Term"/>
+                        <xs:element ref="imop:Definitie"/>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:begripAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="begripAttributeGroup"/>
+
+    <xs:element name="Term">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Term</entity>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:choice maxOccurs="unbounded" minOccurs="0">
+                <xs:group ref="imop:inlineMaximaalMarkerPopupGroup"/>
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Definitie">
+        <!-- recursieve definitielijsten als in stcrt-2012-4242 zijn niet de bedoeling -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Definitie</entity>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:choice maxOccurs="unbounded">
+                        <xs:element ref="imop:al"/>
+                        <xs:element ref="imop:Lijst"/>
+                    </xs:choice>
+                    <!--<xs:attributeGroup ref="imop:rdf_a_lite"/>-->
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- LIJST einde -->
+
+    <!-- INLINES -->
+
+    <!-- OP element inf vervangen door HTML5 element sub -->
+    <!-- OP element nadruk vervangen door of strong element of b/i/u element (nadruk is een mix van presentatie en semantiek, dus ongewenst).-->
+
+    <xs:element name="ExtRef">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Inline</type>
+                <entity>imop:ExtRef</entity>
+                <notRestrictable/>
+            </xs:appinfo>
+        </xs:annotation>
+        <!-- extref moet eigen attributen krijgen dus extension van inlineComplexType -->
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="imop:inlineComplexType">
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:element ref="imop:u"/>
+                    </xs:choice>
+                    <xs:attributeGroup ref="imop:extrefAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="extrefAttributeGroup">
+        <xs:attribute name="doc" use="required"/>
+        <xs:attribute name="struct"/>
+        <xs:attribute name="beschrijving"/>
+        <xs:attribute name="label"/>
+        <xs:attribute name="soort">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="URL"/>
+                    <xs:enumeration value="document"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:element name="IntRef">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Inline</type>
+                <entity>imop:IntRef</entity>
+                <notRestrictable/>
+            </xs:appinfo>
+        </xs:annotation>
+        <!-- intref moet eigen attributen krijgen dus extension van inlineComplexType -->
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="imop:inlineComplexType">
+                    <xs:attributeGroup ref="imop:intrefAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="intrefAttributeGroup">
+        <!-- de oude cvdr attributen struct, beschrijving, label werden nooit gebruikt. doc is hernoemd naar idref wat beter de bedoeling aangeeft -->
+        <xs:attribute name="idref" use="required" type="xs:IDREF">
+            <xs:annotation>
+                <xs:documentation>
+                    <p>Attribuut idref verwijst naar een locatie in hetzelfde XML document.</p>
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <!-- ten opzichte van OP ontbreekt:  afk cit dfn   
+        extref-groep indexterm intref-groep 
+        dossierref -->
+    <!-- TODO: deze wordt nergens gebruikt ? -->
+    <xs:element name="Aanhaling">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Het element aanhaling bevat zogenoemde "aangehaalde tekst", oftewel een tekst fragment dat op een andere locatie al eens is uitgesproken of opgeschreven. Dit element is de inline tegenhanger van citaat, dat een block element
+                    is.</p>
+                <p>Het gevolg van een aanhaling is meestal dat de tekst van dit element tussen aanhalingstekens wordt geplaatst. Deze aanhalingstekens zijn geen onderdeel van de tekst van het element maar worden gegenereerd.</p>
+                <!-- TODO: is string voldoende? in OP was dit met inlines. Bv sup kan wel nodig zijn -->
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="imop:inlineSimpleType">
+                    <xs:attributeGroup ref="imop:aanhalingAttributeGroup"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="aanhalingAttributeGroup">
+        <!-- deze attributen komen uit OP. Legacy? -->
+        <xs:attribute name="bron"/>
+        <xs:attribute name="url"/>
+        <xs:attribute name="auteur"/>
+    </xs:attributeGroup>
+
+    <xs:element name="Inline">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Inline</type>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Dit is de generieke inline, die door alle toepassingen gebruikt kan worden</p>
+                <p>Attribuut @id of @type of @property (geerfde RDFa) is verplicht (zie voor embedded schematron hieronder)</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <sch:pattern>
+                    <sch:rule context="imop:Inline">
+                        <sch:assert test="@id or @typeof or @property">Een inline element moet of @id of @type of @property hebben</sch:assert>
+                        <!--
+                            deze regel is te strikt, bv als je via inline/@id tekst aanduidt dan kan het handig zijn om meer dan 1 niveau te hebben
+                            <sch:assert test="not(stop:inline)">Een inline element mag niet recursief
+                            gebruikt worden</sch:assert>-->
+                    </sch:rule>
+                </sch:pattern>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent mixed="true">
+                <xs:extension base="imop:inlineComplexType">
+                    <xs:choice minOccurs="0" maxOccurs="unbounded">
+                        <xs:group ref="imop:html5InlineGroup"/>
+                        <xs:element ref="imop:ExtRef"/>
+                        <xs:element ref="imop:IntRef"/>
+                        <!-- probleem is dat inline als element zelf weer in diverse groups zit, dan kan ie geen extension zijn van inlinecomplextype, daarom maar Extref Intref zelf toevoegen -->
+                        <!-- TODO: bepalen of er nog meer gewenst is dan basis elementen als sup -->
+                    </xs:choice>
+                    <xs:attributeGroup ref="imop:inlineAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="inlineAttributeGroup">
+        <!-- gebruik rol attribuut om betekenis nader te duiden. 
+            De voorgedefinieerde waarden bij @rol zijn onder andere legacy OP elementen die via deze weg toch gerealiseerd kunnen worden - zonder dat ze een volwaardig element zijn
+            Voor alle genoemde waarden kan de afweging worden gemaakt of ze toch niet als element gepromoveerd moeten worden
+        -->
+        <xs:attribute name="rol">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="cit">
+                        <xs:annotation>
+                            <xs:documentation>
+                                <p>Een inline met @rol = "cit" wordt gebruikt om referenties naar personen of publicaties te taggen. Het gaat hierbij niet om een citaat van een persoon. Dat wordt gecodeerd met een citaat (blockquote) of aanhaling
+                                    (inline) element)</p>
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="unl">
+                        <xs:annotation>
+                            <xs:documentation>
+                                <p>Het element unl staat voor 'underlined'. Deze worden met name in (eenvoudige) formules gebruikt. Dit is de tegenhanger van het element <code>ovl</code>. Deze elementnaam is afkomstig uit een standaarddefinitie voor
+                                    dit soort notaties.</p>
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="ovl">
+                        <xs:annotation>
+                            <xs:documentation>
+                                <p>De elementnaam <code>ovl</code> staat voor 'overlined'. Deze worden met name in (eenvoudige) formules gebruikt. Dit is de tegenhanger van het element <code>unl</code>. Deze elementnaam is afkomstig uit een
+                                    standaarddefinitie voor dit soort notaties.</p>
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+                    <xs:enumeration value="indexterm">
+                        <xs:annotation>
+                            <xs:documentation>
+                                <p>Een index term is een kenmerkend en betekenisvol woord of begrip van de zodanig gewicht dat het zinvol is om het op te nemen in een register of een index met een verwijzing naar de locatie(s) waar dit voorkomt.</p>
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <!-- HTML5 INLINE elementen -->
+    <xs:element name="i">
+        <!-- TODO: dit element heeft eigenlijk teveel attributen via overerving: nog inperken -->
+        <xs:annotation>
+            <xs:documentation>
+                <p>Dit element wordt bedoeld zoals gedefinieerd in HTML5: https://www.w3.org/TR/html5/text-level-semantics.html#the-i-element</p>
+                <p>The i element represents a span of text in an alternate voice or mood, or otherwise offset from the normal prose in a manner indicating a different quality of text, such as a taxonomic designation, a technical term, an idiomatic
+                    phrase from another language, transliteration, a thought, or a ship name in Western texts.</p>
+                <p>Doordat hier kindelementen opgesomd worden, wordt i/i voorkomen (maar niet i/b/i).</p>
+                <p>Omwille van HTML5 relatie is naam lowercase.</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="imop:inlineComplexType">
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:element ref="imop:b"/>
+                        <xs:element ref="imop:u"/>
+                        <xs:element ref="imop:strong"/>
+                    </xs:choice>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="b">
+        <!-- dit element heeft eigenlijk teveel attributen via overerving: nog inperken -->
+        <xs:annotation>
+            <xs:documentation>
+                <p>Dit element wordt bedoeld zoals gedefinieerd in HTML5: https://www.w3.org/TR/html5/text-level-semantics.html#the-b-element</p>
+                <p>The b element represents a span of text to which attention is being drawn for utilitarian purposes without conveying any extra importance and with no implication of an alternate voice or mood, such as key words in a document
+                    abstract, product names in a review, actionable words in interactive text-driven software, or an article lede.</p>
+                <p>Doordat hier kindelementen opgesomd worden, wordt b/b voorkomen (maar niet b/i/b).</p>
+                <p>Omwille van HTML5 relatie is naam lowercase.</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="imop:inlineComplexType">
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:element ref="imop:i"/>
+                        <xs:element ref="imop:u"/>
+                        <xs:element ref="imop:strong"/>
+                    </xs:choice>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="u">
+        <!-- dit element heeft eigenlijk teveel attributen via overerving: nog inperken -->
+        <xs:annotation>
+            <xs:documentation>
+                <p>Dit element wordt bedoeld zoals gedefinieerd in HTML5: https://www.w3.org/TR/html5/text-level-semantics.html#the-u-element</p>
+                <p>The u element represents a span of text with an unarticulated, though explicitly rendered, non-textual annotation, such as labeling the text as being a proper name in Chinese text (a Chinese proper name mark), or labeling the text
+                    as being misspelt.</p>
+                <p>Doordat hier kindelementen opgesomd worden, wordt u/u voorkomen (maar niet u/b/u).</p>
+                <p>Omwille van HTML5 relatie is naam lowercase.</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="imop:inlineComplexType">
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:element ref="imop:i"/>
+                        <xs:element ref="imop:b"/>
+                        <xs:element ref="imop:strong"/>
+                    </xs:choice>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="sup" type="imop:inlineSimpleType">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Dit element wordt bedoeld zoals gedefinieerd in HTML5: https://www.w3.org/TR/html5/text-level-semantics.html#the-sub-and-sup-elements</p>
+                <p>The sup element represents a superscript. These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation for presentation's sake. For example, it would be
+                    inappropriate for the sub and sup elements to be used in the name of the LaTeX document preparation system. In general, authors should use these elements only if the absence of those elements would change the meaning of the
+                    content.</p>
+                <p>Omwille van HTML5 relatie is naam lowercase.</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="sub" type="imop:inlineSimpleType">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Dit element is de vervanger van het inf element in OP.</p>
+                <p>Dit element wordt bedoeld zoals gedefinieerd in HTML5: https://www.w3.org/TR/html5/text-level-semantics.html#the-sub-and-sup-elements</p>
+                <p>The sub element represents a subscript. These elements must be used only to mark up typographical conventions with specific meanings, not for typographical presentation for presentation's sake. For example, it would be
+                    inappropriate for the sub and sup elements to be used in the name of the LaTeX document preparation system. In general, authors should use these elements only if the absence of those elements would change the meaning of the
+                    content.</p>
+                <p>Omwille van HTML5 relatie is naam lowercase.</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <!-- TODO: html5 em element nog opnemen -->
+
+    <!-- TODO: is het niet voldoende om strong en em te doen (ipv b en i)? -->
+
+    <xs:element name="strong">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Dit element wordt bedoeld zoals gedefinieerd in HTML5: https://www.w3.org/TR/html5/text-level-semantics.html#the-strong-element</p>
+                <p>The strong element represents strong importance, seriousness, or urgency for its contents.</p>
+                <p>Doordat hier kindelementen opgesomd worden, wordt strong/strong voorkomen (maar niet strong/b/strong en dergelijke).</p>
+                <p>Omwille van HTML5 relatie is naam lowercase.</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="imop:inlineComplexType">
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:element ref="imop:i"/>
+                        <xs:element ref="imop:b"/>
+                        <xs:element ref="imop:u"/>
+                    </xs:choice>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- let op: HTML5 definieert dfn totaal anders dan OP (de term zelf versus referentie naar de term) 
+         om deze potentiele bron van verwarring te voorkomen, wordt dfn niet meer toegepast. 
+    -->
+
+    <xs:element name="abbr">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Dit element wordt bedoeld zoals gedefinieerd in HTML5: https://www.w3.org/TR/html5/text-level-semantics.html#the-abbr-element</p>
+                <p>The abbr element represents an abbreviation or acronym, optionally with its expansion. The title attribute may be used to provide an expansion of the abbreviation. The attribute, if specified, must contain an expansion of the
+                    abbreviation, and nothing else.</p>
+                <p>Voorbeeld: "The &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt; was founded in 1948."</p>
+                <p>Omwille van HTML5 relatie is naam lowercase.</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="imop:inlineSimpleType">
+                    <xs:attribute name="title"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- HTML5 INLINE elementen einde-->
+
+    <!-- de volgende inline elementen mogen niet overal gebruikt worden (dus die kunnen niet in generieke inline groups terechtkomen) -->
+    <!--<xs:element name="Datum">
+        indien gewenst kan deze functionaliteit worden gerepliceerd via een inline element met annotatie
+        
+        <xs:complexType mixed="true">
+            <xs:simpleContent>
+                <xs:extension base="imop:inlineSimpleType">
+                    <xs:attributeGroup ref="imop:datumAttributeGroup"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="datumAttributeGroup">
+        <xs:attribute name="isodatum" type="xs:date" use="required"/>
+    </xs:attributeGroup>
+-->
+    <!-- inline groepen -->
+    <xs:group name="html5InlineGroup">
+        <xs:choice>
+            <xs:element ref="imop:i"/>
+            <xs:element ref="imop:b"/>
+            <xs:element ref="imop:u"/>
+            <xs:element ref="imop:sub"/>
+            <xs:element ref="imop:sup"/>
+            <xs:element ref="imop:strong"/>
+            <xs:element ref="imop:abbr"/>
+        </xs:choice>
+    </xs:group>
+
+    <xs:group name="inlineBasisGroup">
+        <xs:choice>
+            <xs:group ref="imop:html5InlineGroup"/>
+            <xs:element ref="imop:Inline"/>
+        </xs:choice>
+    </xs:group>
+
+    <xs:group name="inlineMaximaalGroup">
+        <xs:choice>
+            <xs:group ref="imop:inlineBasisGroup"/>
+            <xs:element ref="imop:ExtRef"/>
+            <xs:element ref="imop:IntRef"/>
+        </xs:choice>
+    </xs:group>
+
+    <xs:group name="inlineBasisMarkerPopupGroup">
+        <!-- waar inline mag, is ook altijd marker toegestaan: dit is de variant met minimale inline, en volledige marker -->
+        <!-- gebruiker van deze groep doet minOccurs / maxOccurs -->
+        <xs:choice>
+            <xs:group ref="imop:inlineBasisGroup"/>
+            <xs:group ref="imop:markerElementenGroup"/>
+            <xs:group ref="imop:popupElementenGroup"/>
+        </xs:choice>
+    </xs:group>
+
+    <xs:group name="inlineMaximaalMarkerPopupGroup">
+        <!-- waar inline mag, is ook altijd marker toegestaan: dit is de variant met maximale inline (dus extref / intref), en volledige marker -->
+        <!-- gebruiker van deze groep doet minOccurs / maxOccurs -->
+        <xs:choice>
+            <xs:group ref="imop:inlineMaximaalGroup"/>
+            <xs:group ref="imop:markerElementenGroup"/>
+            <xs:group ref="imop:popupElementenGroup"/>
+        </xs:choice>
+    </xs:group>
+    <!-- AN heeft ook zoiets als "inline containers" bv een mref is daar een verzameling ref. Die mref is een inline omdat je 'm kan gebruiken op alle plaatsen waar inline mogelijk is maar zelf is het eigenlijk een container -->
+
+    <!-- TABLE start -->
+    <!-- wens: keuze op hoogste niveau tussen table CALS en table HTML. ze hebben hetzelfde root element dus je moet iets anders verzinnen. For the time being: CALS -->
+    <!-- TODO: geneste tabellen mogelijk maken? -->
+
+    <xs:element name="table">
+        <!--    table is block vanwege compositie regels (zelfde niveau als al en lijst) maar eigenlijk meer een container
+                omdat het block is, worden kinderen vanzelf ook block of inline, terwijl ze soms eigenlijk ook meer op een container lijken
+                binnen table is geen poging gedaan om lokale kindelementen aan te laten sluiten op block, inline, etc. typen
+                ook zijn veel attributen relevant vanuit perspectief CALS, maar kunnen ook anders opgelost worden (via @style)
+        -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:Tabel</entity>
+                <notRestrictable/>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Beperkte CALS implementatie (https://www.oasis-open.org/specs/tr9503.html#c38ab3b7). Alle CALS elementen zijn in imop namespace geplaatst. Ivm Cals relatie naam van dit element en alle kinderen lowercase gehouden. Binnen entry
+                    element worden diverse block elementen ondersteund.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" ref="imop:title">
+                            <!-- dit is een tabel titel waarin ook meer dan 1 regel moet kunnen optreden dus inline + br nodig -->
+                        </xs:element>
+                        <xs:element ref="imop:tgroup" maxOccurs="unbounded"/>
+                        <xs:element minOccurs="0" ref="imop:Bron"/>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:tableAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="tableAttributeGroup">
+        <xs:attribute name="frame">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="top"/>
+                    <xs:enumeration value="bottom"/>
+                    <xs:enumeration value="topbot"/>
+                    <xs:enumeration value="all"/>
+                    <xs:enumeration value="sides"/>
+                    <xs:enumeration value="none"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="colsep" type="imop:nulOfEen"/>
+        <xs:attribute name="rowsep" type="imop:nulOfEen"/>
+    </xs:attributeGroup>
+
+    <xs:element name="tgroup">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" minOccurs="0" ref="imop:colspec"/>
+                        <xs:element minOccurs="0" ref="imop:thead"/>
+                        <xs:element ref="imop:tbody"/>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:tgroupAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="tgroupAttributeGroup">
+        <xs:attribute name="cols" type="xs:NMTOKEN" use="required"/>
+        <xs:attribute name="colsep" type="xs:NMTOKEN"/>
+        <xs:attribute name="rowsep" type="xs:NMTOKEN"/>
+        <xs:attribute default="" name="char"/>
+        <xs:attribute default="50" name="charoff" type="xs:NMTOKEN"/>
+        <xs:attribute default="left" name="align">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="left"/>
+                    <xs:enumeration value="right"/>
+                    <xs:enumeration value="center"/>
+                    <xs:enumeration value="justify"/>
+                    <xs:enumeration value="char"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:element name="thead">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" ref="imop:row"/>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:theadAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="theadAttributeGroup">
+        <xs:attribute default="bottom" name="valign">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="top"/>
+                    <xs:enumeration value="middle"/>
+                    <xs:enumeration value="bottom"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:element name="tbody">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="unbounded" ref="imop:row"/>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:tbodyAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="tbodyAttributeGroup">
+        <xs:attribute default="top" name="valign">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="top"/>
+                    <xs:enumeration value="middle"/>
+                    <xs:enumeration value="bottom"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:element name="title" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+        <!-- let op: dit is een andere definitie dan titel in kop - deze wordt gebruikt in als CALS title ) -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <entity>imop:TitelCals</entity>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="colspec">
+        <xs:complexType>
+            <xs:attributeGroup ref="imop:colspecAttributeGroup"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="colspecAttributeGroup">
+        <!-- colspec is marker zonder @id en @class -->
+        <xs:attribute name="colname" type="xs:NMTOKEN"/>
+        <xs:attribute name="colnum" type="xs:NMTOKEN"/>
+        <xs:attribute name="colsep" type="imop:nulOfEen"/>
+        <xs:attribute name="rowsep" type="imop:nulOfEen"/>
+        <xs:attribute name="colwidth"/>
+        <xs:attribute name="align">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="left"/>
+                    <xs:enumeration value="right"/>
+                    <xs:enumeration value="center"/>
+                    <xs:enumeration value="justify"/>
+                    <xs:enumeration value="char"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute default="" name="char"/>
+        <xs:attribute default="50" name="charoff" type="xs:NMTOKEN"/>
+    </xs:attributeGroup>
+
+    <xs:element name="row">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:RijCals</entity>
+                <ignore/>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:sequence>
+                        <xs:element ref="imop:entry" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:trAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="trAttributeGroup">
+        <xs:attribute name="rowsep" type="xs:NMTOKEN"/>
+        <xs:attribute name="valign">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="top"/>
+                    <xs:enumeration value="middle"/>
+                    <xs:enumeration value="bottom"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+
+    <xs:element name="entry">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:group ref="imop:blocks_behalve_tableGroup"/>
+                        <!-- voorkom geneste tabellen: alle blocks zonder table  -->
+                    </xs:choice>
+                    <xs:attributeGroup ref="imop:tdAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="tdAttributeGroup">
+        <xs:attribute name="colname" type="xs:NMTOKEN"/>
+        <xs:attribute name="namest" type="xs:NMTOKEN"/>
+        <xs:attribute name="nameend" type="xs:NMTOKEN"/>
+        <xs:attribute name="morerows" type="xs:integer"/>
+        <xs:attribute name="colsep" type="imop:nulOfEen"/>
+        <xs:attribute name="rowsep" type="imop:nulOfEen"/>
+        <xs:attribute name="align">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="left"/>
+                    <xs:enumeration value="right"/>
+                    <xs:enumeration value="center"/>
+                    <xs:enumeration value="justify"/>
+                    <xs:enumeration value="char"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="char" type="xs:string"/>
+        <xs:attribute name="charoff" type="xs:NMTOKEN"/>
+        <xs:attribute name="valign">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:enumeration value="top"/>
+                    <xs:enumeration value="middle"/>
+                    <xs:enumeration value="bottom"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:attributeGroup>
+    <!-- TABLE einde -->
+
+    <!-- KOP start -->
+    <xs:element name="Kop" type="imop:kopType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Dit is het generieke kop type. in lokale contexten kan het nodig zijn om dit aan te scherpen</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="kopType">
+        <!-- 
+            hier toch block van nr, label, titel gemaakt ondanks het feit dat ze veelal op 1 regel worden afgebeeld met daartussen spaties 
+            TODO: beter beargumenteren waarom MixedcontentMaximaleInlinesMarkerPopupType op dit niveau niet genoeg is (nr, titel en label zijn nu reeds van dat type)
+        -->
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <xs:choice minOccurs="0">
+                        <xs:sequence>
+                            <xs:element ref="imop:Label"/>
+                            <xs:element minOccurs="0" ref="imop:Nummer"/>
+                        </xs:sequence>
+                        <xs:sequence>
+                            <xs:element ref="imop:Nummer"/>
+                            <xs:element minOccurs="0" ref="imop:Label"/>
+                        </xs:sequence>
+                    </xs:choice>
+                    <xs:element minOccurs="0" ref="imop:Opschrift"/>
+                    <xs:element maxOccurs="3" minOccurs="0" ref="imop:Subtitel">
+                        <!-- TODO: is dit wel nodig? (waarschijnlijk niet) -->
+                    </xs:element>
+                </xs:sequence>
+                <xs:attributeGroup ref="imop:kop_op_AttributeGroup"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:attributeGroup name="kop_op_AttributeGroup">
+        <!-- <xs:attribute name="kopopmaak">
+            dit attribuut kan weg omdat @style nu beschikbaar is
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="vet"/>
+                    <xs:enumeration value="cur"/>
+                    <xs:enumeration value="ondlijn"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute> -->
+    </xs:attributeGroup>
+
+    <xs:element name="Nummer" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Label" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Subtitel" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+        <!-- TODO: bepalen of dit element echt nodig is. Inschatting: nee (vergroot de kans op fouten bij coderen artikelen, hoofdstukken etc.) -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+            </xs:appinfo>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="Opschrift" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <notRestrictable/>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>In aanwijzing 98 van de Aaanwijzingen voor de Regelgeving wordt gesproken over een "opschrift, waarin de inhoud van het onderdeel </p>
+            </xs:documentation>
+        </xs:annotation>
+        <!-- TODO: bepalen of titel met meer dan 1 regel mogelijk moet zijn. Dit lijkt ongewenst voor artikel / hoofdstuk / divisie kop 
+            (want die wordt altijd achter elkaar geplakt als span met nr en label), maar voor tabel titel is dit wel een optie. -->
+    </xs:element>
+    <!-- KOP einde -->
+
+    <xs:element name="Tussenkop">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType mixed="true">
+            <xs:complexContent>
+                <xs:extension base="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType">
+                    <xs:attributeGroup ref="imop:tussenkop_op_AttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="tussenkop_op_AttributeGroup">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Legacy OP: @kopopmaak afhandelen met @font-weight / @font-style; @font-kleur afhandelen via @font-color; @font-raster onduidelijk of het gebruikt is; @witregel (na tussenkop) afhandelen via @margin-bottom.</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attributeGroup>
+
+    <xs:element name="Groep">
+        <!-- voorheen al-groep, hernoemd om doel - logische groepering - duidelijker te maken -->
+        <!-- TODO: @rol attribuut nodig in bepaalde contexten? (dus met enumeratie) -->
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Groep van Block elementen. Via class attribuut kan betekenis nader aangegeven worden, bv tbv vormgeving</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:choice maxOccurs="unbounded">
+                        <!-- TODO: bepalen of dit meer ingeperkt moet worden (via enumeratie van toegestane elementen -->
+                        <xs:group ref="imop:blocks_minimaleGroup"/>
+                    </xs:choice>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- PLAATJE container / wrapper -->
+    <xs:element name="Figuur">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Element Figuur is een specialisatie van Element Groep. Het is een block, met daarbinnen verplicht een Illustratie en optioneel een Titel, Bijschrift en / of Bron. Zonder een van die laatste drie elementen voegt dit element
+                    eigenlijk niets toe, en zou ook rechtstreeks Illiustratie gebruikt kunnen worden.</p>
+            </xs:documentation>
+            <xs:appinfo>
+                <type>Block</type>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:blockContainerVirtueelType">
+                    <xs:sequence>
+                        <xs:element minOccurs="0" name="Titel" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType"/>
+                        <xs:element ref="imop:Illustratie"/>
+                        <xs:element minOccurs="0" ref="imop:Bijschrift"/>
+                        <xs:element minOccurs="0" ref="imop:Bron"/>
+                    </xs:sequence>
+                    <xs:attributeGroup ref="imop:figuur_op_AttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="figuur_op_AttributeGroup">
+        <!-- TODO: attribuut frame kan beter via CSS worden geregeld -->
+        <xs:attribute name="frame">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="top"/>
+                    <xs:enumeration value="bottom"/>
+                    <xs:enumeration value="topbot"/>
+                    <xs:enumeration value="all"/>
+                    <xs:enumeration value="sides"/>
+                    <xs:enumeration value="none"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <!-- TODO: bepalen of dit niet generieker kan -->
+        <xs:attribute name="uitlijning"/>
+        <xs:attribute name="tekstomloop"/>
+        <!--    dit attribuut kan beter via CSS worden gerealiseerd. default waarde block spreekt voor zich (het is namelijk een block element). Floating en inline wijken sterk af en moeten apart beschreven worden            
+            <xs:attribute default="block" name="positionering">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="block"/>
+                    <xs:enumeration value="inline"/>
+                    <xs:enumeration value="floating"/>
+                    <xs:enumeration value="default"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute> -->
+    </xs:attributeGroup>
+
+    <!-- TODO: kan dit niet samengevoegd worden met img??? -->
+    <xs:element name="Illustratie">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Marker</type>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Element Illustratie is een voorbeeld van een marker die maar op 1 plaats gebruikt mag worden, namelijk als kind van plaatje block element</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:markerEmptyElementType">
+                    <xs:attributeGroup ref="imop:illustratieAttributeGroup"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:attributeGroup name="illustratieAttributeGroup">
+        <xs:attribute name="naam" use="required">
+            <!-- ook eisen stellen aan de inhoud, leeg is niet goed
+               dus bv matches(@naam, '.*\.[png|jpg]') -->
+        </xs:attribute>
+
+        <xs:attribute name="breedte">
+            <!-- in 3pas is hier een veel strikter model gemaakt
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="((([1][0-5])|([0-9]))(\.[0-9]*)?|\.[0-9]+)(cm)"/>
+                </xs:restriction>
+            </xs:simpleType>
+        -->
+        </xs:attribute>
+        <xs:attribute name="hoogte"/>
+        <xs:attribute name="schaal"/>
+        <xs:attribute default="start" name="uitlijning">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="start"/>
+                    <xs:enumeration value="end"/>
+                    <xs:enumeration value="center"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="kleur">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="ja"/>
+                    <xs:enumeration value="nee"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute default="png" name="formaat">
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="jpeg"/>
+                    <xs:enumeration value="gif"/>
+                    <xs:enumeration value="png"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="type">
+            <!-- TODO: bepalen of dit nog nut heeft in 2017 -->
+            <xs:simpleType>
+                <xs:restriction base="xs:token">
+                    <xs:enumeration value="foto"/>
+                    <xs:enumeration value="tekst"/>
+                    <xs:enumeration value="lijn"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="alt"/>
+    </xs:attributeGroup>
+    <!-- PLAATJE einde -->
+
+    <!-- 
+        WIJZIG-ARTIKEL
+        Dit is de mensleesbare versie van de was-wordt-mutaties
+        Dit moet nog verder worden uitgewerkt
+    -->
+    <xs:element name="WijzigArtikel">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>WijzigArtikel</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Dit element bundelt alle wijzigingen voor een regeling. In de traditionele vorm is dit een tekstuele beschrijving van een of meer wijzigingsinstructies, maar dit element ondersteunt ook alternatieve benaderingen via diff. In het
+                    laatste geval is wat kindelement optioneel (dit hangt dan van de verbeelding af, bv groen - geel diff afbeelding).</p>
+                <p class="op_migratie">Vergeleken met OP schema is dit meer een logische constructie geworden dan een puur tekstuele. Een aantal tekstuele elementen zoals kop is daarom optioneel geworden. Dit kan eventueel via toepassingsprofiel weer
+                    verplicht gemaakt worden.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <xs:element ref="imop:Metadata"/>
+                        <xs:element ref="imop:Kop" minOccurs="0"/>
+                        <xs:element name="Wat" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType" minOccurs="0">
+                            <xs:annotation>
+                                <xs:documentation>Dit element wordt gebruikt om een tekstuele omschrijving te geven van de regeling waarop de onderliggende wijzigingen betrekking hebben, bijvoorbeeld "De Wet op het financieel toezicht wordt als volgt
+                                    gewijzigd:".</xs:documentation>
+                            </xs:annotation>
+                        </xs:element>
+                        <xs:element name="WijzigLid" maxOccurs="unbounded">
+                            <xs:annotation>
+                                <xs:documentation>Dit element bevat een enkele wijzigingsinstructie binnen een regeling die is aangeduid in het WijzigArtikel. </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element ref="imop:Metadata" minOccurs="0"/>
+                                    <xs:element name="Wat" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType" minOccurs="0">
+                                        <xs:annotation>
+                                            <xs:documentation>Dit element wordt gebruikt om een tekstuele beschrijving te geven van de wijziging waarop de onderliggende wijzigingen betrekking hebben, bijvoorbeeld "De Wet op het financieel toezicht
+                                                wordt als volgt gewijzigd:".</xs:documentation>
+                                        </xs:annotation>
+                                    </xs:element>
+                                    <xs:element ref="imop:Wijziging" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Wijziging">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="imop:Metadata" minOccurs="0"/>
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element name="VoegToe">
+                        <xs:complexType>
+                            <xs:choice>
+                                <xs:any processContents="skip"/>
+                            </xs:choice>
+                            <xs:attribute name="soort" default="volgtOp">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="volgtOp"/>
+                                        <xs:enumeration value="komtVoor"/>
+                                        <xs:enumeration value="kindVan"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:attribute>
+                            <xs:attribute name="context"/>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Vervang">
+                        <xs:complexType>
+                            <xs:choice>
+                                <xs:any processContents="skip"/>
+                            </xs:choice>
+                            <xs:attribute name="objectIdentifier"/>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="Verwijder">
+                        <xs:complexType>
+                            <xs:choice>
+                                <xs:any processContents="skip"/>
+                            </xs:choice>
+                            <xs:attribute name="objectIdentifier"/>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- WIJZIG-ARTIKEL einde -->
+
+    <!--
+        2017-12-20
+        Het element Werkingsgebied is verwijderd. Identieke uitkomst kan bereikt worden door gebruik te maken van:
+        
+        <Uitspraak eigenschap="stop:werkingsgebied">
+            <Waarde type="stop:objectRef">a12345</Waarde>
+        </Uitspraak>
+        waarbij a12345 een id is van een Geometrie of Locatiegroep element. Deze twee mogen alleen voorkomen in de Locatieaanduidingen container.
+               
+    -->
+    <!-- dit wordt niet meer gebruikt    
+    <xs:complexType name="locatieAanduidingType">
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:choice maxOccurs="unbounded">
+                    <xs:element ref="imop:Geometrie"/>
+                    <xs:element ref="imop:Locatiegroep"/>
+                    <xs:element ref="imop:Locatieverwijzing"/>
+                </xs:choice>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>-->
+
+    <xs:element name="Aanduidingen">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <xs:any maxOccurs="unbounded" processContents="skip"/>
+                    </xs:sequence>
+                    <xs:attribute name="gmlid"/>
+                    <xs:attribute name="type"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- GEO -->
+    <!--   locatieverwijzing is niet meer nodig na verwijdering van Werkingsgebied; het kan als Uitspraak eigenschap worden afgehandeld
+        
+        <xs:element name="Locatieverwijzing">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <subklasseVan>imop:Locatie</subklasseVan>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Instantie van Locatieverwijzing in UML. Dit is een container omdat het om informatie buiten de lopende tekst gaat.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:attribute name="scheme"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>-->
+    <xs:element name="Geometrie">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Geometrie</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <!-- hier metadata definieren als instance van metadataType gaat niet werken want unique particle constraint -->
+                        <xs:any maxOccurs="unbounded" minOccurs="0" processContents="skip"/>
+                        <!-- in de productieversie staat onderstaande regel aan ipv any -->
+                        <!--<xs:element ref="gml:AbstractGML" minOccurs="0" maxOccurs="unbounded"/>-->
+                    </xs:sequence>
+                    <!--
+                        in 0.85 is idealisatie verwijderd, omdat het geen eigenschap van geometrie is
+                        xs:attribute name="idealisatie"/>-->
+                    <xs:attribute name="type"/>
+                    <xs:attribute name="idref" type="xs:IDREF"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Locatiegroep">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <entity>imop:Locatiegroep</entity>
+            </xs:appinfo>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:choice maxOccurs="unbounded" minOccurs="0">
+                        <xs:element ref="imop:Locatiegroep"/>
+                        <xs:element ref="imop:Geometrie"/>
+                    </xs:choice>
+                    <xs:attribute name="idref" type="xs:IDREF">
+                        <xs:annotation>
+                            <xs:documentation>
+                                <p>idref toegestaan voor Geometrie en/of Locatiegroep elementen</p>
+                            </xs:documentation>
+                        </xs:annotation>
+                    </xs:attribute>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Locaties">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Container</type>
+                <ignore/>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>In de container Locaties worden alle Geometrie en Locatiegroep elementen gebundeld.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:choice maxOccurs="unbounded">
+                        <xs:element ref="imop:Geometrie"/>
+                        <xs:element ref="imop:Locatiegroep"/>
+                    </xs:choice>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <!-- RDFa attributen einde -->
+
+    <xs:attributeGroup name="langAttributeGroup">
+        <xs:attribute ref="xml:lang"/>
+    </xs:attributeGroup>
+
+    <xs:simpleType name="opmaak_waarden">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="vet"/>
+            <xs:enumeration value="cur"/>
+            <xs:enumeration value="vetcur"/>
+            <xs:enumeration value="rom"/>
+            <xs:enumeration value="ondlijn"/>
+            <xs:enumeration value="nonprop"/>
+            <xs:enumeration value="klkap"/>
+            <xs:enumeration value="kap"/>
+            <xs:enumeration value="halfvet"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!-- HTML TABLE -->
+    <!-- dit is een versimpelde versie van het HTML5 table model. Verdere versimpelingen mogelijk -->
+    <!-- alternatief voor CALS. Omdat CALS reeds table element heeft, en er toch geen namespaces gebruikt worden, zal HTML table als element htmltable gebruikt worden (en niet table) -->
+    <!-- met inspiratie van http://grepcode.com/file/repo1.maven.org/maven2/com.googlecode.l10n-maven-plugin/l10n-maven-plugin/1.5/xhtml5.xsd?av=f -->
+    <!-- definities zijn hier hoofdzakelijk lokaal vanwege naamsconflict met andere globale elementen. Eigen namespace was ook mogelijk maar dat compliceert nog verder -->
+
+    <!-- TODO: substitutionGroup aan de praat krijgen, want dan kan 1 table element gebruikt worden -->
+    <!-- TODO: verder versimpelen - wat is de minimale HTML5 table die bruikbaar is? CALS blijft dan de default voor moeilijke gevallen) -->
+    <!-- TODO: simpletable ipv table_html5? -->
+    <xs:element name="table_html5" type="imop:HTML5TableType">
+        <xs:annotation>
+            <xs:appinfo>
+                <type>Block</type>
+                <!--niet handig om zelfde Entity name te gebruiken als bij CALS tabel <entity>imop:Tabel</entity>-->
+            </xs:appinfo>
+            <xs:documentation>
+                <p>SubstitutionGroup met imop:table mag niet van XSD, dus daarom maar eigen element. Mogelijk dat verdere versimpeling (weglaten colgroup, tfoot, tbody) helpt.</p>
+                <p>Omwille van consistentie met table hier ook dit element naam en naam van kinderen lowercase</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="HTML5TableType">
+        <xs:complexContent>
+            <xs:extension base="imop:blockContainerVirtueelType">
+                <!-- extra constraint t.o.v. HTML5: tfoot alleen gebruiken direct na thead (en niet als element na tbody) ivm unique particle constraint XSD -->
+                <xs:sequence>
+                    <xs:element name="caption" minOccurs="0" type="imop:blockMixedcontentMetMaximaleInlinesMarkersPopupsType"/>
+                    <xs:element name="colgroup" minOccurs="0" maxOccurs="unbounded" type="imop:HTML_ColgroupType"/>
+                    <xs:element name="thead" minOccurs="0" type="imop:HTML_TbodyType"/>
+                    <xs:element name="tfoot" type="imop:HTML_TbodyType" minOccurs="0"/>
+                    <xs:choice>
+                        <xs:element name="tbody" minOccurs="0" maxOccurs="unbounded" type="imop:HTML_TbodyType"/>
+                        <xs:element name="tr" maxOccurs="unbounded" type="imop:HTML_TrType"/>
+                    </xs:choice>
+                </xs:sequence>
+                <!--<xs:attributeGroup ref="imop:globalAttributeGroup"/>-->
+                <xs:attribute name="border"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HTML_ColgroupType">
+        <!-- LIMITATION: the content model is actually: col* OR @span? -->
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="col" type="imop:HTML_ColType"/>
+        </xs:sequence>
+        <!--<xs:attributeGroup ref="globalAttributeGroup"/>-->
+        <xs:attribute name="span" type="imop:positiveInteger"/>
+    </xs:complexType>
+
+    <xs:complexType name="HTML_ColType">
+        <!--<xs:attributeGroup ref="globalAttributeGroup"/>-->
+        <xs:attribute name="span" type="imop:positiveInteger"/>
+    </xs:complexType>
+
+    <xs:complexType name="HTML_TbodyType">
+        <xs:sequence minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="tr" type="imop:HTML_TrType"/>
+        </xs:sequence>
+        <!--<xs:attributeGroup ref="imop:globalAttributeGroup"/>-->
+    </xs:complexType>
+
+    <xs:complexType name="HTML_TrType">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="td" type="imop:HTML_TdType"/>
+            <xs:element name="th" type="imop:HTML_ThType"/>
+        </xs:choice>
+        <!--<xs:attributeGroup ref="imop:globalAttributeGroup"/>-->
+    </xs:complexType>
+
+    <xs:complexType name="HTML_TdType">
+        <xs:complexContent>
+            <xs:extension base="imop:alBaseType">
+                <xs:attributeGroup ref="imop:HTML_TdAttributeGroup"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="HTML_ThType">
+        <xs:complexContent>
+            <xs:extension base="imop:HTML_TdType">
+                <xs:attribute name="scope" type="imop:HTML_ScopeSimpleType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:attributeGroup name="HTML_TdAttributeGroup">
+        <xs:attribute name="colspan" type="imop:positiveInteger"/>
+        <xs:attribute name="rowspan" type="imop:nonNegativeInteger"/>
+        <xs:attribute name="headers" type="imop:idrefs"/>
+    </xs:attributeGroup>
+
+    <xs:simpleType name="nonNegativeInteger">
+        <xs:restriction base="xs:nonNegativeInteger"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="positiveInteger">
+        <xs:restriction base="xs:positiveInteger"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="idrefs">
+        <xs:restriction base="imop:idrefs0">
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="idrefs0">
+        <xs:list itemType="imop:idref"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="idref">
+        <xs:restriction base="xs:token">
+            <xs:pattern value="\S+"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="HTML_ScopeSimpleType">
+        <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="col"/>
+            <xs:enumeration value="colgroup"/>
+            <xs:enumeration value="row"/>
+            <xs:enumeration value="rowgroup"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <!-- HTML Table einde -->
+
+    <!-- pseudo CSS attributen -->
+    <xs:attributeGroup name="pseudoCssAttributeGroup">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Het is wenselijk om aan te sluiten bij CSS terminologie waar mogelijk, maar tegelijkertijd is het niet de bedoeling om CSS helemaal "open te zetten". Dan verschuift de complexiteit namelijk naar het parsen van het style attribuut,
+                    en moet precies omschreven worden wat daarbinnen mag.</p>
+                <p>Een tussenoplossing is daarom om enerzijds een class attribuut toe te voegen (dat via het toepassingsprofiel werkt) en anderzijds een aantal "pseudo-attributen" die geinspireerd zijn op CSS toe te voegen.</p>
+            </xs:documentation>
+        </xs:annotation>
+
+        <xs:attribute name="class">
+            <xs:annotation>
+                <xs:documentation>
+                    <p>Dit attribuut is bedoeld om de vormgeving van elementen te beinvloeden. Toegestane waarden **moeten** via het toepassingsprofiel gespecificeerd worden.</p>
+                </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+
+        <xs:attribute name="style">
+            <xs:annotation>
+                <xs:documentation>Er is geen garantie dat een afnemend systeem de inhoud van dit attribuut daadwerkelijk kan verwerken, het is alleen bedoeld als manier om gewenste presentatie vast te leggen, voor zover die niet met de CSS pseudo
+                    attributen wordt geregeld (die hebben prio). </xs:documentation>
+            </xs:annotation>
+        </xs:attribute>
+    </xs:attributeGroup>
+    <!-- EINDE pseudo CSS attributen -->
+
+    <!-- MUTEREN EN CONSOLIDEREN -->
+    <xs:element name="mutatie-bericht">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Rootelement voor de mutatie-berichten die het bevoegd gezag aan de LVBB stuurt.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="imop:Metadata"/>
+                <xs:element ref="imop:publicatiecontainers"/>
+                <xs:element ref="imop:was-wordt-mutaties"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="publicatiecontainers">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Container voor alle containers die letterlijk overgenomen dienen te worden in de publicatie.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <xs:element ref="imop:RegelingOpschrift" minOccurs="0"/>
+                        <xs:element ref="imop:Aanhef" minOccurs="0"/>
+                        <xs:element ref="imop:Sluiting" minOccurs="0"/>
+                        <xs:element ref="imop:Nawerk" minOccurs="0"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="was-wordt-mutaties">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Container voor de was-wordt-mutaties.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <xs:element ref="imop:was-wordt-mutatie-groep" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="was-wordt-mutatie-groep">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:Toestandsovergang</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Was-wordt-mutaties worden gegroepeerd. Voor alle was-wordt-mutaties in de groep geldt dat de inwerkingtredingsdatum, de gebaseerd_op_toestand en de doeltoestand hetzelfde zijn.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <xs:element ref="imop:Metadata"/>
+                        <xs:element ref="imop:was-wordt-mutatie" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="was-wordt-mutatie">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:WasWordtMutatie</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Een was-wordt-mutatie bevat de wijziging van één object.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:containerBaseType">
+                    <xs:sequence>
+                        <xs:element ref="imop:Metadata"/>
+                        <xs:element ref="imop:was"/>
+                        <xs:element ref="imop:wordt"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="was" type="imop:WasWordtContainer">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Dit element is nog niet stabiel</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="wordt" type="imop:WasWordtContainer">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Dit element is nog niet stabiel</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="WasWordtContainer">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Een container met alle versies van één object.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:choice minOccurs="0">
+                    <xs:element ref="imop:tekstelement_lichaam" maxOccurs="unbounded"/>
+                    <xs:element ref="imop:tekstelement_structuurelement" maxOccurs="unbounded"/>
+                    <xs:element ref="imop:tekstelement_artikel" maxOccurs="unbounded"/>
+                    <xs:element ref="imop:locatieaanduiding_geometrie" maxOccurs="unbounded"/>
+                    <xs:element ref="imop:locatieaanduiding_locatiegroep" maxOccurs="unbounded"/>
+                    <xs:element ref="imop:locatieaanduiding_locatieverwijzing" maxOccurs="unbounded"/>
+                </xs:choice>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="tekstelement">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Abstracte klasse voor alle tekstelementen in was-wordt-mutaties.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <xs:element ref="imop:Metadata"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="tekstelement_lichaam" type="imop:tekstelement">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:Lichaamspecificatie</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Object om het lichaam van een regeling te wijzigen in een was-wordt-mutatie.</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="tekstelement_artikel">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:Artikelspecificatie</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Object om een artikel te wijzigen in een was-wordt-mutatie.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:tekstelement">
+                    <xs:sequence>
+                        <xs:element ref="imop:Kop"/>
+                        <xs:choice>
+                            <xs:element ref="imop:Inhoud"/>
+                            <xs:element ref="imop:Lid"/>
+                        </xs:choice>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="tekstelement_structuurelement">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:Structuurelementspecificatie</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Object om een structuurelement te wijzigen in een was-wordt-mutatie.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:tekstelement">
+                    <xs:sequence>
+                        <xs:element ref="imop:Kop"/>
+                    </xs:sequence>
+                    <xs:attribute name="type" type="imop:structuurelement_typen"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:simpleType name="structuurelement_typen">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Boek"/>
+            <xs:enumeration value="Deel"/>
+            <xs:enumeration value="Hoofdstuk"/>
+            <xs:enumeration value="Paragraaf"/>
+            <xs:enumeration value="Afdeling"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="locatieaanduiding">
+        <xs:annotation>
+            <xs:documentation>
+                <p>Abstracte klasse voor alle locatieaanduidingen in was-wordt-mutaties.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="imop:containerBaseType">
+                <xs:sequence>
+                    <xs:element ref="imop:Metadata"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="locatieaanduiding_geometrie">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:Geometriespecificatie</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Object om een geometrie te wijzigen in een was-wordt-mutatie.</p>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="imop:locatieaanduiding">
+                    <xs:sequence>
+                        <xs:any maxOccurs="unbounded" minOccurs="0" processContents="skip"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="locatieaanduiding_locatiegroep" type="imop:locatieaanduiding">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:Locatiegroepspecificatie</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Object om een locatiegroep te wijzigen in een was-wordt-mutatie.</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:element name="locatieaanduiding_locatieverwijzing" type="imop:locatieaanduiding">
+        <xs:annotation>
+            <xs:appinfo>
+                <entity>imop:Locatieverwijzingspecificatie</entity>
+            </xs:appinfo>
+            <xs:documentation>
+                <p>Object om een locatieverwijzing te wijzigen in een was-wordt-mutatie.</p>
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <!-- DATATYPEN gekopieerd uit https://www.w3.org/MarkUp/SCHEMA/xhtml-datatypes-1.xsd -->
+    <!-- (KOPIE omdat anders gedoe met namespaces ontstaat) -->
+    <xs:simpleType name="SafeCURIEorCURIEorIRI">
+        <xs:union memberTypes="imop:SafeCURIE imop:CURIE xs:anyURI"/>
+    </xs:simpleType>
+    <xs:simpleType name="TERMorCURIEorAbsIRI">
+        <xs:union memberTypes="imop:TERM imop:CURIE imop:AbsIRI"/>
+    </xs:simpleType>
+    <xs:simpleType name="TERM">
+        <xs:restriction base="xs:Name">
+            <xs:pattern value="[\i-[:]][/\c-[:]]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="SafeCURIE">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\[(([\i-[:]][\c-[:]]*)?:)?(/[^\s/][^\s]*|[^\s/][^\s]*|[^\s]?)\]"/>
+            <xs:minLength value="3"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="CURIE">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="(([\i-[:]][\c-[:]]*)?:)?(/[^\s/][^\s]*|[^\s/][^\s]*|[^\s]?)"/>
+            <xs:minLength value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="AbsIRI">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[\i-[:]][\c-[:]]+:.+"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="TERMorCURIEorAbsIRIs">
+        <xs:list itemType="imop:TERMorCURIEorAbsIRI"/>
+    </xs:simpleType>
+
+    <xs:simpleType name="nulOfEen">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="0"/>
+            <xs:enumeration value="1"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>

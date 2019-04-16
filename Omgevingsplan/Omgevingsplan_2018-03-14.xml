@@ -1,0 +1,1494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OfficielePublicatie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.overheid.nl/imop/def#" xsi:schemaLocation="http://www.overheid.nl/imop/def# http://technische-documentatie.oep.overheid.nl/poc-toepassingsprofiel/schemas/imop/0.85/xsd/imop_0.85.xsd http://www.opengis.net/gml/3.2 http://schemas.opengis.net/gml/3.2.1/gml.xsd">
+    <Metadata>
+        <Uitspraak eigenschap="dcterms:title">
+            <Waarde type="xs:string">Omgevingsplan Centrum Stedelijk - staalkaart</Waarde>
+        </Uitspraak>
+    </Metadata>
+    <Staatscourant>
+        <Bladaanduiding>
+            <Titelregel>Staatscourant</Titelregel>
+        </Bladaanduiding>
+        <Regeling>
+            <RegelingOpschrift>
+                <al>Omgevingsplan Centrum Stedelijk - staalkaart</al>
+            </RegelingOpschrift>
+            <Lichaam>
+                <Hoofdstuk>
+                    <Kop>
+                        <Label>Hoofdstuk</Label>
+                        <Nummer>2</Nummer>
+                        <Opschrift>Functietoedeling en bijbehorende activiteiten</Opschrift>
+                    </Kop>
+                    <Afdeling id="id-4">
+                        <Metadata>
+                            <Uitspraak eigenschap="tpod:heeftFunctie">
+                                <Object id="id-4F" type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Detailhandel Modern winkelen en druk ontmoeten</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">Detailhandel</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">NDD_DetailhandelModernWinkelen</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.1</Nummer>
+                            <Opschrift>Detailhandel Modern winkelen en druk ontmoeten</Opschrift>
+                        </Kop>
+                        <Artikel id="id-4_1">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.1</Nummer>
+                                <Opschrift>Doel functietoedeling</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>De regels in dit artikel zijn gesteld met het oog op de bescherming van van de fysieke leefomgeving zoals bedoeld in Afdeling 3.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Detailhandel Modern winkelen en druk ontmoeten' wordt specifiek ingezet op de volgende doelen waarbij de genoemde klassen verwijzen naar de klassen die zijn beschreven in Bijlage 1 van de Bijlagen bij het omgevingsplan:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>levendigheid van klasse 2 naar klasse 3</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Uitsluitend indien dat voor het halen van de doelen onder b noodzakelijk wordt geacht, kan voor de volgende doelen een lagere kwaliteitsklasse worden aangehouden:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>rust: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>mobiliteit: van klasse 2 naar klasse 1.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>gezondheid: van klasse 2 naar 1.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij het samenvallen van functies dient een afweging te worden gemaakt die per saldo niet mag leiden tot een lager kwaliteitsniveau.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-4_2">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-4_2" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-4_2A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Reeks>
+                                                    <Waarde type="xs:string">detailhandel op de begane grond</Waarde>
+                                                    <Waarde type="xs:string">wonen op de verdiepingen</Waarde>
+                                                </Reeks>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">toegestaan</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.2</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Detailhandel Modern winkelen en druk ontmoeten' is het toegestaan de volgende gebruiksactiviteiten te verrichten:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>detailhandel op de begane grond</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>wonen op de verdiepingen</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>&lt;&lt;bestaande functies uit onderliggende gebruikslaag&gt;&gt;</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-4_3">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-4_3" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-4_3A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Waarde type="xs:string">gebruik dat aantoonbaar afhankelijk is van bezoekers, openingstijden kent die voldoen aan de eis van winkeltijden gemiddeld (buiten de winkeltijden is aanvullend toegestaan), wordt uitgeoefend in een pand dat op de begane grond voor een ieder vanaf het openbaar gebied toegankelijk is om naar binnen en buiten te open, past binnen het maximaal toegestane programma detailhandel en past binnen het maximaal toegestane programma horeca</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">meldingsplichtig</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.3</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegestaan na voorafgaande melding</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Detailhandel Modern winkelen en druk ontmoeten' is het verrichten van de volgende gebruiksactiviteiten uitsluitend toegestaan nadat daarvoor aan het bevoegde gezag een melding is gedaan:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>ieder gemeld gebruik &lt;&lt;link melding&gt;&gt; dat aantoonbaar:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>afhankelijk is van bezoekers;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>openingstijden kent die voldoen aan de eis van winkeltijden gemiddeld, buiten de winkeltijden is aanvullend toegestaan;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>wordt uitgeoefend in een pand dat op de begane grond voor een ieder vanaf het openbaar gebied toegankelijk is om naar binnen en buiten te open.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>past binnen het volgende maximaal toegestane programma:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>detailhandel: ... m<sup>2</sup> &lt;&lt;ophalen uit database zodat exact duidelijk is wat de gebruiksruimte nog is, direct bij melding moet de bevestiging volgen dat de ruimte beschikbaar en gereserveerd is &gt;&gt;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>horeca: ... m<sup>2</sup> &lt;ophalen uit database zodat duidelijk is wat de gebruiksruimte nog is&gt;&gt;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>na melding passen burgemeester en wethouders de gebruikslaag aan overeenkomstig het gemelde gebruik.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-4_4">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-4_4" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-4_4A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Waarde type="xs:string">gebruiksactiviteit in het openbaar gebied die kleinschalig en publieksaantrekkend is, geen afbreuk doet aan de functiedoelen als bedoeld in Artikel 2.1, een tijdelijk karakter heeft en niet plaatsvindt buiten de winkeltijden gemiddeld</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">vergunningplichtig</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.4</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegestaan nadat daarvoor omgevingsvergunning is verleend</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Detailhandel Modern wonen en druk ontmoeten' is het uitsluitend toegestaan gebruiksactiviteiten te verrichten nadat het bevoegd gezag daarvoor een omgevingsvergunning heeft verleend, voor zover de activiteit:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>kleinschalig en publieksaantrekkend is;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>geen afbreuk doet aan de functiedoelen als bedoeld in Artikel 2.1;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>een tijdelijk karakter heeft;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>niet plaatsvindt buiten de winkeltijden gemiddeld;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>e.</LiNr>
+                                        <Inhoud>
+                                            <al>burgemeester en wethouders kunnen aan de vergunning voorwaarden verbinden. hoort hier niet</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-4_5">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.5</Nummer>
+                                <Opschrift>Bevoegdheid tot stellen maatwerkvoorschriften en verbinden voorschriften aan omgevingsvergunning</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Burgemeester en wethouders kunnen op verzoek voorschriften stellen aan een gebruiksactiviteit die afwijkt van de in artikel 2.3 gestelde voorwaarden indien de activiteit naar het oordeel van burgemeester en wethouders een bijdraagt aan de in artikel 2.1 gestelde doelen.</al>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling id="id-5">
+                        <Metadata>
+                            <Uitspraak eigenschap="tpod:heeftFunctie">
+                                <Object id="id-5F" type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Centrumgebied Monumentaal-centrum</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">Centrumgebied</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">NDD_CentrumgebiedMonumentaalCentrum</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.2</Nummer>
+                            <Opschrift>Centrumgebied Monumentaal-centrum</Opschrift>
+                        </Kop>
+                        <Artikel id="id-5_1">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.6</Nummer>
+                                <Opschrift>Doel functietoedeling</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>De regels in dit artikel zijn gesteld met het oog op de bescherming van van de fysieke leefomgeving zoals bedoeld in Afdeling 3.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Centrumgebied Monumentaal-centrum' wordt specifiek ingezet op de doelen:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>rust van klasse 2 naar 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>welzijn van klasse 2 naar 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>mobiliteit van klasse 2 naar 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>4.</LiNr>
+                                                    <Inhoud>
+                                                        <al>cultureel erfgoed van 2 naar 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>5.</LiNr>
+                                                    <Inhoud>
+                                                        <al>wonen van klasse 2 naar 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Uitsluitend indien dat voor het halen van de doelen onder b noodzakelijk wordt geacht, kan voor de volgende doelen een lagere kwaliteitklasse worden aangehouden:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>levendigheid van klasse 2 naar 1;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>voorzieningen van klasse 3 naar 2;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>economie van klasse 3 naar 2;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij het samenvallen van functies dient een afweging te worden gemaakt die per saldo niet mag leiden tot een lager kwaliteitsniveau.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-5_2">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-5_2" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-5_2A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Reeks>
+                                                    <Waarde type="xs:string">op de begane grond: wonen, geen appartementen</Waarde>
+                                                    <Waarde type="xs:string">op de verdieping: wonen</Waarde>
+                                                </Reeks>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">toegestaan</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.7</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Centrumgebied Monumentaal-centrum' is het toegestaan de volgende gebruiksactiviteiten te verrichten:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>op de begane grond: wonen, geen appartementen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>op de verdieping: wonen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>&lt;&lt;bestaande functies uit onderliggende gebruikslaag&gt;&gt;</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                                <al>NB: bestaande legale grootschalige winkels worden hier 'wegbestemd' en zijn in de gebruikslaag opgenomen als: "geen toegestane gebruiksactiviteit".</al>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-5_3">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-5_3" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-5_3A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Waarde type="xs:string">gebruiksactiviteit die kleinschalig is, dat wil zeggen uit te oefenen is binnen de afmetingen van het bestaande pand, positief bijdraagt aan de instandhouding van de het bestaande cultureel erfgoed, voor activiteiten, niet zijde wonen, openingstijden heeft die voor 50% overeenkomen met de winkeltijden gemiddeld en past binnen het geldt het volgende maximaal toegestane programma: detailhandel: 100.000 m, horeca</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">vergunningplichtig</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.8</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegestaan nadat daarvoor omgevingsvergunning is verleend</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Centrumgebied Monumentaal-centrum' is het uitsluitend toegestaan gebruiksactiviteiten te verrichten nadat het bevoegd gezag daarvoor een omgevingsvergunning heeft verleend, voor zover de activiteit:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>kleinschalig is, dat wil zeggen uit te oefenen is binnen de afmetingen van het bestaande pand;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>positief bijdraagt aan de instandhouding van de het bestaande cultureel erfgoed;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>voor activiteiten, niet zijde wonen, openingstijden heeft die voor 50% overeenkomen met de winkeltijden gemiddeld;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>past binnen het geldt het volgende maximaal toegestane programma:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>detailhandel: 100.000 m<sup>2</sup> &lt;&lt;ophalen uit database zodat duidelijk is wat de gebruiksruimte nog is&gt;&gt;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>horeca &lt;ophalen uit database zodat duidelijk is wat de gebruiksruimte nog is&gt;&gt;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling id="id-6">
+                        <Metadata>
+                            <Uitspraak eigenschap="tpod:heeftFunctie">
+                                <Object id="id-6F" type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Horeca Uitgaan</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">horeca</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">NDD_HorecaUitgaan</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="id-6_2" eigenschap="tpod:regelOverActiviteit">
+                                <Reeks>
+                                    <Object id="id-6_2A" type="tpod:Activiteit">
+                                        <Eigenschap naam="activiteit">
+                                            <Reeks>
+                                                <Waarde type="xs:string">op de begane grond en openbaar gebied: lichte horeca en ontspanning en terrassen</Waarde>
+                                                <Waarde type="xs:string">op de verdieping: geluidbelast wonen</Waarde>
+                                            </Reeks>
+                                        </Eigenschap>
+                                        <Eigenschap naam="activiteitengroep">
+                                            <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="regelkwalificatie">
+                                            <Waarde type="xs:string">toegestaan</Waarde>
+                                        </Eigenschap>
+                                    </Object>
+                                </Reeks>
+                            </Uitspraak>
+                            <Uitspraak onderwerp="id-6_3" eigenschap="tpod:regelOverActiviteit">
+                                <Reeks>
+                                    <Object id="id-6_3A" type="tpod:Activiteit">
+                                        <Eigenschap naam="activiteit">
+                                            <Waarde type="xs:string">publieksaantrekkende gebruiksactiviteit die bijdraagt aan de levendigheid in het gebied, avondopening heeft, past binnen het het volgende maximaal toegestane programma detailhandel, horeca</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="activiteitengroep">
+                                            <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                        </Eigenschap>
+                                        <Eigenschap naam="regelkwalificatie">
+                                            <Waarde type="xs:string">vergunningplichtig</Waarde>
+                                        </Eigenschap>
+                                    </Object>
+                                </Reeks>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.3</Nummer>
+                            <Opschrift>Horeca Uitgaan</Opschrift>
+                        </Kop>
+                        <Artikel id="id-6_1">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.9</Nummer>
+                                <Opschrift>Doel functietoedeling</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>De regels in dit artikel zijn gesteld met het oog op de bescherming van van de fysieke leefomgeving zoals bedoeld in Afdeling 3.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Horeca Uitgaan' wordt specifiek ingezet op de doelen:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>levendigheid van klasse 2 naar klasse 3.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Uitsluitend indien dat voor het halen van de doelen onder b noodzakelijk wordt geacht, kan voor de volgende doelen een lagere kwaliteitklasse worden aangehouden:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>rust: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>welzijn: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>leefbaarheid: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>4.</LiNr>
+                                                    <Inhoud>
+                                                        <al>mobiliteit: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>5.</LiNr>
+                                                    <Inhoud>
+                                                        <al>wonen van klasse 2 naar klasse 1.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij het samenvallen van functies dient een afweging te worden gemaakt die per saldo niet mag leiden tot een lager kwaliteitsniveau.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-6_2">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.10</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Uitgaan' is het toegestaan de volgende gebruiksactiviteiten te verrichten:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>op de begane grond en openbaar gebied: lichte horeca en ontspanning en terrassen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>op de verdieping: geluidbelast wonen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>&lt;&lt;bestaande functies uit onderliggende gebruikslaag&gt;&gt;</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-6_3">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.11</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegestaan nadat daarvoor omgevingsvergunning is verleend</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Horeca Uitgaan' is het uitsluitend toegestaan gebruiksactiviteiten te verrichten nadat het bevoegd gezag daarvoor een omgevingsvergunning heeft verleend, voor zover de activiteit:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>bijdraagt aan de levendigheid in het gebied;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>avondopening heeft;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>past binnen het het volgende maximaal toegestane programma:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>detailhandel &lt;&lt;ophalen uit database zodat duidelijk is wat de gebruiksruimte nog is&gt;&gt;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>horeca &lt;&lt;ophalen uit database zodat duidelijk is wat de gebruiksruimte nog is&gt;&gt;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>in vergunning wordt vastgelegd welke activiteiten met het oog op de gestelde functiedoelen waar waar mogen plaatsen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>e.</LiNr>
+                                        <Inhoud>
+                                            <al>de vergunning heeft een looptijd van 5 jaar met de mogelijkheid voor verlenging nadat gebleken is van goed gedrag ten opzichte van de geformuleerde functiedoelen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                                <al>d en e in ander subArtikel m.i.</al>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling id="id-7">
+                        <Metadata>
+                            <Uitspraak eigenschap="tpod:heeftFunctie">
+                                <Object id="id-7F" type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Cultuur artistiek en creatief</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">Cultuur</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">NDD_CultuurArtistiekCreatief</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.4</Nummer>
+                            <Opschrift>Cultuur Artistiek en creatief</Opschrift>
+                        </Kop>
+                        <Artikel id="id-7_1">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.12</Nummer>
+                                <Opschrift>Doel functietoedeling</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>De regels in dit artikel zijn gesteld met het oog op de bescherming van van de fysieke leefomgeving zoals bedoeld in Afdeling 3.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Cultuur Artistiek en creatief' is het toegestaan de volgende gebruiksactiviteiten te verrichten:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>levendigheid van klasse 2 naar klasse 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>bereikbaarheid van klasse 2 naar 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Uitsluitend indien dat voor het halen van de doelen onder b noodzakelijk wordt geacht, kan voor de volgende doelen een lagere kwaliteitklasse worden aangehouden:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>rust: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>landschap en openbare ruimte van 3 naar 2;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>welzijn: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>4.</LiNr>
+                                                    <Inhoud>
+                                                        <al>leefbaarheid: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij het samenvallen van functies dient een afweging te worden gemaakt die per saldo niet mag leiden tot een lager kwaliteitsniveau.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-7_2">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-7_2" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-7_2A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Waarde type="xs:string">op de verdieping: wonen</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">toegestaan</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.13</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Cultuur Artistiek en creatief' is het toegestaan de volgende gebruiksactiviteiten te verrichten:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>op de verdieping: wonen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>&lt;&lt;bestaande functies uit onderliggende gebruikslaag&gt;&gt;</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-7_3">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-7_3" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-7_3A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Waarde type="xs:string">de vervaardiging van handmatige gemaakte producten gericht op kunst, cultuur en design betreft en detailhandel, horeca en andere gebruiksactiviteiten uitsluitend als ondergeschikt onderdeel van handgemaakte producten gericht op kunst, cultuur en design, passend binnen het programma voor detailhandel, horeca</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">vergunningplichtig</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.14</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegestaan nadat daarvoor omgevingsvergunning is verleend</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Cultuur Artistiek en creatief' is het uitsluitend toegestaan gebruiksactiviteiten te verrichten nadat het bevoegd gezag daarvoor een omgevingsvergunning heeft verleend, voor zover de activiteit:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>de vervaardiging van handmatige gemaakte producten gericht op kunst, cultuur en design betreft;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>detailhandel, horeca en andere gebruiksactiviteiten uitsluitend als ondergeschikt onderdeel van de producten genoemd onder a; dit hoort hier ook niet</al>
+                                            <!-- dit is eigenlijk een "of" -->
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>uit te oefenen is binnen de afmetingen en plattegronden van het bestaande pand;</al>
+                                            <!-- en dit is een criterium, geen activiteit -->
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>past binnen het geldt het volgende maximaal toegestane programma:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>detailhandel: 5.000 m<sup>2</sup> &lt;&lt;ophalen uit database zodat duidelijk is wat de gebruiksruimte nog is&gt;&gt;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>horeca &lt;ophalen uit database zodat duidelijk is wat de gebruiksruimte nog is&gt;&gt;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>e.</LiNr>
+                                        <Inhoud>
+                                            <al>burgemeester en wethouders kunnen aan de vergunning voorwaarden verbinden. idem hoort hier niet</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling id="id-8">
+                        <Metadata>
+                            <Uitspraak eigenschap="tpod:heeftFunctie">
+                                <Object id="id-8F" type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Gemengd Innovatiegebied</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">Gemengd</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">NDD_GemengdInnovatiegebied</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.5</Nummer>
+                            <Opschrift>Gemengd Innovatiegebied</Opschrift>
+                        </Kop>
+                        <Artikel id="id-8_1">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.15</Nummer>
+                                <Opschrift>Doel functietoedeling</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>De regels in dit artikel zijn gesteld met het oog op de bescherming van van de fysieke leefomgeving zoals bedoeld in Afdeling 3.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Gemengd Innovatiegebied' is het toegestaan de volgende gebruiksactiviteiten te verrichten:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>levendigheid van klasse 2 naar klasse 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>bereikbaarheid van klasse 2 naar 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Uitsluitend indien dat voor het halen van de doelen onder b noodzakelijk wordt geacht, kan voor de volgende doelen een lagere kwaliteitklasse worden aangehouden:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>rust: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>landschap en openbare ruimte van 3 naar 2;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>welzijn: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>4.</LiNr>
+                                                    <Inhoud>
+                                                        <al>leefbaarheid: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij het samenvallen van functies dient een afweging te worden gemaakt die per saldo niet mag leiden tot een lager kwaliteitsniveau.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-8_2">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-8_2" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-8_2A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Reeks>
+                                                    <Waarde type="xs:string">wonen op de verdiepingen</Waarde>
+                                                    <Waarde type="xs:string">tijdelijke gebruiksactiviteiten die bijdragen aan de doelen van het gebied, voor een periode van maximaal 6 maanden</Waarde>
+                                                    <Waarde type="xs:string">tijdelijke gebruiksactiviteiten tussen 7:00 en 23:00 die bijdragen aan de functiedoelen</Waarde>
+                                                </Reeks>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">toegestaan</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.16</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Gemengd Innovatiegebied' is het toegestaan de volgende gebruiksactiviteiten te verrichten:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>wonen op de verdiepingen</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>&lt;&lt;bestaande functies uit onderliggende gebruikslaag&gt;&gt;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <al>tijdelijke gebruiksactiviteiten die bijdragen aan de doelen van het gebied, voor een periode van maximaal 6 maanden.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>tijdelijke gebruiksactiviteiten tussen 7:00 en 23:00 die bijdragen aan de functiedoelen.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-8_3">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-8_3" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-8_3A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Waarde type="xs:string">activiteiten die in de periode van tijdelijkheid aantoonbaar bijdragen dan wel geen afbreuk doen aan de functiedoelen en maximaal voor een periode van 5 jaar worden toegestaan</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">vergunningplichtig</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.17</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zijn toegestaan nadat daarvoor omgevingsvergunning is verleend</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Gemengd Innovatiegebied' is het uitsluitend toegestaan gebruiksactiviteiten te verrichten nadat het bevoegd gezag daarvoor een omgevingsvergunning heeft verleend, voor zover de activiteit:</Lijstaanhef>
+                                    <!-- dit lijkt geen opsomming te zijn -->
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>het betreft activiteiten die in de periode van tijdelijkheid aantoonbaar bijdragen dan wel geen afbreuk doen aan de functiedoelen;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>de aangevraagde gebruiksactiviteiten maximaal voor een periode van 5 jaar worden toegestaan.</al>
+                                            <!-- dit is geen criterium -->
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-8_4">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.18</Nummer>
+                                <Opschrift>Bevoegdheid tot stellen maatwerkvoorschriften en verbinden voorschriften aan omgevingsvergunning</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Burgemeester en wethouders kunnen voorschriften stellen aan de gebruiksactiviteit als bedoeld in Artikel 8.2 indien de gemelde activiteit naar het oordeel van burgemeester en wethouders past na toepassing van het maatwerkvoorschrift bijdraagt aan de in Artikel 8.1 bedoelde doelen.</al>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling id="id-9">
+                        <Metadata>
+                            <Uitspraak eigenschap="tpod:heeftFunctie">
+                                <Object id="id-9F" type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Wonen Rustig stedelijk wonen</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">Wonen</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">NDD_WonenRustigStedelijkWonen</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.6</Nummer>
+                            <Opschrift>Wonen Rustig stedelijk wonen</Opschrift>
+                        </Kop>
+                        <Artikel id="id-9_1">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.19</Nummer>
+                                <Opschrift>Doel functietoedeling</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>De regels in dit artikel zijn gesteld met het oog op de bescherming van van de fysieke leefomgeving zoals bedoeld in Afdeling 3.</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Wonen Rustig stedelijk wonen' is het toegestaan de volgende gebruiksactiviteiten te verrichten:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>rust van klasse 2 naar klasse 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>leefbaarheid: van klasse 2 naar klasse 3;</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>3.</LiNr>
+                                                    <Inhoud>
+                                                        <al>welzijn: van klasse 2 naar klasse 3</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>c.</LiNr>
+                                        <Inhoud>
+                                            <Lijst type="expliciet">
+                                                <Lijstaanhef>Uitsluitend indien dat voor het halen van de doelen onder a noodzakelijk wordt geacht, kan voor de volgende doelen een lagere kwaliteitklasse worden aangehouden:</Lijstaanhef>
+                                                <Li>
+                                                    <LiNr>1.</LiNr>
+                                                    <Inhoud>
+                                                        <al>levendigheid: van klasse 2 naar klasse 1</al>
+                                                    </Inhoud>
+                                                </Li>
+                                                <Li>
+                                                    <LiNr>2.</LiNr>
+                                                    <Inhoud>
+                                                        <al>voorzieningen van klasse 3 naar klasse 2.</al>
+                                                    </Inhoud>
+                                                </Li>
+                                            </Lijst>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>d.</LiNr>
+                                        <Inhoud>
+                                            <al>Bij het samenvallen van functies dient een afweging te worden gemaakt die per saldo niet mag leiden tot een lager kwaliteitsniveau.</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-9_2">
+                            <Metadata>
+                                <Uitspraak onderwerp="id-9_2" eigenschap="tpod:regelOverActiviteit">
+                                    <Reeks>
+                                        <Object id="id-9_2A" type="tpod:Activiteit">
+                                            <Eigenschap naam="activiteit">
+                                                <Waarde type="xs:string">wonen met een minimaal woonoppervlak van 100 m2 per woning</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="activiteitengroep">
+                                                <Waarde type="xs:string">gebruiksactiviteit</Waarde>
+                                            </Eigenschap>
+                                            <Eigenschap naam="regelkwalificatie">
+                                                <Waarde type="xs:string">toegestaan</Waarde>
+                                            </Eigenschap>
+                                        </Object>
+                                    </Reeks>
+                                </Uitspraak>
+                            </Metadata>
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.20</Nummer>
+                                <Opschrift>Gebruiksactiviteiten die zonder vergunning of melding zijn toegestaan</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <Lijst type="expliciet">
+                                    <Lijstaanhef>Ter plaatse van het werkingsgebied van de functie 'Wonen Rustig stedelijk wonen' is het toegestaan de volgende gebruiksactiviteiten te verrichten:</Lijstaanhef>
+                                    <Li>
+                                        <LiNr>a.</LiNr>
+                                        <Inhoud>
+                                            <al>wonen met een minimaal woonoppervlak van 100 m<sup>2</sup> per woning;</al>
+                                        </Inhoud>
+                                    </Li>
+                                    <Li>
+                                        <LiNr>b.</LiNr>
+                                        <Inhoud>
+                                            <al>&lt;&lt;bestaande functies uit onderliggende gebruikslaag&gt;&gt;</al>
+                                        </Inhoud>
+                                    </Li>
+                                </Lijst>
+                            </Inhoud>
+                        </Artikel>
+                        <Artikel id="id-9_3">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.21</Nummer>
+                                <Opschrift>Kostenverhaal</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Voor iedere nieuwe woning is een exploitatiebijdrage van XX per vereist.</al>
+                                <al>PM</al>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling id="id-10">
+                        <Metadata>
+                            <Uitspraak eigenschap="tpod:heeftFunctie">
+                                <Object id="id-10F" type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Bedrijf Wonen en werken</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">Bedrijf</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">NDD_BedrijfWonenWerken</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.7</Nummer>
+                            <Opschrift>Bedrijf Wonen en werken</Opschrift>
+                        </Kop>
+                        <!-- dit artikel is toegevoegd vanwege de kaart -->
+                        <Artikel id="id-10_1">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.22</Nummer>
+                                <Opschrift>Fake Artikel</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Fake Artikel</al>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                    <Afdeling id="id-11">
+                        <Metadata>
+                            <Uitspraak eigenschap="tpod:heeftFunctie">
+                                <Object id="id-11F" type="tpod:Functie">
+                                    <Eigenschap naam="functie">
+                                        <Waarde type="xs:string">Water</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="functiegroep">
+                                        <Waarde type="xs:string">Water</Waarde>
+                                    </Eigenschap>
+                                    <Eigenschap naam="locatie">
+                                        <Waarde type="imop:objectRef">NDD_Water</Waarde>
+                                    </Eigenschap>
+                                </Object>
+                            </Uitspraak>
+                        </Metadata>
+                        <Kop>
+                            <Label>Afdeling</Label>
+                            <Nummer>2.8</Nummer>
+                            <Opschrift>Water</Opschrift>
+                        </Kop>
+                        <!-- dit artikel is toegevoegd vanwege de kaart -->
+                        <!-- WQ: Een lege Afdeling bestaat niet, dus een fake Artikel toegevoegd -->
+                        <Artikel id="id-11_1">
+                            <Kop>
+                                <Label>Artikel</Label>
+                                <Nummer>2.23</Nummer>
+                                <Opschrift>Fake Artikel</Opschrift>
+                            </Kop>
+                            <Inhoud>
+                                <al>Fake Artikel omdat een leeg artikel niet mag</al>
+                            </Inhoud>
+                        </Artikel>
+                    </Afdeling>
+                </Hoofdstuk>
+            </Lichaam>
+        </Regeling>
+    </Staatscourant>
+    <Locaties>
+        <Geometrie id="NDD_DetailhandelModernWinkelen_001" type="GeometrieBesluitobject_P1">
+            <gml:Polygon xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="id.d5e186bb775e49c7b8aca5cc5330fb05" srsName="EPSG:28992">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>185179.716 567851.111 185183.785 567849.593 185184.84 567847.64 185204.446 567840.258 185220.238 567834.312 185219.08 567831.16 185232.779 567825.354 185237.683 567823.288 185236.539 567820.652 185238.43 567819.83 185246.45 567816.55 185246.366 567816.346 185254.888 567812.89 185246.24 567786.6 185245.6 567786.84 185244.052 567783.079 185247.18 567781.8 185262.76 567775.42 185263.584 567773.466 185260.12 567765.21 185260.34 567764.97 185255.92 567754.38 185253.383 567750.483 185247.16 567736.09 185248.051 567735.276 185248.632 567735.896 185259.187 567725.996 185259.361 567723.84 185236.335 567721.62 185236.357 567721.824 185225.479 567720.818 185216.825 567713.076 185215.027 567712.523 185212.577 567709.673 185209.184 567705.984 185209.166 567705.559 185206.525 567702.691 185207.348 567701.939 185206.629 567700.267 185204.966 567698.938 185206.062 567697.608 185209.119 567693.903 185210.976 567691.427 185213.577 567689.039 185214.903 567688.08 185225.419 567677.246 185232.891 567669.184 185236.988 567672.002 185233.917 567676.118 185234.403 567676.445 185236.038 567676.523 185245.342 567681.426 185247.445 567681.835 185252.212 567681.51 185260.727 567680.908 185262.39 567680.711 185262.43 567680.063 185265.638 567680.261 185265.671 567680.024 185273.13 567680.805 185273.121 567681.046 185286.283 567685.603 185286.282 567686.054 185291.279 567686.403 185292.015 567687.255 185291.639 567692.912 185309.888 567692.01 185315.009 567691.757 185315.049 567691.514 185331.31 567690.549 185332.661 567713.448 185331.419 567713.62 185331.125 567717.488 185330.196 567729.709 185328.768 567733.853 185330.361 567738.202 185330.134 567740.571 185329.975 567740.556 185329.255 567748.081 185339.52 567748.653 185342.78 567748.685 185343.079 567750.813 185344.242 567750.603 185355.866 567748.498 185355.637 567747.339 185357.694 567746.893 185369.528 567744.326 185376.812 567742.71 185376.809 567744.128 185376.8 567748.925 185376.769 567764.893 185378.238 567764.802 185378.311 567777.224 185378.384 567780.175 185376.735 567780.301 185376.734 567780.834 185376.718 567792.786 185376.708 567796.14 185376.68 567805.64 185376.666 567840.834 185376.838 567856.603 185377.439 567857.402 185377.825 567857.761 185378.818 567858.415 185393.25 567862.956 185396.869 567863.443 185398 567863.983 185409.235 567867.461 185411.042 567867.919 185412.05 567868.052 185412.957 567868.04 185414.019 567867.812 185415.257 567867.35 185421.822 567864.547 185424.336 567863.473 185424.802 567863.274 185441.08 567856.162 185444.375 567862.338 185445.829 567866.416 185446.198 567867.257 185449.135 567878.096 185448.7 567879.325 185442.91 567881.956 185443.93 567884.2 185437.761 567886.891 185429.468 567888.03 185422.093 567888.598 185421.515 567885.33 185414.774 567884.958 185414.673 567884.289 185413.477 567884.381 185413.011 567882.736 185409.041 567882.373 185402.444 567882.098 185395.249 567880.877 185391.962 567880.905 185382.233 567882.822 185379.578 567884.849 185378.599 567886.063 185377.88 567886.866 185376.056 567888.224 185373.783 567889.316 185374.123 567890.239 185366.941 567892.314 185357.697 567894.977 185350.385 567896.884 185341.106 567899.399 185341.615 567901.324 185336.874 567902.76 185332.166 567904.186 185332.482 567905.782 185334.155 567909.949 185330.919 567910.869 185327.309 567911.894 185324.957 567912.919 185321.978 567914.356 185319.42 567915.721 185316.838 567917.231 185314.568 567918.576 185312.189 567920.116 185309.458 567922.065 185300.684 567928.04 185291.129 567936.608 185279.001 567947.37 185273.713 567951.985 185252.468 567930.983 185231.414 567936.639 185228.362 567934.323 185224.649 567935.614 185223.75 567932.778 185220.776 567923.859 185217.63 567913.486 185216.007 567909.553 185217.336 567909.108 185213.978 567899.391 185211.779 567891.552 185218.365 567889.617 185215.516 567881.451 185213.16 567882.33 185213.021 567881.955 185203.594 567885.561 185197.73 567884.131 185193.865 567873.817 185187.834 567872.726 185179.716 567851.111</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </Geometrie>
+        <Geometrie id="NDD_CentrumgebiedMonumentaalCentrum_001" type="GeometrieBesluitobject_P1">
+            <gml:Polygon xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="id.1fd0adfe3dcf4f3b9c62cc729c445775" srsName="EPSG:28992">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>185176.768 567713.197 185167.434 567689.204 185161.821 567673.542 185144.406 567679.989 185136.414 567658.903 185157.031 567650.746 185155.892 567647.75 185153.42 567641.25 185154.12 567637.964 185148.873 567623.64 185133.403 567583.875 185115.811 567538.447 185114.529 567532.955 185115.079 567528.561 185145.293 567510.071 185153.717 567515.746 185179.624 567546.902 185187.818 567554.497 185193.255 567559.538 185223.921 567587.966 185258.952 567591.011 185291.349 567593.686 185307.007 567593.973 185307.224 567581.24 185307.584 567568.812 185307.874 567563.287 185308.339 567555.069 185324.727 567558.134 185324.194 567560.947 185324.81 567565.141 185326.351 567572.92 185327.191 567577.158 185344.444 567573.631 185342.921 567593.747 185352.496 567593.054 185363.194 567592.279 185370.588 567591.874 185379.038 567591.411 185386.315 567591.012 185392.961 567590.648 185397.52 567590.387 185403.233 567590.061 185407.234 567589.832 185412.594 567588.761 185417.428 567587.794 185422.857 567586.333 185428.031 567584.94 185447.019 567578.389 185463.805 567572.597 185473.994 567569.082 185481.09 567566.634 185485.419 567565.14 185487.448 567564.44 185489.012 567563.901 185490.274 567568.856 185493.368 567567.583 185502.41 567563.979 185508.518 567561.531 185518.934 567557.149 185524.74 567554.963 185529.554 567553.063 185533.692 567551.621 185538.443 567550.127 185541.717 567549.044 185544.949 567547.996 185547.642 567547.4 185550.699 567546.883 185553.873 567546.378 185556.673 567546.068 185559.404 567545.85 185562.133 567545.75 185567.398 567545.486 185572.815 567545.398 185575.181 567545.474 185577.352 567545.902 185579.848 567546.6 185582.489 567547.411 185584.917 567548.2 185587.201 567549.406 185588.982 567550.34 185590.341 567551.488 185591.93 567553.023 185593.164 567555.497 185594.315 567557.209 185595.788 567559.034 185598.837 567563.559 185600.901 567566.467 185602.66 567569.657 185604.371 567572.195 185605.692 567574.71 185606.888 567577.84 185608.539 567580.94 185610.592 567583.768 185614.73 567589.488 185618.855 567595.325 185621.041 567598.56 185623.059 567601.719 185624.472 567604.656 185626.916 567608.41 185629.273 567612.802 185630.25 567615.045 185630.941 567616.845 185631.593 567619.564 185632.117 567622.19 185632.963 567626.414 185633.424 567629.926 185633.822 567634.123 185632.92 567639.646 185632.306 567642.498 185631.645 567645.865 185631.422 567648.658 185631.373 567651.659 185631.541 567655.219 185632.009 567658.328 185631.932 567659.687 185630.728 567668.475 185628.594 567674.303 185625.56 567681.547 185621.263 567689.55 185617.724 567697.553 185614.775 567704.544 185612.837 567710.609 185609.793 567721.034 185608.529 567726.721 185607.434 567731.648 185605.748 567736.786 185601.788 567744.283 185596.733 567752.286 185590.718 567760.594 185586.42 567765.48 185584.805 567766.816 185581.528 567769.919 185577.626 567773.331 185575.717 567774.79 185571.475 567777.707 185568.343 567779.723 185562.432 567783.88 185557.063 567787.821 185551.961 567791.681 185547.338 567795.777 185543.152 567799.353 185541.118 567801.64 185538.264 567805.144 185534.678 567809.581 185531.766 567813.707 185532.142 567814.094 185529.749 567817.947 185526.826 567821.058 185527.838 567822.002 185525.834 567823.739 185514.61 567832.512 185506.738 567838.082 185502.484 567841.008 185500.955 567837.927 185484.333 567845.495 185451.283 567859.258 185444.375 567862.338 185445.829 567866.416 185446.198 567867.257 185448.899 567877.225 185449.135 567878.096 185448.7 567879.325 185442.91 567881.956 185443.93 567884.2 185444.107 567884.589 185446.156 567891.939 185445.079 567892.247 185446.136 567895.963 185444.078 567896.587 185445.464 567901.937 185447.017 567908.052 185444.915 567908.558 185445.254 567909.968 185435.745 567912.417 185435.487 567911.436 185428.466 567913.142 185433.887 567928.767 185428.519 567930.62 185414.185 567935.54 185414.699 567936.719 185406.16 567940.618 185409.705 567949.411 185386.15 567956.419 185387.28 567960.918 185388.739 567960.438 185391.855 567970.187 185394.6 567979.004 185396.036 567983.7 185400.964 567987.298 185414.223 567983.114 185414.252 567983.222 185417.516 567982.157 185420.218 567994.283 185425.342 568017.281 185423.847 568017.614 185423.627 568031.576 185419.843 568031.579 185419.295 568031.579 185419.387 568032.899 185419.876 568039.908 185421.347 568064.791 185377.272 568067.395 185332.337 568049.452 185278.137 568017.077 185225.043 567964.767 185200.637 567935.619 185180.646 567901.51 185180.732 567901.47 185199.03 567892.978 185217.2 567886.754 185217.714 567888.194 185232.533 567883.668 185229.917 567875.655 185229.351 567873.82 185235.936 567871.468 185232.368 567862.036 185228.497 567851.721 185227.326 567848.603 185226.844 567847.321 185226.123 567846.333 185225.315 567844.35 185224.065 567839.793 185224.694 567839.625 185236.992 567835.416 185236.681 567834.507 185232.779 567825.354 185231.71 567822.794 185236.539 567820.652 185246.45 567816.55 185246.366 567816.346 185249.457 567815.092 185254.888 567812.89 185246.24 567786.6 185244.992 567782.909 185247.18 567781.8 185251.353 567780.093 185262.46 567775.55 185259.33 567768.185 185279.044 567767.666 185279.785 567756.847 185279.52 567756.579 185276.933 567756.855 185273.955 567728.877 185273.791 567727.32 185273.825 567723.209 185259.487 567722.272 185259.361 567723.84 185259.187 567725.996 185248.632 567735.896 185245.487 567732.542 185234.637 567734.487 185223.966 567736.401 185218.142 567737.445 185213.238 567731.558 185206.319 567723.252 185201.111 567717 185196.519 567711.488 185194.524 567710.866 185180.633 567715.99 185180.442 567716.06 185176.768 567713.197</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </Geometrie>
+        <Geometrie id="NDD_HorecaUitgaan_001" type="GeometrieBesluitobject_P1">
+            <gml:Polygon xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="id.954e5dcbdd7f49928b87c8a17399248c" srsName="EPSG:28992">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>185328.244 568002.642 185324.122 568000 185322.18 568000 185285.108 567963.33 185278.391 567956.61 185273.713 567951.985 185279.001 567947.37 185291.129 567936.608 185300.684 567928.04 185309.458 567922.065 185312.189 567920.116 185314.568 567918.576 185316.838 567917.231 185319.42 567915.721 185321.978 567914.356 185324.957 567912.919 185327.309 567911.894 185330.919 567910.869 185334.155 567909.949 185332.482 567905.782 185332.166 567904.186 185336.874 567902.76 185341.615 567901.324 185341.106 567899.399 185350.385 567896.884 185357.697 567894.977 185366.941 567892.314 185374.123 567890.239 185373.783 567889.316 185376.056 567888.224 185377.88 567886.866 185378.599 567886.063 185379.578 567884.849 185382.233 567882.822 185391.962 567880.905 185395.249 567880.877 185402.444 567882.098 185409.041 567882.373 185413.011 567882.736 185413.477 567884.381 185414.673 567884.289 185414.774 567884.958 185421.515 567885.33 185422.093 567888.598 185429.468 567888.03 185437.761 567886.891 185443.93 567884.2 185444.107 567884.589 185446.156 567891.939 185445.079 567892.247 185446.136 567895.963 185444.078 567896.587 185445.464 567901.937 185447.017 567908.052 185444.915 567908.558 185445.254 567909.968 185435.745 567912.417 185435.487 567911.436 185428.466 567913.142 185433.887 567928.767 185428.519 567930.62 185414.185 567935.54 185414.699 567936.719 185406.16 567940.618 185409.705 567949.411 185386.15 567956.419 185387.28 567960.918 185388.739 567960.438 185391.855 567970.187 185394.6 567979.004 185396.036 567983.7 185400.964 567987.298 185414.223 567983.114 185414.252 567983.222 185417.516 567982.157 185420.218 567994.283 185425.342 568017.281 185423.847 568017.614 185423.627 568031.576 185419.843 568031.579 185419.295 568031.579 185419.387 568032.899 185419.396 568033.031 185418.304 568032.899 185409.615 568031.852 185406.34 568031.621 185406.571 568028.056 185390.647 568023.948 185394.289 568010.325 185398.771 567996.008 185398.815 567995.866 185397.84 567995.487 185393.846 567993.933 185387.779 567991.547 185386.841 567991.093 185385.154 567989.917 185383.436 567988.428 185381.007 567985.871 185377.996 567985.657 185374.021 567985.375 185372.54 567985.27 185373.296 567971.824 185363.338 567971.824 185361.368 567971.824 185360.166 567953.361 185359.565 567948.26 185348.178 567950.007 185348.31 567951.771 185338.261 567952.789 185337.274 567953.045 185336.964 567953.845 185337.7 567964.914 185335.38 567973.602 185334.234 567979.119 185331.801 567988.672 185329.44 567997.945 185328.244 568002.642</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </Geometrie>
+        <Geometrie id="NDD_CultuurArtistiekCreatief_001" type="GeometrieBesluitobject_P1">
+            <gml:Polygon xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="id.c77d4c3da98d4827a8149d4bfb733fb4" srsName="EPSG:28992">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>185331.31 567690.549 185342.642 567689.898 185342.67 567694.659 185373.952 567692.205 185390.116 567690.768 185391.117 567701.7 185391.163 567702.234 185391.982 567703.37 185392.91 567704.103 185394.37 567704.826 185395.626 567705.194 185397.503 567705.526 185397.808 567709.075 185399.772 567731.88 185400.68 567740.134 185421.982 567738.219 185422.645 567741.997 185422.972 567743.858 185423.058 567746.024 185424.287 567776.298 185421.817 567776.394 185421.482 567793.369 185421.223 567793.377 185421.132 567803.086 185421.286 567804.62 185421.691 567808.648 185421.885 567808.628 185421.911 567811.231 185421.89 567823.673 185421.878 567831.207 185420.092 567831.779 185420.797 567844.009 185423.717 567845.808 185424.336 567863.473 185441.08 567856.162 185444.375 567862.338 185445.829 567866.416 185446.198 567867.257 185449.135 567878.096 185448.7 567879.325 185442.91 567881.956 185443.93 567884.2 185437.761 567886.891 185429.468 567888.03 185422.093 567888.598 185421.515 567885.33 185414.774 567884.958 185414.673 567884.289 185413.477 567884.381 185413.011 567882.736 185409.041 567882.373 185402.444 567882.098 185402.331 567882.079 185395.249 567880.877 185391.962 567880.905 185382.233 567882.822 185379.578 567884.849 185377.88 567886.866 185376.056 567888.224 185373.783 567889.316 185374.123 567890.239 185368.286 567891.925 185357.697 567894.977 185350.385 567896.884 185341.106 567899.399 185339.78 567895.772 185337.328 567886.561 185338.388 567886.304 185335.806 567874.208 185343.217 567872.983 185343.273 567873.317 185352.604 567871.698 185351.48 567858.441 185349.867 567847.651 185346.913 567808.474 185346.832 567807.627 185347.692 567773.202 185345.098 567752.192 185339.076 567752.936 185338.678 567750.468 185338.375 567748.589 185329.255 567748.081 185329.975 567740.556 185330.134 567740.571 185330.361 567738.202 185328.768 567733.853 185330.196 567729.709 185331.127 567717.46 185331.419 567713.62 185332.661 567713.448 185331.31 567690.549</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </Geometrie>
+        <Geometrie id="NDD_GemengdInnovatiegebied_001" type="GeometrieBesluitobject_P1">
+            <gml:Polygon xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="id.61020dc7c5fa47adaeb0037c6226dec6" srsName="EPSG:28992">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>185273.713 567951.985 185279.001 567947.37 185291.129 567936.608 185300.684 567928.04 185309.458 567922.065 185312.189 567920.116 185314.568 567918.576 185316.838 567917.231 185319.42 567915.721 185321.978 567914.356 185324.957 567912.919 185327.309 567911.894 185330.919 567910.869 185334.155 567909.949 185332.482 567905.782 185332.166 567904.186 185336.874 567902.76 185341.615 567901.324 185341.106 567899.399 185350.385 567896.884 185357.697 567894.977 185366.941 567892.314 185374.123 567890.239 185373.783 567889.316 185376.056 567888.224 185377.88 567886.866 185378.599 567886.063 185379.578 567884.849 185382.233 567882.822 185391.962 567880.905 185395.249 567880.877 185402.444 567882.098 185409.041 567882.373 185413.011 567882.736 185413.477 567884.381 185414.673 567884.289 185414.774 567884.958 185421.515 567885.33 185422.093 567888.598 185429.468 567888.03 185437.761 567886.891 185443.93 567884.2 185444.107 567884.589 185446.156 567891.939 185445.079 567892.247 185446.136 567895.963 185444.078 567896.587 185445.464 567901.937 185447.017 567908.052 185444.915 567908.558 185445.254 567909.968 185435.745 567912.417 185435.487 567911.436 185428.466 567913.142 185433.887 567928.767 185428.519 567930.62 185414.185 567935.54 185414.699 567936.719 185406.16 567940.618 185409.705 567949.411 185386.15 567956.419 185387.28 567960.918 185388.739 567960.438 185391.855 567970.187 185394.6 567979.004 185396.036 567983.7 185400.964 567987.298 185414.223 567983.114 185414.252 567983.222 185417.516 567982.157 185420.218 567994.283 185425.342 568017.281 185423.847 568017.614 185423.627 568031.576 185419.843 568031.579 185419.295 568031.579 185419.387 568032.899 185419.396 568033.031 185418.304 568032.899 185409.615 568031.852 185406.34 568031.621 185406.571 568028.056 185390.647 568023.948 185389.741 568028.814 185389.97 568028.838 185389.521 568030.76 185376.315 568025.214 185376.761 568022.541 185371.547 568022.136 185371.32 568025.654 185358.142 568020.185 185344.841 568014.673 185344.351 568014.473 185344.619 568013.14 185328.244 568002.642 185324.122 568000 185322.18 568000 185285.108 567963.33 185278.391 567956.61 185273.713 567951.985</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </Geometrie>
+        <Geometrie id="NDD_WonenRustigStedelijkWonen_001" type="GeometrieBesluitobject_P1">
+            <gml:Polygon xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="id.22c80ab42293463aa29cf1e7e9ceb764" srsName="EPSG:28992">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>185179.716 567851.111 185173.866 567853.212 185148.137 567809.89 185144.908 567804.422 185119.617 567761.381 185116.677 567762.441 185112.156 567754.749 185116.279 567744.84 185122.511 567742.494 185130.686 567739.545 185173.401 567723.912 185180.442 567716.06 185180.633 567715.99 185194.524 567710.866 185196.519 567711.488 185218.142 567737.445 185245.487 567732.542 185248.051 567735.276 185247.16 567736.09 185253.383 567750.483 185255.92 567754.38 185260.34 567764.97 185260.12 567765.21 185263.584 567773.466 185262.76 567775.42 185247.18 567781.8 185244.052 567783.079 185245.6 567786.84 185246.24 567786.6 185254.888 567812.89 185246.366 567816.346 185246.45 567816.55 185238.43 567819.83 185236.539 567820.652 185237.683 567823.288 185232.779 567825.354 185219.08 567831.16 185220.238 567834.312 185204.446 567840.258 185184.84 567847.64 185183.785 567849.593 185179.716 567851.111</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </Geometrie>
+        <Geometrie id="NDD_WonenRustigStedelijkWonen_002" type="GeometrieBesluitobject_P1">
+            <gml:Polygon xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="id.2388ad27df05409ab100a2566cfed19d" srsName="EPSG:28992">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>185444.375 567862.338 185441.08 567856.162 185424.802 567863.274 185424.336 567863.473 185421.822 567864.547 185415.257 567867.35 185414.019 567867.812 185412.957 567868.04 185412.05 567868.052 185411.042 567867.919 185409.235 567867.461 185398 567863.983 185396.869 567863.443 185393.25 567862.956 185378.818 567858.415 185377.825 567857.761 185377.439 567857.402 185376.838 567856.603 185376.666 567840.834 185376.68 567805.64 185376.708 567796.14 185376.718 567792.786 185376.734 567780.834 185376.735 567780.301 185378.384 567780.175 185378.311 567777.224 185378.238 567764.802 185376.769 567764.893 185376.8 567748.925 185376.809 567744.128 185376.812 567742.71 185369.528 567744.326 185357.694 567746.893 185355.637 567747.339 185355.866 567748.498 185344.242 567750.603 185343.079 567750.813 185342.78 567748.685 185339.52 567748.653 185329.255 567748.081 185329.975 567740.556 185330.134 567740.571 185330.361 567738.202 185328.768 567733.853 185330.196 567729.709 185331.125 567717.488 185331.419 567713.62 185332.661 567713.448 185331.31 567690.549 185315.049 567691.514 185315.009 567691.757 185309.888 567692.01 185291.639 567692.912 185292.015 567687.255 185291.279 567686.403 185286.282 567686.054 185286.283 567685.603 185273.121 567681.046 185273.13 567680.805 185265.671 567680.024 185265.638 567680.261 185262.43 567680.063 185262.39 567680.711 185260.727 567680.908 185252.212 567681.51 185247.445 567681.835 185245.342 567681.426 185236.038 567676.523 185234.403 567676.445 185233.917 567676.118 185236.988 567672.002 185232.891 567669.184 185225.419 567677.246 185214.903 567688.08 185213.577 567689.039 185210.976 567691.427 185209.119 567693.903 185206.062 567697.608 185205.956 567697.409 185204.439 567694.573 185203.497 567695.289 185202.193 567691.011 185197.274 567693.861 185197.482 567695.098 185195.792 567695.4 185193.369 567696.409 185194.593 567698.8 185187.496 567702.239 185186.712 567700.702 185177.992 567705.068 185174.849 567708.267 185167.434 567689.204 185161.821 567673.542 185144.406 567679.989 185136.414 567658.903 185157.031 567650.746 185155.892 567647.75 185153.42 567641.25 185154.12 567637.964 185148.873 567623.64 185133.403 567583.875 185115.811 567538.447 185114.529 567532.955 185115.079 567528.561 185145.293 567510.071 185153.717 567515.746 185179.624 567546.902 185187.818 567554.497 185193.255 567559.538 185223.921 567587.966 185258.952 567591.011 185291.349 567593.686 185307.007 567593.973 185307.224 567581.24 185307.584 567568.812 185307.874 567563.287 185308.339 567555.069 185324.727 567558.134 185324.194 567560.947 185324.81 567565.141 185326.351 567572.92 185327.191 567577.158 185344.444 567573.631 185342.921 567593.747 185352.496 567593.054 185363.194 567592.279 185370.588 567591.874 185379.038 567591.411 185386.315 567591.012 185392.961 567590.648 185397.52 567590.387 185403.233 567590.061 185407.234 567589.832 185412.594 567588.761 185417.428 567587.794 185422.857 567586.333 185428.031 567584.94 185447.019 567578.389 185463.805 567572.597 185473.994 567569.082 185481.09 567566.634 185485.419 567565.14 185487.448 567564.44 185489.012 567563.901 185490.274 567568.856 185493.368 567567.583 185502.41 567563.979 185508.518 567561.531 185518.934 567557.149 185524.74 567554.963 185529.554 567553.063 185533.692 567551.621 185538.443 567550.127 185541.717 567549.044 185544.949 567547.996 185547.642 567547.4 185550.699 567546.883 185553.873 567546.378 185556.673 567546.068 185559.404 567545.85 185562.133 567545.75 185567.398 567545.486 185572.815 567545.398 185575.181 567545.474 185577.352 567545.902 185579.848 567546.6 185582.489 567547.411 185584.917 567548.2 185587.201 567549.406 185588.982 567550.34 185590.341 567551.488 185591.93 567553.023 185593.164 567555.497 185594.315 567557.209 185595.788 567559.034 185598.837 567563.559 185600.901 567566.467 185602.66 567569.657 185604.371 567572.195 185605.692 567574.71 185606.888 567577.84 185608.539 567580.94 185610.592 567583.768 185614.73 567589.488 185618.855 567595.325 185621.041 567598.56 185623.059 567601.719 185624.472 567604.656 185626.916 567608.41 185629.273 567612.802 185630.25 567615.045 185630.941 567616.845 185631.593 567619.564 185632.117 567622.19 185632.963 567626.414 185633.424 567629.926 185633.822 567634.123 185632.92 567639.646 185632.306 567642.498 185631.645 567645.865 185631.422 567648.658 185631.373 567651.659 185631.541 567655.219 185632.009 567658.328 185631.932 567659.687 185630.728 567668.475 185628.594 567674.303 185625.56 567681.547 185621.263 567689.55 185617.724 567697.553 185614.775 567704.544 185612.837 567710.609 185609.793 567721.034 185608.529 567726.721 185607.434 567731.648 185605.748 567736.786 185601.788 567744.283 185596.733 567752.286 185590.718 567760.594 185586.42 567765.48 185584.805 567766.816 185581.528 567769.919 185577.626 567773.331 185575.717 567774.79 185571.475 567777.707 185568.343 567779.723 185562.432 567783.88 185557.063 567787.821 185551.961 567791.681 185547.338 567795.777 185543.152 567799.353 185541.118 567801.64 185538.264 567805.144 185534.678 567809.581 185531.766 567813.707 185532.142 567814.094 185529.749 567817.947 185526.826 567821.058 185527.838 567822.002 185525.834 567823.739 185514.61 567832.512 185506.738 567838.082 185502.484 567841.008 185500.955 567837.927 185484.333 567845.495 185451.283 567859.258 185444.375 567862.338</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </Geometrie>
+        <Geometrie id="NDD_BedrijfWonenWerken_001" type="GeometrieBesluitobject_P1">
+            <gml:Polygon xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="id.4ca27182b45744a1b022dba1accc4cdb" srsName="EPSG:28992">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>185328.244 568002.642 185329.44 567997.945 185331.801 567988.672 185334.234 567979.119 185335.38 567973.602 185337.7 567964.914 185336.964 567953.845 185337.274 567953.045 185338.261 567952.789 185348.31 567951.771 185348.178 567950.007 185359.565 567948.26 185360.166 567953.361 185361.368 567971.824 185363.338 567971.824 185373.296 567971.824 185372.54 567985.27 185374.021 567985.375 185377.996 567985.657 185381.007 567985.871 185383.436 567988.428 185385.154 567989.917 185386.841 567991.093 185387.779 567991.547 185393.846 567993.933 185397.84 567995.487 185398.815 567995.866 185398.771 567996.008 185394.289 568010.325 185390.647 568023.948 185389.741 568028.814 185389.97 568028.838 185389.521 568030.76 185376.315 568025.214 185376.761 568022.541 185371.547 568022.136 185371.32 568025.654 185348.057 568015.999 185344.841 568014.673 185344.351 568014.473 185344.619 568013.14 185328.244 568002.642</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </Geometrie>
+        <Geometrie id="NDD_Water_001" type="GeometrieBesluitobject_P1">
+            <gml:Polygon xmlns:gml="http://www.opengis.net/gml/3.2" gml:id="id.011d866aa06e45599cea1a1f4e9c1d8b" srsName="EPSG:28992">
+                <gml:exterior>
+                    <gml:LinearRing>
+                        <gml:posList>185174.849 567708.267 185177.992 567705.068 185186.712 567700.702 185187.496 567702.239 185194.593 567698.8 185193.369 567696.409 185195.792 567695.4 185197.482 567695.098 185197.274 567693.861 185202.193 567691.011 185203.497 567695.289 185204.439 567694.573 185205.956 567697.409 185206.062 567697.608 185204.966 567698.938 185206.629 567700.267 185207.348 567701.939 185206.525 567702.691 185209.166 567705.559 185209.184 567705.984 185212.577 567709.673 185215.027 567712.523 185216.825 567713.076 185225.479 567720.818 185236.357 567721.824 185236.335 567721.62 185259.361 567723.84 185259.187 567725.996 185248.632 567735.896 185245.487 567732.542 185218.142 567737.445 185196.519 567711.488 185194.524 567710.866 185180.633 567715.99 185180.442 567716.06 185173.401 567723.912 185130.686 567739.545 185122.511 567742.494 185116.279 567744.84 185112.156 567754.749 185116.677 567762.441 185119.617 567761.381 185144.908 567804.422 185173.866 567853.212 185179.716 567851.111 185187.834 567872.726 185193.865 567873.817 185197.73 567884.131 185203.594 567885.561 185213.021 567881.955 185213.16 567882.33 185215.516 567881.451 185218.365 567889.617 185211.779 567891.552 185213.978 567899.391 185217.336 567909.108 185216.007 567909.553 185217.63 567913.486 185220.776 567923.859 185224.649 567935.614 185228.362 567934.323 185231.414 567936.639 185250.107 567931.618 185252.468 567930.983 185255.028 567933.514 185278.391 567956.61 185285.108 567963.33 185322.18 568000 185324.122 568000 185344.619 568013.14 185344.351 568014.473 185344.841 568014.673 185358.142 568020.185 185371.32 568025.654 185371.547 568022.136 185376.761 568022.541 185376.315 568025.214 185389.521 568030.76 185389.97 568028.838 185389.741 568028.814 185390.647 568023.948 185406.571 568028.056 185406.34 568031.621 185409.615 568031.852 185418.304 568032.899 185419.396 568033.031 185419.876 568039.908 185421.347 568064.791 185377.272 568067.395 185332.337 568049.452 185278.137 568017.077 185225.043 567964.767 185200.637 567935.619 185176.749 567894.862 185157.985 567861.966 185113.084 567811.539 185046.638 567765.765 185109.134 567742.494 185170.97 567719.315 185176.768 567713.197 185174.849 567708.267</gml:posList>
+                    </gml:LinearRing>
+                </gml:exterior>
+            </gml:Polygon>
+        </Geometrie>
+        <Locatiegroep id="NDD_DetailhandelModernWinkelen">
+            <Geometrie idref="NDD_DetailhandelModernWinkelen_001" />
+        </Locatiegroep>
+        <Locatiegroep id="NDD_CentrumgebiedMonumentaalCentrum">
+            <Geometrie idref="NDD_CentrumgebiedMonumentaalCentrum_001" />
+        </Locatiegroep>
+        <Locatiegroep id="NDD_HorecaUitgaan">
+            <Geometrie idref="NDD_HorecaUitgaan_001" />
+        </Locatiegroep>
+        <Locatiegroep id="NDD_CultuurArtistiekCreatief">
+            <Geometrie idref="NDD_CultuurArtistiekCreatief_001" />
+        </Locatiegroep>
+        <Locatiegroep id="NDD_GemengdInnovatiegebied">
+            <Geometrie idref="NDD_GemengdInnovatiegebied_001" />
+        </Locatiegroep>
+        <Locatiegroep id="NDD_WonenRustigStedelijkWonen">
+            <Geometrie idref="NDD_WonenRustigStedelijkWonen_001" />
+            <Geometrie idref="NDD_WonenRustigStedelijkWonen_002" />
+        </Locatiegroep>
+        <Locatiegroep id="NDD_BedrijfWonenWerken">
+            <Geometrie idref="NDD_BedrijfWonenWerken_001" />
+        </Locatiegroep>
+        <Locatiegroep id="NDD_Water">
+            <Geometrie idref="NDD_Water_001" />
+        </Locatiegroep>
+    </Locaties>
+</OfficielePublicatie>
