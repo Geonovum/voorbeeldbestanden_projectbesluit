@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="20.1">
+<project version="21.0">
     <meta>
         <filters directoryPatterns="" filePatterns="" positiveFilePatterns="" showHiddenFiles="false"/>
-        <options/>
+        <options>
+            <serialized version="21.0" xml:space="preserve">
+                <serializableOrderedMap>
+                    <entry>
+                        <String>enable.project.master.files.support</String>
+                        <Boolean>true</Boolean>
+                    </entry>
+                </serializableOrderedMap>
+            </serialized>
+        </options>
     </meta>
     <projectTree name="Projectbesluit.xpr">
+        <folder masterFiles="true" name="Master Files">
+            <file name="build.xml"/>
+        </folder>
         <file name="build.xml"/>
         <file name="imop2html.xsl"/>
     </projectTree>
